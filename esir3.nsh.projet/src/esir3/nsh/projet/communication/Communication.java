@@ -6,11 +6,10 @@ import esir3.nsh.projet.communication.Communication;
 
 public class Communication {
 
-	Communication com;
+    Communication com;
 
 
-
-	public Communication (Communication com) {	
-		this.com = com;
-	}
+    public Communication(Communication com) {
+        this.com = com;
+    }
 }
