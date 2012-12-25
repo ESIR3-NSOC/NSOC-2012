@@ -1,4 +1,5 @@
 import java.net.Inet4Address;
+import java.util.logging.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,6 +15,7 @@ public class GestionLumImpl implements GestionLumInterface {
      */
     String ipadd;
     Inet4Address ip;
+    Logger log = Logger.getLogger(GestionLumImpl.class.getName());
 
     /**
      * Constructeur
