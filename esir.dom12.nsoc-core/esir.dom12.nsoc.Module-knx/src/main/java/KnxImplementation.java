@@ -9,6 +9,8 @@ import tuwien.auto.calimero.process.ProcessCommunicatorImpl;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,12 +29,15 @@ public class KnxImplementation implements InterfaceKnx {
     Boolean connect = false;
     KNXNetworkLinkIP netLinkIp;
     ProcessCommunicator pc;
+    Logger log = Logger.getLogger(KnxImplementation.class.getName());
 
     /**
      * Constructeur
      */
     public KnxImplementation(String ip) {
         ipPasserelle = ip;
+
+        log.log(Level.INFO, "Instance Créée");
     }
 
     /**
@@ -52,16 +57,22 @@ public class KnxImplementation implements InterfaceKnx {
         // Action sur l'équipement
         try {
             pc.write(new GroupAddress(addComposant), value);
+            log.log(Level.INFO, String.format("Valeur équipement: %s modifié: %s", addComposant, value));
+
         } catch (KNXException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-
+            log.log(Level.WARNING, "KNX Exception lors de l'ecriture sur le composant");
             // Si il y a un problème on returne false et on se déconnecte
             deconnexionKNX(netLinkIp);
-            return false;
+
+            log.log(Level.INFO, "Déconnexion");
+            return false; // Retourne false car la valeur du composant n'a pas été modifié
         }
 
         // Sinon on retourne true et on se déconnect
         deconnexionKNX(netLinkIp);
+
+        log.log(Level.INFO,"Déconnexion");
         return true;
     }
 
@@ -72,17 +83,24 @@ public class KnxImplementation implements InterfaceKnx {
      */
     public void connexionKnx(String ip) {
 
+        log.log(Level.INFO, "Connexion a la passerelle");
         try {
             netLinkIp = new KNXNetworkLinkIP(KNXNetworkLinkIP.TUNNEL, new InetSocketAddress(InetAddress.getLocalHost(), 0), new InetSocketAddress(
                     InetAddress.getByName(ip),
                     KNXnetIPConnection.IP_PORT), false, new TPSettings(
                     false));
+            log.log(Level.INFO, "KNX netLinkIp créé");
+
             pc = new ProcessCommunicatorImpl(netLinkIp);
+
+            log.log(Level.INFO, "Process Communicator créé");
         } catch (KNXException e) {
 
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            log.log(Level.WARNING, 'KNX Exception ' + e);
         } catch (UnknownHostException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            log.log(Level.WARNING, 'UnKnownHostException ' + e);
         }
 
         connect = true; // Indique que l'on est connecté a la passerelle KNX
@@ -101,7 +119,8 @@ public class KnxImplementation implements InterfaceKnx {
         } finally {
             if (linkIp != null) {
                 linkIp.close();
-                System.out.println("Connexion closed");
+
+                log.log(Level.INFO, "Connection closed");
                 connect = false; // Indique que l'on est déconnecté de la passerelle
             }
         }
