@@ -50,16 +50,16 @@ public class KnxImplementation extends AbstractComponentType {
     ProcessCommunicator pc;
     Logger log = Logger.getLogger(KnxImplementation.class.getName());
 
+    // Variables neccessaire pour agir sur les équipements
+    String addComposant; // Adresse de l'équipement
+    float value; // Prchaine valeur du composant
+
     /**
      * Implémentation de la methode setComposant
-     *
-     * @param addComposant: adresse de l'équipement a controler
-     * @param value:        Valeur a donner a l'equipement
-     * @return
      */
 
     @Port(name = "setData")
-    public boolean setComposant(String addComposant, float value) {
+    public void setComposant() {
 
         // Connexion à la passerelle KNX (si l'on est pas deja connecté)
         if (connect == false) {
@@ -78,24 +78,49 @@ public class KnxImplementation extends AbstractComponentType {
             deconnexionKNX(netLinkIp);
 
             log.log(Level.INFO, "Déconnexion");
-            return false; // Retourne false car la valeur du composant n'a pas été modifié
+            // Ecriture sur le port
         }
 
         // Sinon on retourne true et on se déconnect
         deconnexionKNX(netLinkIp);
 
         log.log(Level.INFO,"Déconnexion");
-        return true;
+        // ecriture sur le port
     }
 
     /**
      * Récupère la valeur d'un équipement KNX
      */
     @Port(name = "getData")
-    public float getData(){
-        float value = 0;
+    public void getData(){
 
-        return value;
+        // Connexion à la passerelle KNX (si l'on est pas deja connecté)
+        if (connect == false) {
+            connexionKnx(ipPasserelle);
+        }
+
+        // Action sur l'équipement
+        try {
+            pc.readFloat(new GroupAddress(addComposant));
+            log.log(Level.INFO, String.format("Valeur équipement: %s: %s", addComposant, value));
+
+            // Ecriture de la valeur sur le port
+
+        } catch (KNXException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            log.log(Level.WARNING, "KNX Exception lors de l'ecriture sur le composant");
+            // Si il y a un problème on returne false et on se déconnecte
+            deconnexionKNX(netLinkIp);
+
+            log.log(Level.INFO, "Déconnexion");
+            // Ecriture sur le port
+        }
+
+        // Sinon on retourne true et on se déconnect
+        deconnexionKNX(netLinkIp);
+
+        log.log(Level.INFO,"Déconnexion");
+        // ecriture sur le port
     }
 
     /**
