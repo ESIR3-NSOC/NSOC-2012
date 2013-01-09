@@ -13,20 +13,17 @@ import java.util.logging.Logger;
  * To change this template use File | Settings | File Templates.
  */
 
-/**
- * Défniniton des ports
- */
 
 @Requires({
         @RequiredPort(name = "type", type = PortType.MESSAGE, optional = false),
-        @RequiredPort(name = "add", type = PortType.MESSAGE, optional = true),
-        @RequiredPort(name = "Value", type = PortType.MESSAGE, optional = true)
+        @RequiredPort(name = "value", type = PortType.MESSAGE, optional = true),
+        @RequiredPort(name = "lightValue", type = PortType.MESSAGE, optional = true)
 })
 @Provides({
-        @ProvidedPort(name = "getShutterState", type = PortType.MESSAGE),
-        @ProvidedPort(name = "setVolet", type = PortType.MESSAGE)
+        @ProvidedPort(name = "getLightState", type = PortType.MESSAGE),
+        @ProvidedPort(name = "setLight", type = PortType.MESSAGE)
 })
-public class GestionVolImpl extends AbstractComponentType {
+public class GestionLum extends AbstractComponentType {
 
     /**
      * Global Variable
@@ -44,7 +41,7 @@ public class GestionVolImpl extends AbstractComponentType {
 
     @Start
     public void startComponent() {
-        System.out.println("Consumer:: Start");
+        System.out.println("Gestion Luminaire :: Start");
 
         // Get the value from the required port
 
@@ -52,10 +49,13 @@ public class GestionVolImpl extends AbstractComponentType {
 
     /**
      * Methode qui appel le bon composant pour effectuer la modification sur l'équipement
+     * @param add:   addresse de l'équipement a commander
+     * @param type:  type d'équipement (KNX, Dali, Bacnet)
+     * @param value: valeur a donner a l'équipement
      * @return
      */
 
-    @Port(name = "setVolet")
+    @Port(name = "setLight")
     public boolean setEquipement() {
         // Selon le type d'équipement, nous appelons le bon composant
 
@@ -90,11 +90,11 @@ public class GestionVolImpl extends AbstractComponentType {
         return false;
     }
 
-    @Port(name = "getShutterState")
-    public float getShutterState(){
+    @Port(name = "getLightState")
+    public float getLightState(){
 
         // Variables de la fonction
-        float shutterValue = 0;
+        float lightValue = 0;
 
         // Selon le type de technologie,
         // Switch case impossible sur une variable String...

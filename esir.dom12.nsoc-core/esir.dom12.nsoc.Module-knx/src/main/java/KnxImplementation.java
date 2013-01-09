@@ -1,3 +1,5 @@
+import org.kevoree.annotation.*;
+import org.kevoree.framework.AbstractComponentType;
 import tuwien.auto.calimero.GroupAddress;
 import tuwien.auto.calimero.exception.KNXException;
 import tuwien.auto.calimero.knxnetip.KNXnetIPConnection;
@@ -20,7 +22,24 @@ import java.util.logging.Logger;
  * To change this template use File | Settings | File Templates.
  */
 
-public class KnxImplementation implements InterfaceKnx {
+/**
+ * Definition des ports
+ */
+
+@Requires({
+        @RequiredPort(name = "ip", type = PortType.MESSAGE, optional = true),
+        @RequiredPort(name = "addEquipement", type = PortType.MESSAGE, optional = true),
+        @RequiredPort(name = "value", type = PortType.MESSAGE, optional = false)
+})
+@Provides({
+        @ProvidedPort(name = "getData", type = PortType.MESSAGE),
+        @ProvidedPort(name = "setData", type = PortType.MESSAGE),
+        @ProvidedPort(name = "connect", type = PortType.MESSAGE),
+        @ProvidedPort(name = "deconnect", type = PortType.MESSAGE)
+})
+
+
+public class KnxImplementation extends AbstractComponentType {
 
     /**
      * Attributs
@@ -32,21 +51,14 @@ public class KnxImplementation implements InterfaceKnx {
     Logger log = Logger.getLogger(KnxImplementation.class.getName());
 
     /**
-     * Constructeur
-     */
-    public KnxImplementation(String ip) {
-        ipPasserelle = ip;
-
-        log.log(Level.INFO, "Instance Créée");
-    }
-
-    /**
      * Implémentation de la methode setComposant
      *
      * @param addComposant: adresse de l'équipement a controler
      * @param value:        Valeur a donner a l'equipement
      * @return
      */
+
+    @Port(name = "setData")
     public boolean setComposant(String addComposant, float value) {
 
         // Connexion à la passerelle KNX (si l'on est pas deja connecté)
@@ -77,10 +89,21 @@ public class KnxImplementation implements InterfaceKnx {
     }
 
     /**
+     * Récupère la valeur d'un équipement KNX
+     */
+    @Port(name = "getData")
+    public float getData(){
+        float value = 0;
+
+        return value;
+    }
+
+    /**
      * Connexion via calimero a la passerelle KNX
      *
      * @param ip: adresse IP de la passerelle
      */
+    @Port(name = "connect")
     public void connexionKnx(String ip) {
 
         log.log(Level.INFO, "Connexion a la passerelle");
@@ -97,10 +120,10 @@ public class KnxImplementation implements InterfaceKnx {
         } catch (KNXException e) {
 
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            log.log(Level.WARNING, 'KNX Exception ' + e);
+            log.log(Level.WARNING, "KNX Exception " + e);
         } catch (UnknownHostException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            log.log(Level.WARNING, 'UnKnownHostException ' + e);
+            log.log(Level.WARNING, "UnKnownHostException " + e);
         }
 
         connect = true; // Indique que l'on est connecté a la passerelle KNX
@@ -112,6 +135,7 @@ public class KnxImplementation implements InterfaceKnx {
      *
      * @param linkIp
      */
+    @Port(name = "deconnect")
     public void deconnexionKNX(KNXNetworkLinkIP linkIp) {
 
         try {
