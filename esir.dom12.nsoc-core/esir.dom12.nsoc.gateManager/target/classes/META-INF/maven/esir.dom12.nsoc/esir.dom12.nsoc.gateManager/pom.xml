@@ -3,9 +3,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>esir.dom12.nsoc</groupId>
-    <artifactId>esir.dom12.nsoc.scenarii</artifactId>
+    <artifactId>esir.dom12.nsoc.gateManager</artifactId>
     <version>1.8.9</version>
-    <name>Scenario</name>
+    <name>Gate Manager</name>
 
     <properties>
         <kevoree.version>${project.version}</kevoree.version>
