@@ -1,6 +1,9 @@
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 
+import java.lang.Object;
+import java.lang.String;
+import java.lang.System;
 import java.net.Inet4Address;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,13 +18,12 @@ import java.util.logging.Logger;
 
 
 @Requires({
-        @RequiredPort(name = "type", type = PortType.MESSAGE, optional = false),
-        @RequiredPort(name = "value", type = PortType.MESSAGE, optional = true),
-        @RequiredPort(name = "lightValue", type = PortType.MESSAGE, optional = true)
+        @RequiredPort(name = "getLight", type = PortType.MESSAGE, optional = false),
+        @RequiredPort(name = "setLight", type = PortType.MESSAGE, optional = false)
 })
 @Provides({
         @ProvidedPort(name = "getLightState", type = PortType.MESSAGE),
-        @ProvidedPort(name = "setLight", type = PortType.MESSAGE)
+        @ProvidedPort(name = "setLightState", type = PortType.MESSAGE)
 })
 public class GestionLum extends AbstractComponentType {
 
@@ -29,7 +31,7 @@ public class GestionLum extends AbstractComponentType {
      * Global Variable
      */
     String ipadd; // Adresse de la machine
-    Inet4Address ip;// Objet pour connaitre l'adresse ip de notre machine
+    InetAddress ip;// Objet pour connaitre l'adresse ip de notre machine
     String ipPasserelle; // Adresse ip de la passerelle
     Logger log = Logger.getLogger(GestionVolImpl.class.getName());
 
@@ -49,14 +51,22 @@ public class GestionLum extends AbstractComponentType {
 
     /**
      * Methode qui appel le bon composant pour effectuer la modification sur l'équipement
+     *
      * @param add:   addresse de l'équipement a commander
      * @param type:  type d'équipement (KNX, Dali, Bacnet)
      * @param value: valeur a donner a l'équipement
      * @return
      */
 
-    @Port(name = "setLight")
-    public boolean setEquipement() {
+    @Port(name = "setLightState")
+    public boolean setEquipement(Object o) {
+
+        // On recupere les parametres contenu dans l'objet o
+        String data = new String(o);
+        String [] temp = data.split(data,";");
+
+        type = temp[0];
+        value = float.valueOf(temp[1]);
         // Selon le type d'équipement, nous appelons le bon composant
 
         // Switch case impossible sur une variable String...
@@ -66,6 +76,14 @@ public class GestionLum extends AbstractComponentType {
             // Cas ou l'on veut commander des équipements KNX
 
             // Ecriture sur le port setDataKnx
+            MessagePort prodPort = getPortByName("setLight",MessagePort.class);
+            if(prodPort != null) {
+
+                // Donnée à envoyer au composant KNX
+                String knxData = value + ";" + add; //
+                prodPort.process(knxData); // Ecrit sur le port setLight
+
+            }
 
 
         } else if (type.equals("Dali")) {
@@ -91,7 +109,16 @@ public class GestionLum extends AbstractComponentType {
     }
 
     @Port(name = "getLightState")
-    public float getLightState(){
+    public float getLightState(Object o) {
+
+        // Récuperation des données sur le port
+        String data = new String(o);
+        String [] temp = data.split(data,";");
+
+        // Affichage des données
+        System.out.println("Donnée::getLigthState : " + data);
+
+        type = temp[0];
 
         // Variables de la fonction
         float lightValue = 0;
@@ -128,4 +155,6 @@ public class GestionLum extends AbstractComponentType {
 
         return shutterValue;
     }
+
+
 }
