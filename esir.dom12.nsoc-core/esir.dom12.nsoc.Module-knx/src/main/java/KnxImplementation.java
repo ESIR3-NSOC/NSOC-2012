@@ -1,5 +1,6 @@
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
+import org.kevoree.framework.MessagePort;
 import tuwien.auto.calimero.GroupAddress;
 import tuwien.auto.calimero.exception.KNXException;
 import tuwien.auto.calimero.knxnetip.KNXnetIPConnection;
@@ -27,17 +28,15 @@ import java.util.logging.Logger;
  */
 
 @Requires({
-        @RequiredPort(name = "ip", type = PortType.MESSAGE, optional = true),
-        @RequiredPort(name = "addEquipement", type = PortType.MESSAGE, optional = true),
-        @RequiredPort(name = "value", type = PortType.MESSAGE, optional = false)
+        @RequiredPort(name = "getState", type = PortType.MESSAGE, optional = true)
 })
 @Provides({
-        @ProvidedPort(name = "getData", type = PortType.MESSAGE),
-        @ProvidedPort(name = "setData", type = PortType.MESSAGE),
-        @ProvidedPort(name = "connect", type = PortType.MESSAGE),
-        @ProvidedPort(name = "deconnect", type = PortType.MESSAGE)
+        @ProvidedPort(name = "getEquipementState", type = PortType.MESSAGE),
+        @ProvidedPort(name = "setEquipementState", type = PortType.MESSAGE)
 })
-
+@DictionaryType({
+        @DictionaryAttribute(name = "ipMaquette", defaultValue = "true", optional = true)
+})
 
 public class KnxImplementation extends AbstractComponentType {
 
@@ -52,14 +51,20 @@ public class KnxImplementation extends AbstractComponentType {
 
     // Variables neccessaire pour agir sur les équipements
     String addComposant; // Adresse de l'équipement
-    float value; // Prchaine valeur du composant
+    float value ; // Prchaine valeur du composant
 
     /**
      * Implémentation de la methode setComposant
      */
 
-    @Port(name = "setData")
-    public void setComposant() {
+    @Port(name = "setEquipementState")
+    public void setComposant(Object o) {
+
+        // On lit les paramètres ecrit sur le port
+        String data = new String(o.toString());
+        String [] temp = data.split(";"); // Split les parametres
+        addComposant = temp[0]; // Récupere l'adresse de l'équipement
+        value = float.valueOf(temp[1]);
 
         // Connexion à la passerelle KNX (si l'on est pas deja connecté)
         if (connect == false) {
@@ -91,9 +96,14 @@ public class KnxImplementation extends AbstractComponentType {
     /**
      * Récupère la valeur d'un équipement KNX
      */
-    @Port(name = "getData")
-    public void getData(){
+    @Port(name = "getEquipementState")
+    public void getData(Object o){
 
+        // Lecture des paramètres sur le port getEquipementState
+        String data = new String(o.toString());
+        String [] temp = data.split(";");
+
+        addComposant = temp[0];
         // Connexion à la passerelle KNX (si l'on est pas deja connecté)
         if (connect == false) {
             connexionKnx(ipPasserelle);
@@ -101,10 +111,14 @@ public class KnxImplementation extends AbstractComponentType {
 
         // Action sur l'équipement
         try {
-            pc.readFloat(new GroupAddress(addComposant));
+           float value = pc.readFloat(new GroupAddress(addComposant));
             log.log(Level.INFO, String.format("Valeur équipement: %s: %s", addComposant, value));
 
             // Ecriture de la valeur sur le port
+            MessagePort sendData = getPortByName("getState", MessagePort.class);
+            if(sendData != null){
+                sendData.process(value);
+            }
 
         } catch (KNXException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -128,7 +142,6 @@ public class KnxImplementation extends AbstractComponentType {
      *
      * @param ip: adresse IP de la passerelle
      */
-    @Port(name = "connect")
     public void connexionKnx(String ip) {
 
         log.log(Level.INFO, "Connexion a la passerelle");
@@ -160,7 +173,6 @@ public class KnxImplementation extends AbstractComponentType {
      *
      * @param linkIp
      */
-    @Port(name = "deconnect")
     public void deconnexionKNX(KNXNetworkLinkIP linkIp) {
 
         try {
