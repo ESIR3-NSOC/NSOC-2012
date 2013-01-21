@@ -21,6 +21,7 @@
     <orderEntry type="library" name="Maven: org.kevoree:org.kevoree.adaptation.model:1.8.9" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree:org.kevoree.kcl:1.8.9" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree.tools:org.kevoree.tools.annotation.api:1.8.9" level="project" />
+    <orderEntry type="module" module-name="Module-knx" />
   </component>
 </module>
 

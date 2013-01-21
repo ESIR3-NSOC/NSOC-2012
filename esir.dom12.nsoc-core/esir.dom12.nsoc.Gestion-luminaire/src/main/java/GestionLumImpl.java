@@ -1,9 +1,10 @@
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
+import org.kevoree.framework.MessagePort;
 
-import java.lang.Object;
+import java.lang.Boolean;
+import java.lang.Float;
 import java.lang.String;
-import java.lang.System;
 import java.net.Inet4Address;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,6 +17,9 @@ import java.util.logging.Logger;
  * To change this template use File | Settings | File Templates.
  */
 
+/**
+ * Défniniton des ports
+ */
 
 @Requires({
         @RequiredPort(name = "getLight", type = PortType.MESSAGE, optional = false),
@@ -25,13 +29,17 @@ import java.util.logging.Logger;
         @ProvidedPort(name = "getLightState", type = PortType.MESSAGE),
         @ProvidedPort(name = "setLightState", type = PortType.MESSAGE)
 })
-public class GestionLum extends AbstractComponentType {
+@DictionaryType({
+        @DictionaryAttribute(name = "Board_light", defaultValue = "3/0/1", optional = true),
+        @DictionaryAttribute(name = "Room_light", defaultValue = "3/0/2", optional = true)
+})
+public class GestionVolImpl extends AbstractComponentType {
 
     /**
      * Global Variable
      */
     String ipadd; // Adresse de la machine
-    InetAddress ip;// Objet pour connaitre l'adresse ip de notre machine
+    Inet4Address ip;// Objet pour connaitre l'adresse ip de notre machine
     String ipPasserelle; // Adresse ip de la passerelle
     Logger log = Logger.getLogger(GestionVolImpl.class.getName());
 
@@ -43,7 +51,7 @@ public class GestionLum extends AbstractComponentType {
 
     @Start
     public void startComponent() {
-        System.out.println("Gestion Luminaire :: Start");
+        System.out.println("Consumer:: Start");
 
         // Get the value from the required port
 
@@ -51,24 +59,21 @@ public class GestionLum extends AbstractComponentType {
 
     /**
      * Methode qui appel le bon composant pour effectuer la modification sur l'équipement
-     *
-     * @param add:   addresse de l'équipement a commander
-     * @param type:  type d'équipement (KNX, Dali, Bacnet)
-     * @param value: valeur a donner a l'équipement
      * @return
      */
 
-    @Port(name = "setLightState")
+    @Port(name = "setLight")
     public boolean setEquipement(Object o) {
 
-        // On recupere les parametres contenu dans l'objet o
-        String data = new String(o);
-        String [] temp = data.split(data,";");
-
-        type = temp[0];
-        value = float.valueOf(temp[1]);
         // Selon le type d'équipement, nous appelons le bon composant
 
+        // On recécupere les données
+        String data = new String((byte[]) o);
+        String [] temp = data.split(":");
+        String equipementAdd = null;  // Equipement a controler (Room_light, Board_light)
+        Boolean valBoardLight;
+
+        type = "KNX"; // Toujours égal a KNX
         // Switch case impossible sur une variable String...
         if (type.equals("KNX")) {
 
@@ -76,13 +81,23 @@ public class GestionLum extends AbstractComponentType {
             // Cas ou l'on veut commander des équipements KNX
 
             // Ecriture sur le port setDataKnx
-            MessagePort prodPort = getPortByName("setLight",MessagePort.class);
-            if(prodPort != null) {
+            MessagePort portKnx = getPortByName("setLight", MessagePort.class);
+            if(portKnx != null){
+                // On récupere la valeur et les équipements a modifié
+                // Dans le cas de la lumiere du tableau, la valeur est de type ON/OFF
+                if(temp[0].equals("LIGHT_BOARD")){
+                    equipementAdd = temp[0];
+                    valBoardLight = temp[1];
+                    String knxData = equipementAdd + ":" + valBoardLight;
+                }
+                else if(temp[0].equals("LIGHT_ROOM")){
+                    equipementAdd = temp[0];
+                    value = Float.parseFloat(temp[1]);
+                    String knxData = equipementAdd + ":" + value;
 
-                // Donnée à envoyer au composant KNX
-                String knxData = value + ";" + add; //
-                prodPort.process(knxData); // Ecrit sur le port setLight
+                }
 
+                portKnx.process(knxData); // Ecrit sur le port setLight
             }
 
 
@@ -109,29 +124,29 @@ public class GestionLum extends AbstractComponentType {
     }
 
     @Port(name = "getLightState")
-    public float getLightState(Object o) {
+    public void getShutterState(Object o){
 
-        // Récuperation des données sur le port
-        String data = new String(o);
-        String [] temp = data.split(data,";");
+        // Variables de la fonction
 
-        // Affichage des données
-        System.out.println("Donnée::getLigthState : " + data);
+        String data = new String((byte[]) o);
+        String [] temp = data.split(";");
 
         type = temp[0];
 
-        // Variables de la fonction
-        float lightValue = 0;
-
-        // Selon le type de technologie,
         // Switch case impossible sur une variable String...
         if (type.equals("KNX")) {
 
             log.log(Level.INFO, "KNX selectionné");
             // Cas ou l'on veut commander des équipements KNX
 
-            // Ecriture sur le port getDataKnx
+            // Ecriture sur le port setDataKnx
+            MessagePort portKnx = getPortByName("setLight", MessagePort.class);
+            if(portKnx != null){
+                // Donnée à envoyer au composant KNX
 
+                String knxData = (String) getDictionary().get("Room_light"); //
+                portKnx.process(knxData); // Ecrit sur le port setLight
+            }
 
         } else if (type.equals("Dali")) {
 
@@ -152,8 +167,23 @@ public class GestionLum extends AbstractComponentType {
             System.out.println("Equipements non reconnu");
 
         }
+    }
 
-        return shutterValue;
+    /**
+     * retourne l'adresse de l'équipement
+     */
+    public String getEquipement(String portValue){
+
+        // Selon le nom de l'équipement on retourne l'adresse qui se trouve dans le dictionnnaire
+        if(portValue.equals("LIGHT_BOARD")){
+            return (String) getDictionary().get("Board_light");
+        }
+        if(portValue.equals("LIGHT_ROOM")){
+            return (String) getDictionary().get("Room_light");
+        }
+        else {
+            return "Equipement non connu";
+        }
     }
 
 

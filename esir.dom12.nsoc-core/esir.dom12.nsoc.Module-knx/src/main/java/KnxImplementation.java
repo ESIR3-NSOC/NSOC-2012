@@ -1,6 +1,5 @@
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
-import org.kevoree.framework.MessagePort;
 import tuwien.auto.calimero.GroupAddress;
 import tuwien.auto.calimero.exception.KNXException;
 import tuwien.auto.calimero.knxnetip.KNXnetIPConnection;
@@ -35,10 +34,10 @@ import java.util.logging.Logger;
         @ProvidedPort(name = "setEquipementState", type = PortType.MESSAGE)
 })
 @DictionaryType({
-        @DictionaryAttribute(name = "ipMaquette", defaultValue = "true", optional = true)
+        @DictionaryAttribute(name = "ipMaquette", defaultValue = "192.168.1.193", optional = true)
 })
 
-public class KnxImplementation extends AbstractComponentType {
+public class KnxImplementation extends AbstractComponentType implements KnxListener {
 
     /**
      * Attributs
@@ -53,6 +52,21 @@ public class KnxImplementation extends AbstractComponentType {
     String addComposant; // Adresse de l'équipement
     float value ; // Prchaine valeur du composant
 
+    // Variable pour le Thread
+    KnxThread threadKnx = new KnxThread();
+
+
+    @Start
+    public void startComponent() {
+
+        // Si le thread n'est pas démarré
+        if(threadKnx == null || threadKnx.isStopped()){
+            threadKnx.start(); // Démarre le thread
+        }
+
+    }
+
+
     /**
      * Implémentation de la methode setComposant
      */
@@ -62,9 +76,17 @@ public class KnxImplementation extends AbstractComponentType {
 
         // On lit les paramètres ecrit sur le port
         String data = new String(o.toString());
-        String [] temp = data.split(";"); // Split les parametres
+        String [] temp = data.split(":"); // Split les parametres
         addComposant = temp[0]; // Récupere l'adresse de l'équipement
-        value = float.valueOf(temp[1]);
+        String value = temp[1]; // Get the value
+        boolean isFloat = false;
+        float fvalue = 0;
+
+        // Cas ou la valeur est un float
+        if(value != "ON" || value != "OFF" || value != "UP" || value != "DOWN"){
+            fvalue = Float.parseFloat(value);
+            isFloat = true;
+        }
 
         // Connexion à la passerelle KNX (si l'on est pas deja connecté)
         if (connect == false) {
@@ -73,37 +95,42 @@ public class KnxImplementation extends AbstractComponentType {
 
         // Action sur l'équipement
         try {
-            pc.write(new GroupAddress(addComposant), value);
-            log.log(Level.INFO, String.format("Valeur équipement: %s modifié: %s", addComposant, value));
+            /* Cas ou l'on utilise la valeur float */
+            if(isFloat == true){
+                pc.write(new GroupAddress(addComposant), fvalue);
+                log.log(Level.INFO, String.format("Valeur équipement: %s modifié: %s", addComposant, fvalue));
+            }
+            else{
+                pc.write(new GroupAddress(addComposant), value);
+                log.log(Level.INFO, String.format("Valeur équipement: %s modifié: %s", addComposant, value));
+            }
+
 
         } catch (KNXException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             log.log(Level.WARNING, "KNX Exception lors de l'ecriture sur le composant");
+
             // Si il y a un problème on returne false et on se déconnecte
             deconnexionKNX(netLinkIp);
 
             log.log(Level.INFO, "Déconnexion");
-            // Ecriture sur le port
         }
 
         // Sinon on retourne true et on se déconnect
         deconnexionKNX(netLinkIp);
 
         log.log(Level.INFO,"Déconnexion");
-        // ecriture sur le port
     }
 
     /**
      * Récupère la valeur d'un équipement KNX
      */
     @Port(name = "getEquipementState")
-    public void getData(Object o){
+    public String getState(String addComposant){
 
-        // Lecture des paramètres sur le port getEquipementState
-        String data = new String(o.toString());
-        String [] temp = data.split(";");
+        float value = 0; // Variable pour la valeur de Ligth room
+        boolean valueBool = false; // Variable utilisé pour la valeur des volets et de la lumiere du tableau
 
-        addComposant = temp[0];
         // Connexion à la passerelle KNX (si l'on est pas deja connecté)
         if (connect == false) {
             connexionKnx(ipPasserelle);
@@ -111,13 +138,17 @@ public class KnxImplementation extends AbstractComponentType {
 
         // Action sur l'équipement
         try {
-           float value = pc.readFloat(new GroupAddress(addComposant));
-            log.log(Level.INFO, String.format("Valeur équipement: %s: %s", addComposant, value));
-
-            // Ecriture de la valeur sur le port
-            MessagePort sendData = getPortByName("getState", MessagePort.class);
-            if(sendData != null){
-                sendData.process(value);
+            // Cas ou on lit un float (Room_Light)
+            if(addComposant.equals("3/0/2")){
+                value = pc.readFloat(new GroupAddress(addComposant));
+                log.log(Level.INFO, String.format("Valeur équipement: %s: %s", addComposant, value));
+                return addComposant + ":" + String.valueOf(value);
+            }
+            // Sinon on lit un boolean true ou false
+            else{
+                valueBool = pc.readBool(new GroupAddress(addComposant));
+                log.log(Level.INFO, String.format("Valeur équipement: %s: %s", addComposant, valueBool));
+                return addComposant + ":" + String.valueOf(valueBool);
             }
 
         } catch (KNXException e) {
@@ -127,14 +158,24 @@ public class KnxImplementation extends AbstractComponentType {
             deconnexionKNX(netLinkIp);
 
             log.log(Level.INFO, "Déconnexion");
-            // Ecriture sur le port
+
+
         }
 
         // Sinon on retourne true et on se déconnect
         deconnexionKNX(netLinkIp);
 
         log.log(Level.INFO,"Déconnexion");
-        // ecriture sur le port
+
+        // Cas on lit un boolean
+        if(value == 0){
+            return addComposant + ":" + String.valueOf(valueBool);
+        }
+        // Cas on lit un float
+        else{
+            return addComposant + ":" + String.valueOf(value);
+        }
+
     }
 
     /**
