@@ -11,7 +11,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: esir.dom12.nsoc.Module-knx:esir.dom12.nsoc.Module-knx:1.8.9" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree.tools:org.kevoree.tools.javase.framework:1.8.9" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree:org.kevoree.framework:1.8.9" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree:org.kevoree.api:1.8.9" level="project" />
