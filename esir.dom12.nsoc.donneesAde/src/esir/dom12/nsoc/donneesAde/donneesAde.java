@@ -6,29 +6,39 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.StringTokenizer;
 
-
 public class donneesAde {
-	
+	//index :
 	static int dtstamp = 0, dtstart = 1, dtend = 2, summary = 3, location = 4, description = 5;
 	
 
     public static String ressource;//voir ent : ESIR1 997 / ESIR2 111 / ESIR3 982
-    public static String dateDebut;
-    public static String dateFin;
-    public static String projectId;
+    public static String dateDebut;//forme : AAAA-MM-JJ
+    public static String dateFin;//forme : AAAA-MM-JJ
+    public static int annee;//AAAA
+    public static int mois;//MM
+    public static int jour;//JJ
+    public static String projectId;//défault = 31
+    public static String batiment;//41 ou 42
+    public static String salle;//1,2,3,4,101,102,103,104,L,M,N
 
     public static void main(String[] args) throws IOException {
-        init("982", "2012-12-18", "2012-12-18");
-        String[] data = getPlanningSalle("41","1",2012,12,18);
+    	init ("982",2012,12,18,"41","1");//ressource annee mois jour batiment salle
+        String[] data = getPlanningSalle();
         for (int i=0; i<9; i++)
-        	System.out.println(data[i]);
+        	System.out.println("n°"+i+" : "+data[i]);
     }
     
-    static void init(String ressourceInit, String dateDebutInit, String dateFinInit) {
+    //attribue la ressource voulue et la plage de temps concernée
+    static void init(String ressourceInit, int anneeInit, int moisInit, int jourInit, String batimentInit, String salleInit) {
         ressource = ressourceInit;//voir ent : ESIR1 997 / ESIR2 111 / ESIR3 982
-        dateDebut = dateDebutInit;
-        dateFin = dateFinInit;
+        //dateDebut = anneeInit+"-"+moisInit+"-"+jourInit;
+        //dateFin = anneeInit+"-"+moisInit+"-"+jourInit;
         projectId = "31";
+        batiment=batimentInit;
+        salle=salleInit;
+        annee=anneeInit;
+        mois=moisInit;
+        jour=jourInit;
     }
 
     static String recupererAde() throws IOException {
@@ -40,6 +50,7 @@ public class donneesAde {
         while ((inputLine = in.readLine()) != null)
             ade = ade + "\n" + inputLine;
         in.close();
+        System.out.println(url.toString());
 		return ade;		
 	}
 	
@@ -97,7 +108,7 @@ public class donneesAde {
 	
 	//date +- 1
 	//batiment={41,42} salle={L,M,N,1,2,3,4,101,102,103,104}
-	static String[] getPlanningSalle(String batiment, String salle,  int annee, int mois, int jour) throws IOException{
+	static String[] getPlanningSalle() throws IOException{
 		//renvoie les heures 
 		String[] infos=new String[15];
 		String[] elements=new String[10];
@@ -147,13 +158,13 @@ public class donneesAde {
 	}
 
 
-    String getCours(String personne, String heure, String date) {
+    String getCours(String personne, String heure) {
         String infos = null;
 
         return infos;
     }
 
-    String getSalle(String salle, String heure, String date) {
+    String getSalle(String salle, String heure) {
         String infos = null;
 
         return infos;
