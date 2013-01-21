@@ -56,34 +56,14 @@ public class donneesArbre {
 	    // Now submit the form by clicking the button and get back the second page.
 	    HtmlPage page2 = button.click();	    
 	   String rep = page2.getWebResponse().getContentAsString();
-	    System.out.println(rep+"-------------------------51--------------------------------------------------------------------------------\n\n\n");
+	    System.out.println(rep+"-------------------------59--------------------------------------------------------------------------------\n\n\n");
 
-	    /*HtmlSelect select = (HtmlSelect) page2.getElementByName("projectId");
-	    HtmlOption option = select.getOptionByText("BEAULIEU 2012-2013");
-	    select.setSelectedAttribute(option, true);*/
-	    ww.setEnclosedPage(page2);
 	    final HtmlImageInput ip = page2.getFirstByXPath("//input");//[@nsrc='/ade/button?text=Ok&red=false&cssClass=okbutton']
 	    HtmlPage page3 = (HtmlPage) ip.click();
 	    rep = page3.getWebResponse().getContentAsString();
-	    System.out.println(rep+"-------------------------------62--------------------------------------------------------------------------\n\n\n");
+	    System.out.println(rep+"-------------------------------66--------------------------------------------------------------------------\n\n\n");
 	    ScriptResult sr = page3.executeJavaScript("checkCategory('trainee')");
 	    System.out.println("script result... :  "+sr.toString());
 	    webClient.closeAllWindows();
 	}
 }
-/*static String recupererArbre(String requete) throws IOException {
-String tree = null;
-URL url = new URL("http://plannings.univ-rennes1.fr/ade/standard/gui/tree.jsp?calType=ical&login=cal&password=visu&projectId=31&"+requete);
-URL url2 = new URL("http://plannings.univ-rennes1.fr/ade/standard/gui/tree.jsp?calType=ical&login=cal&password=visu&projectId=31&branchId=982&expand=true&forceLoad=true&reload=true");
-
-HttpClient client = new HttpClient();
-HttpMethod method = new GetMethod("http://www.apache.org/");
-URLConnection connection = url.openConnection();        
-BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-String inputLine;
-while ((inputLine = in.readLine()) != null)
-    tree +="\n" + inputLine;
-in.close();
-System.out.println(url.toString()+"\n"+tree);
-return tree;		
-}*/

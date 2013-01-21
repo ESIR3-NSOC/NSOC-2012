@@ -23,7 +23,7 @@ public class donneesAde {
 
     public static void main(String[] args) throws IOException {
     	//init ("982",2012,12,18,"41","1");//ressource annee mois jour batiment salle
-        String[] data = fonctionsAde.planningDeuxJours (2012,12,18, "41","1");
+        String[] data = fonctionsAde.planningSalleParDate (2012,12,18, "41","1");
         for (int i=0; i<9; i++)
         	System.out.println("n°"+i+" : "+data[i]);
         
