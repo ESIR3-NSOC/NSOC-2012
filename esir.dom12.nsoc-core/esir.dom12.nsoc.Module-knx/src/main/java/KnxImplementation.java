@@ -1,5 +1,6 @@
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
+import org.kevoree.framework.MessagePort;
 import tuwien.auto.calimero.GroupAddress;
 import tuwien.auto.calimero.exception.KNXException;
 import tuwien.auto.calimero.knxnetip.KNXnetIPConnection;
@@ -42,7 +43,7 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
     /**
      * Attributs
      */
-    String ipPasserelle = null;
+    String ipPasserelle = (String) getDictionary().get("ipMaquette");
     Boolean connect = false;
     KNXNetworkLinkIP netLinkIp;
     ProcessCommunicator pc;
@@ -50,17 +51,17 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
 
     // Variables neccessaire pour agir sur les équipements
     String addComposant; // Adresse de l'équipement
-    float value ; // Prchaine valeur du composant
+    float value ;        // Prochaine valeur du composant
 
     // Variable pour le Thread
     KnxThread threadKnx = new KnxThread();
-
 
     @Start
     public void startComponent() {
 
         // Si le thread n'est pas démarré
         if(threadKnx == null || threadKnx.isStopped()){
+            threadKnx.addKnxListener(this);
             threadKnx.start(); // Démarre le thread
         }
 
@@ -125,7 +126,7 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
     /**
      * Récupère la valeur d'un équipement KNX
      */
-    @Port(name = "getEquipementState")
+   // @Port(name = "getEquipementState")
     public String getState(String addComposant){
 
         float value = 0; // Variable pour la valeur de Ligth room
@@ -227,5 +228,17 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
             }
         }
 
+    }
+
+
+    /**
+     * Cette fonction écrit les données sur le port getState du module KNX
+     * Les données correspondent aux différentes valeur des capteurs
+     */
+    public void sendData(String data){
+        MessagePort dataPort = getPortByName("getState",MessagePort.class);
+        if(dataPort != null) {
+            dataPort.process(data);
+        }
     }
 }

@@ -19,11 +19,9 @@ import java.util.logging.Logger;
  */
 
 @Requires({
-        @RequiredPort(name = "getShutter", type = PortType.MESSAGE, optional = false),
         @RequiredPort(name = "setShutter", type = PortType.MESSAGE, optional = false)
 })
 @Provides({
-        @ProvidedPort(name = "getShutterState", type = PortType.MESSAGE),
         @ProvidedPort(name = "setShutterState", type = PortType.MESSAGE)
 })
 @DictionaryType({
@@ -47,7 +45,7 @@ public class GestionVolImpl extends AbstractComponentType{
 
     @Start
     public void startComponent() {
-        System.out.println("Consumer:: Start");
+        System.out.println("Gestion volet :: Start");
 
         // Get the value from the required port
 
@@ -64,7 +62,7 @@ public class GestionVolImpl extends AbstractComponentType{
         // Selon le type d'équipement, nous appelons le bon composant
 
         // On recécupere les données
-        String data = new String((byte[]) o);
+        String data = new String(o.toString());
         String [] temp = data.split(";");
 
         type = temp[0];
@@ -108,49 +106,5 @@ public class GestionVolImpl extends AbstractComponentType{
         return false;
     }
 
-    @Port(name = "getShutterState")
-    public void getShutterState(Object o){
 
-        // Variables de la fonction
-
-        String data = new String((byte[]) o);
-        String [] temp = data.split(";");
-
-        type = temp[0];
-
-        // Switch case impossible sur une variable String...
-        if (type.equals("KNX")) {
-
-            log.log(Level.INFO, "KNX selectionné");
-            // Cas ou l'on veut commander des équipements KNX
-
-            // Ecriture sur le port setDataKnx
-            MessagePort portKnx = getPortByName("setShutter", MessagePort.class);
-            if(portKnx != null){
-                // Donnée à envoyer au composant KNX
-
-                String knxData = (String) getDictionary().get("Volet"); // Récupere l'adresse KNX du volet
-                portKnx.process(knxData); // Ecrit sur le port setLight
-            }
-
-        } else if (type.equals("Dali")) {
-
-            log.log(Level.INFO, "Dali selectionné");
-            // Cas ou l'on veut commander des equipement Dali
-            System.out.println("Les équipements dali ne sont pas encore commandables");
-
-        } else if (type.equals("Bacnet")) {
-
-            log.log(Level.INFO, "Bacnet selectionné");
-            // Cas ou l'on veut commander des équipement Bacnet
-            System.out.println("Les équipements Bacnet ne pas encore commandables");
-
-        } else {
-
-            log.log(Level.INFO, "appareil inconnu selectionné");
-            // Cas ou le type d'équipement est inconnu
-            System.out.println("Equipements non reconnu");
-
-        }
-    }
 }

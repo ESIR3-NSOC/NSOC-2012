@@ -8,4 +8,5 @@
 public interface KnxListener {
 
     public String getState(String add);
+    public void sendData(String data);
 }
