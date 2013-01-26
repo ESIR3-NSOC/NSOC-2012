@@ -1,10 +1,13 @@
 package esir.dom12.nsoc.donneesAde;
+
 import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class donneesAde {
@@ -24,11 +27,14 @@ public class donneesAde {
 
     public static void main(String[] args) throws IOException {
     	//init ("982",2012,12,18,"41","1");//ressource annee mois jour batiment salle
-        //String[] data = fonctionsAde.planningSalleParDate (2012,12,18, "41","1");
-    	String[] data = fonctionsAde.planningSalleParDate (2013,01,22, "41","3");
-        for (int i=0; i<9; i++)
+       // String[] data = fonctionsAde.planningSalleParDate (2012,12,18, "41","1");
+    	//String[] data = fonctionsAde.planningSalleParDate (2013,01,22, "41","3");
+        /*for (int i=0; i<9; i++)
         	System.out.println("n°"+i+" : "+data[i]);
-        System.out.println(fonctionsAde.coursActuelParEtudiant ("5881"));
+        System.out.println(fonctionsAde.coursActuelParEtudiant ("5881"));*/
+    	//recupererNoms("ESIR 1","Dom");
+    	//System.out.println(recupererIdEtudiant("Thebault Antoine"));
+    	 fonctionsAde.planningEtudiantParDate(2013, 1, 25, "Thebault Antoine");
     }
     
     //attribue la ressource voulue et la plage de temps concernée
@@ -191,8 +197,7 @@ public class donneesAde {
 		int i=1;
 		while (i<10){//récupère les informations voulues
 			if (infos[i]!=null){
-				elements = parsePlageHoraire(infos[i]);		
-				System.out.println(temps+" entre "+recupHeureCours(elements)+" et "+recupFinHeureCours(elements));
+				elements = parsePlageHoraire(infos[i]);
 				if (temps>recupHeureCours(elements)&& temps<recupFinHeureCours(elements)){
 						infos[0]=recupNomCours(elements)+recupLocation(elements);
 				}
@@ -201,16 +206,66 @@ public class donneesAde {
 		}
 		return infos[0];
 	}
-	
-    String getCours(String personne, String heure) {
-        String infos = null;
-
-        return infos;
+    
+    static String[] recupererNoms (String promo, String option) throws IOException{
+    	//Option : {Info, R & T, Biom, Dom, Mat}
+    	//Promo : {ESIR 1, ESIR 2, ESIR 3}
+    	//
+    	//
+    	InputStream ips=new FileInputStream("tree"); 
+		InputStreamReader ipsr=new InputStreamReader(ips);
+		BufferedReader br=new BufferedReader(ipsr);
+		String ligne;
+		String chaine=null;
+		String []resultat = new String[100];
+		Boolean promoOk=false;
+		Boolean optionOk=false;
+		Boolean ok =false;
+		int i=0;
+		
+		while ((ligne=br.readLine())!=null && !ok){
+			chaine+=ligne+"\n";
+			if (ligne.contains(promo)){
+				promoOk=true;
+			}
+			if (promoOk && ligne.contains(option)){
+				chaine=null;
+				promoOk=false;
+				optionOk=true;
+			}
+			if (optionOk && !ok){
+				resultat[i]=ligne;
+				i++;
+				if (ligne.contains("]),"))
+					ok=true;
+			}
+		}
+		resultat[0]=null;
+		resultat[i-1]=null;
+		for (i=1; resultat[i]!=null; i++){
+			resultat[i]=resultat[i].substring(15);
+			System.out.println(resultat[i]);
+		}
+		br.close(); 
+    	return resultat;
     }
-
-    String getSalle(String salle, String heure) {
-        String infos = null;
-
-        return infos;
+    public static String recupererIdEtudiant (String nomEtudiant) throws IOException{
+    	//(Nom Prenom)
+		String idEtudiant=null;
+		boolean ok=false;
+		
+		InputStream ips=new FileInputStream("tree"); 
+		InputStreamReader ipsr=new InputStreamReader(ips);
+		BufferedReader br=new BufferedReader(ipsr);
+		String ligne;
+		
+		while ((ligne=br.readLine())!=null && !ok){
+			if (ligne.contains(nomEtudiant)){
+				idEtudiant=ligne.substring(15,19);
+				ok=true;
+			}
+		}
+		
+    	return idEtudiant;    	
     }
 }

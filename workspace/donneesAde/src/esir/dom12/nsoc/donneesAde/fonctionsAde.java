@@ -14,9 +14,32 @@ public class fonctionsAde {
 		
 		return planning;
 	}
+	public static String[] planningEtudiantParDate(int annee, int mois, int jour, String etudiant) throws IOException{
+		donneesAde.init(donneesAde.recupererIdEtudiant(etudiant),annee,mois,jour+1,"","");		
+		String[] infos=new String[15];
+		String[] elements=new String[10];
+		
+		infos[0] = donneesAde.recupererAde();//récupération d'ade
+		infos = donneesAde.parseAde(infos[0]);//parse ade par cours
+		
+		infos[0]=null;
+		int i=1;
+		while (i<10){//récupère les informations voulues
+			if (infos[i]!=null){
+				elements = donneesAde.parsePlageHoraire(infos[i]);
+				infos[i]=donneesAde.recupHeureCours(elements)+" / "+donneesAde.recupNomCours(elements)+" / "+donneesAde.recupLocation(elements);
+				}
+			i++;
+		}
+		for (i=1; infos[i]!=null; i++){
+			System.out.println(infos[i]);
+		}
+		return infos;
+	}
 	public static String coursActuelParEtudiant(String etudiant) throws IOException{
+		//String etudiant = "Nom Prenom";
 		//retourne cours!=null si l'etudiant a cours
-		String ressource =etudiant;//recuperer par le nom de l'étudiant
+		String ressource =donneesAde.recupererIdEtudiant(etudiant);//recuperer par le nom de l'étudiant
 		//recup heure et date
 		Calendar calendar = Calendar.getInstance();	
 		int annee = calendar.get(Calendar.YEAR);

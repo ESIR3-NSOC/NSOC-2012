@@ -36,7 +36,6 @@ public class donneesArbre {
 		System.out.println("url : "+url+"\n-----------------\n");
     
 		final WebClient webClient = new WebClient(BrowserVersion.FIREFOX_10);
-		WebWindow ww = null;
 	    HtmlPage page = webClient.getPage(url);
 	    
 	    // Get the form that we are dealing with and within that form, 
