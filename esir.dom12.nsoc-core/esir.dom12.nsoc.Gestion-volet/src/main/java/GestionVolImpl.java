@@ -1,5 +1,6 @@
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
+import org.kevoree.framework.MessagePort;
 
 import java.net.Inet4Address;
 import java.util.logging.Level;
@@ -18,15 +19,15 @@ import java.util.logging.Logger;
  */
 
 @Requires({
-        @RequiredPort(name = "type", type = PortType.MESSAGE, optional = false),
-        @RequiredPort(name = "add", type = PortType.MESSAGE, optional = true),
-        @RequiredPort(name = "Value", type = PortType.MESSAGE, optional = true)
+        @RequiredPort(name = "setShutter", type = PortType.MESSAGE, optional = false)
 })
 @Provides({
-        @ProvidedPort(name = "getShutterState", type = PortType.MESSAGE),
-        @ProvidedPort(name = "setVolet", type = PortType.MESSAGE)
+        @ProvidedPort(name = "setShutterState", type = PortType.MESSAGE)
 })
-public class GestionVolImpl extends AbstractComponentType {
+@DictionaryType({
+        @DictionaryAttribute(name = "Volet", defaultValue = "2/0/1", optional = true)
+})
+public class GestionVolImpl extends AbstractComponentType{
 
     /**
      * Global Variable
@@ -44,7 +45,7 @@ public class GestionVolImpl extends AbstractComponentType {
 
     @Start
     public void startComponent() {
-        System.out.println("Consumer:: Start");
+        System.out.println("Gestion volet :: Start");
 
         // Get the value from the required port
 
@@ -56,8 +57,16 @@ public class GestionVolImpl extends AbstractComponentType {
      */
 
     @Port(name = "setVolet")
-    public boolean setEquipement() {
+    public boolean setEquipement(Object o) {
+
         // Selon le type d'équipement, nous appelons le bon composant
+
+        // On recécupere les données
+        String data = new String(o.toString());
+        String [] temp = data.split(";");
+
+        type = temp[0];
+        value = Float.parseFloat(temp[1]);
 
         // Switch case impossible sur une variable String...
         if (type.equals("KNX")) {
@@ -66,6 +75,13 @@ public class GestionVolImpl extends AbstractComponentType {
             // Cas ou l'on veut commander des équipements KNX
 
             // Ecriture sur le port setDataKnx
+            MessagePort portKnx = getPortByName("setShutter", MessagePort.class);
+            if(portKnx != null){
+                // Donnée à envoyer au composant KNX
+                String knxData = (String) getDictionary().get("Volet"); // Récupere l'adresse KNX du volet
+                knxData = knxData + ":" + temp[1];
+                portKnx.process(knxData); // Ecrit sur le port setLight
+            }
 
 
         } else if (type.equals("Dali")) {
@@ -90,42 +106,5 @@ public class GestionVolImpl extends AbstractComponentType {
         return false;
     }
 
-    @Port(name = "getShutterState")
-    public float getShutterState(){
 
-        // Variables de la fonction
-        float shutterValue = 0;
-
-        // Selon le type de technologie,
-        // Switch case impossible sur une variable String...
-        if (type.equals("KNX")) {
-
-            log.log(Level.INFO, "KNX selectionné");
-            // Cas ou l'on veut commander des équipements KNX
-
-            // Ecriture sur le port getDataKnx
-
-
-        } else if (type.equals("Dali")) {
-
-            log.log(Level.INFO, "Dali selectionné");
-            // Cas ou l'on veut commander des equipement Dali
-            System.out.println("Les équipements dali ne sont pas encore commandables");
-
-        } else if (type.equals("Bacnet")) {
-
-            log.log(Level.INFO, "Bacnet selectionné");
-            // Cas ou l'on veut commander des équipement Bacnet
-            System.out.println("Les équipements Bacnet ne pas encore commandables");
-
-        } else {
-
-            log.log(Level.INFO, "appareil inconnu selectionné");
-            // Cas ou le type d'équipement est inconnu
-            System.out.println("Equipements non reconnu");
-
-        }
-
-        return shutterValue;
-    }
 }

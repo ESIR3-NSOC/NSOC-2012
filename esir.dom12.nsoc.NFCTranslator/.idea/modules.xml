@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc.NFCTranslator.iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc.NFCTranslator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/esir.dom12.nsoc.connexionBDD.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/esir.dom12.nsoc.connexionBDD.iml" />
+    </modules>
+  </component>
+</project>
+
