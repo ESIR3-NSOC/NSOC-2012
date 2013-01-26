@@ -34,7 +34,7 @@ public class donneesAde {
         System.out.println(fonctionsAde.coursActuelParEtudiant ("5881"));*/
     	//recupererNoms("ESIR 1","Dom");
     	//System.out.println(recupererIdEtudiant("Thebault Antoine"));
-    	 fonctionsAde.planningEtudiantParDate(2013, 1, 25, "Thebault Antoine");
+    	 System.out.println(fonctionsAde.coursActuelParEtudiant("Thebault Antoine"));
     }
     
     //attribue la ressource voulue et la plage de temps concernée
@@ -188,7 +188,6 @@ public class donneesAde {
 		//renvoie les heures 
 		String[] infos=new String[15];
 		String[] elements=new String[10];
-		String recupIdetudiantFonction_nom;
 		ressource = nom;
 		
 		infos[0] = recupererAde();//récupération d'ade
@@ -216,7 +215,6 @@ public class donneesAde {
 		InputStreamReader ipsr=new InputStreamReader(ips);
 		BufferedReader br=new BufferedReader(ipsr);
 		String ligne;
-		String chaine=null;
 		String []resultat = new String[100];
 		Boolean promoOk=false;
 		Boolean optionOk=false;
@@ -224,12 +222,10 @@ public class donneesAde {
 		int i=0;
 		
 		while ((ligne=br.readLine())!=null && !ok){
-			chaine+=ligne+"\n";
 			if (ligne.contains(promo)){
 				promoOk=true;
 			}
 			if (promoOk && ligne.contains(option)){
-				chaine=null;
 				promoOk=false;
 				optionOk=true;
 			}

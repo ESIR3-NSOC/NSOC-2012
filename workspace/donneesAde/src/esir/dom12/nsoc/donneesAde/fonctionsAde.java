@@ -6,6 +6,12 @@ import java.util.Calendar;
 
 
 public class fonctionsAde {
+	public static boolean autorisation (String nom) throws IOException{
+		if (coursActuelParEtudiant(nom)==null)
+				return false;
+		return true;
+	}
+	
 	public static String[] planningSalleParDate (int annee, int mois, int jour, String batiment, String salle) throws IOException{
 		//ex : init("982",2012,12,18,"41","1") 
 		
@@ -51,10 +57,9 @@ public class fonctionsAde {
 		if (partie ==1)
 			heures+=12;
 		int minutes = calendar.get(Calendar.MINUTE);	
-		int temps=heures*100+minutes;
-		System.out.println("le "+jour+"-0"+mois+"-"+annee+" à "+temps);
-		
+		int temps=heures*100+minutes;		
 		donneesAde.init (ressource,annee,mois,jour,"","");
+		etudiant=ressource;
 		String cours = donneesAde.getPlanningEtudiant(etudiant,temps);//ressource
 		return cours;
 	}
