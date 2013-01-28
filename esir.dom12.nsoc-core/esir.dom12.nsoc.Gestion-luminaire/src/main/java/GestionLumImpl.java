@@ -31,6 +31,7 @@ import java.util.logging.Logger;
         @DictionaryAttribute(name = "Board_light", defaultValue = "3/0/1", optional = true),
         @DictionaryAttribute(name = "Room_light", defaultValue = "3/0/2", optional = true)
 })
+@ComponentType
 public class GestionLumImpl extends AbstractComponentType {
 
     /**
@@ -54,13 +55,22 @@ public class GestionLumImpl extends AbstractComponentType {
         // Get the value from the required port
 
     }
+    @Stop
+    public void stopComponent() {
+        System.out.println("Gestion Volet:: Stop");
+    }
+
+    @Update
+    public void updateComponent() {
+        System.out.println("Gestion Volet:: Update");
+    }
 
     /**
      * Methode qui appel le bon composant pour effectuer la modification sur l'équipement
      * @return
      */
 
-    @Port(name = "setLight")
+    @Port(name = "setLightState")
     public void setEquipement(Object o) {
 
         // Selon le type d'équipement, nous appelons le bon composant

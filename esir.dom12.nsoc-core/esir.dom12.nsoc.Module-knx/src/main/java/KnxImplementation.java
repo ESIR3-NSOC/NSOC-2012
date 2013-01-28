@@ -37,7 +37,7 @@ import java.util.logging.Logger;
 @DictionaryType({
         @DictionaryAttribute(name = "ipMaquette", defaultValue = "192.168.1.193", optional = true)
 })
-
+@ComponentType
 public class KnxImplementation extends AbstractComponentType implements KnxListener {
 
     /**
@@ -59,6 +59,7 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
     @Start
     public void startComponent() {
 
+        System.out.println("Module KNX :: Start");
         // Si le thread n'est pas démarré
         if(threadKnx == null || threadKnx.isStopped()){
             threadKnx.addKnxListener(this);
@@ -67,6 +68,15 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
 
     }
 
+    @Stop
+    public void stopComponent() {
+        System.out.println("Module KNX :: Stop");
+    }
+
+    @Update
+    public void updateComponent() {
+        System.out.println("Module KNX :: Update");
+    }
 
     /**
      * Implémentation de la methode setComposant
@@ -126,7 +136,7 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
     /**
      * Récupère la valeur d'un équipement KNX
      */
-   // @Port(name = "getEquipementState")
+    @Port(name = "getEquipementState")
     public String getState(String addComposant){
 
         float value = 0; // Variable pour la valeur de Ligth room

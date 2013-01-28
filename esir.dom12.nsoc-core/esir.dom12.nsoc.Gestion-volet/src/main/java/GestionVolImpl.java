@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 @DictionaryType({
         @DictionaryAttribute(name = "Volet", defaultValue = "2/0/1", optional = true)
 })
+@ComponentType
 public class GestionVolImpl extends AbstractComponentType{
 
     /**
@@ -46,19 +47,30 @@ public class GestionVolImpl extends AbstractComponentType{
         // Get the value from the required port
 
     }
+    @Stop
+    public void stopComponent() {
+        System.out.println("Gestion Volet:: Stop");
+    }
+
+    @Update
+    public void updateComponent() {
+        System.out.println("Gestion Volet:: Update");
+    }
 
     /**
      * Methode qui appel le bon composant pour effectuer la modification sur l'équipement
      * @return
      */
 
-    @Port(name = "setVolet")
+    @Port(name = "setShutterState")
     public boolean setEquipement(Object o) {
 
         // Selon le type d'équipement, nous appelons le bon composant
-
+        String data = null;
         // On recécupere les données
-        String data = new String(o.toString());
+        if (o instanceof String){
+            data = new String(o.toString());
+        }
         String [] temp = data.split(";");
 
         type = temp[0];
@@ -77,6 +89,7 @@ public class GestionVolImpl extends AbstractComponentType{
                 String knxData = (String) getDictionary().get("Volet"); // Récupere l'adresse KNX du volet
                 knxData = knxData + ":" + temp[1];
                 portKnx.process(knxData); // Ecrit sur le port setLight
+                return true;
             }
 
 
