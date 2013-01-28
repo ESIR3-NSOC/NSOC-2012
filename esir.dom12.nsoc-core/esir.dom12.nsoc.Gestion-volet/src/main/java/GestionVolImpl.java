@@ -2,7 +2,6 @@ import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 import org.kevoree.framework.MessagePort;
 
-import java.net.Inet4Address;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -32,9 +31,6 @@ public class GestionVolImpl extends AbstractComponentType{
     /**
      * Global Variable
      */
-    String ipadd; // Adresse de la machine
-    Inet4Address ip;// Objet pour connaitre l'adresse ip de notre machine
-    String ipPasserelle; // Adresse ip de la passerelle
     Logger log = Logger.getLogger(GestionVolImpl.class.getName());
 
     // Variables necessaire pour le getShutterState et le setVolet
