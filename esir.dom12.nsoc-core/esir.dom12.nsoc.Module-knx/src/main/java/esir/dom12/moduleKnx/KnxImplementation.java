@@ -1,3 +1,5 @@
+package esir.dom12.moduleKnx;
+
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 import org.kevoree.framework.MessagePort;
@@ -62,7 +64,9 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
         System.out.println("Module KNX :: Start");
         // Si le thread n'est pas démarré
         if(threadKnx == null || threadKnx.isStopped()){
-            threadKnx.addKnxListener(this);
+            if (threadKnx != null) {
+                threadKnx.addKnxListener(this);
+            }
             threadKnx.start(); // Démarre le thread
         }
 

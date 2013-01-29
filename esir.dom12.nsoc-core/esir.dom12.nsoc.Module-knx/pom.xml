@@ -7,6 +7,7 @@
     <groupId>Module-knx</groupId>
     <artifactId>Module-knx</artifactId>
     <version>1.8.9</version>
+    <name>Module KNX</name>
 
     <properties>
         <kevoree.version>${project.version}</kevoree.version>

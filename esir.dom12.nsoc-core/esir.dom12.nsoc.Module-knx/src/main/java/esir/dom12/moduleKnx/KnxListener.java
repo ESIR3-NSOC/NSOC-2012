@@ -1,3 +1,5 @@
+package esir.dom12.moduleKnx;
+
 /**
  * Created with IntelliJ IDEA.
  * User: guillaumelefloch
