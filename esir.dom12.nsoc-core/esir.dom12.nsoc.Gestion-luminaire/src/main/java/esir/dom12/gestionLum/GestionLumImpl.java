@@ -1,3 +1,5 @@
+package esir.dom12.gestionLum;
+
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 import org.kevoree.framework.MessagePort;
@@ -22,7 +24,7 @@ import java.util.logging.Logger;
  */
 
 @Requires({
-        @RequiredPort(name = "setLight", type = PortType.MESSAGE, optional = false)
+        @RequiredPort(name = "setLight", type = PortType.MESSAGE, optional = true)
 })
 @Provides({
         @ProvidedPort(name = "setLightState", type = PortType.MESSAGE)
