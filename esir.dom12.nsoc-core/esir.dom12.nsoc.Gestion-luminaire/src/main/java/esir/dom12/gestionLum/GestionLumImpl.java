@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 /**
  * Défniniton des ports
  */
-
+@Library(name = "JavaSE")
 @Requires({
         @RequiredPort(name = "setLight", type = PortType.MESSAGE, optional = true)
 })
@@ -96,12 +96,12 @@ public class GestionLumImpl extends AbstractComponentType {
                 // On récupere la valeur et les équipements a modifié
                 // Dans le cas de la lumiere du tableau, la valeur est de type ON/OFF
                 if(temp[0].equals("LIGHT_BOARD")){
-                    equipementAdd = temp[0];
+                    equipementAdd = (String) getDictionary().get("Board_light");
                     valBoardLight = Boolean.valueOf(temp[1]);
                     knxData = equipementAdd + ":" + valBoardLight;
                 }
                 else if(temp[0].equals("LIGHT_ROOM")){
-                    equipementAdd = temp[0];
+                    equipementAdd = (String) getDictionary().get("Room_light");
                     value = Float.parseFloat(temp[1]);
                     knxData = equipementAdd + ":" + value;
                 }
