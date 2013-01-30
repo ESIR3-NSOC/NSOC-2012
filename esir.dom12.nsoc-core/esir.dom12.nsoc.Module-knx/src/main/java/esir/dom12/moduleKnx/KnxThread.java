@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Time: 11:38 AM
  * To change this template use File | Settings | File Templates.
  */
-class KnxThread extends Thread{
+public class KnxThread extends Thread{
 
     /**
      * Variable global
@@ -17,6 +17,8 @@ class KnxThread extends Thread{
     private boolean stopped = false;
     private long delay = 200000;
     private ArrayList<KnxListener> listeners = new ArrayList<KnxListener>();
+
+    public KnxThread() {};
 
     /**
      * Fonction appélé lors du démarrage du thread
