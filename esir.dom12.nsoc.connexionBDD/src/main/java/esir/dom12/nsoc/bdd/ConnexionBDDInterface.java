@@ -9,7 +9,7 @@ package esir.dom12.nsoc.bdd;
  */
 public interface ConnexionBDDInterface {
 
-    public void sendRequestFromNfcToBdd (Object o);
+    public String sendRequestFromNfcToBdd (String req);
 
-    public String receiveNameFromBddToNfc ();
+    public String sendRequestFromTrombiToBdd (String req);
 }

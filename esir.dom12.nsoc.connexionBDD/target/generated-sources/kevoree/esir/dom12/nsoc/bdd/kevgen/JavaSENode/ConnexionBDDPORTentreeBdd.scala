@@ -2,8 +2,8 @@ package esir.dom12.nsoc.bdd.kevgen.JavaSENode
 import org.kevoree.framework.port._
 import esir.dom12.nsoc.bdd._
 import scala.{Unit=>void}
-class ConnexionBDDPORTentreeFromNfcToBdd(component : ConnexionBDD) extends esir.dom12.nsoc.bdd.ConnexionBDDInterface with KevoreeProvidedPort {
-def getName : String = "entreeFromNfcToBdd"
+class ConnexionBDDPORTentreeBdd(component : ConnexionBDD) extends esir.dom12.nsoc.bdd.ConnexionBDDInterface with KevoreeProvidedPort {
+def getName : String = "entreeBdd"
 def getComponentName : String = component.getName 
 def sendRequestFromNfcToBdd(req:java.lang.String) : java.lang.String ={
 val msgcall = new org.kevoree.framework.MethodCallMessage

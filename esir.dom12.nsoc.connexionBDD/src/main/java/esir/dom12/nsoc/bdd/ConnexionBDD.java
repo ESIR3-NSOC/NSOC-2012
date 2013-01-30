@@ -13,11 +13,9 @@ import org.kevoree.framework.MessagePort;
 import java.sql.*;
 
 @Provides({
-        @ProvidedPort(name = "entreeFromNfcToBdd", type = PortType.MESSAGE)
+        @ProvidedPort(name = "entreeBdd", type = PortType.SERVICE, className = ConnexionBDDInterface.class)
 })
-@Requires({
-        @RequiredPort(name = "sortieFromBddToNfc", type = PortType.MESSAGE, optional = true)
-})
+
 @DictionaryType({
         @DictionaryAttribute(name = "ConnexionDelay", defaultValue = "2000", optional = true)
 })
@@ -29,8 +27,9 @@ public class ConnexionBDD extends AbstractComponentType {
     String password;
     String requeteNom;
     String requetePrenom;
+    String requeteTrombi;
     String nomPrenomEtudiant;
-    ConnexionBDD c = new ConnexionBDD();
+    String trombiEtudiant;
 
     @Start
     public void startComponent() {
@@ -66,15 +65,14 @@ public class ConnexionBDD extends AbstractComponentType {
         return connection;
     }
 
-    @Port(name = "entreeFromNfcToBdd")
-    public void receiveRequestFromNFCTranslator (Object o) throws SQLException, ClassNotFoundException {
+    @Port(name = "entreeBdd", method = "sendRequestFromNfcToBdd")
+    public String sendRequestFromNfcToBdd (String req) throws SQLException, ClassNotFoundException {
 
-        String data = new String ((byte[]) o);
-        String [] temp = data.split(";");
+        String [] temp = req.split(";");
         requeteNom = temp[0];
         requetePrenom = temp[1];
 
-        Statement state = c.execute().createStatement();
+        Statement state = execute().createStatement();
 
         ResultSet nom = state.executeQuery(requeteNom);
         nom.next();
@@ -86,7 +84,22 @@ public class ConnexionBDD extends AbstractComponentType {
 
         nomPrenomEtudiant = nom + " " + prenom;
 
-        MessagePort portNFC = getPortByName("sortieFromBddToNfc", MessagePort.class);
-        portNFC.process(nomPrenomEtudiant);
+        return nomPrenomEtudiant;
+    }
+
+    @Port(name = "entreeBdd", method = "sendRequestFromTrombiToBdd")
+    public String sendRequestFromTrombiToBdd (String req) throws SQLException, ClassNotFoundException {
+
+        requeteTrombi = req;
+
+        Statement state = execute().createStatement();
+
+        ResultSet trombi = state.executeQuery(requeteTrombi);
+        trombi.next();
+        trombi.getString(1);
+
+        trombiEtudiant = trombi + "";
+
+        return trombiEtudiant;
     }
 }
