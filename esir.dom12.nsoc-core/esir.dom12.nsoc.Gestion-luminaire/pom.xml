@@ -7,6 +7,7 @@
     <groupId>esir.dom12.nsoc.Gestion-luminaire</groupId>
     <artifactId>esir.dom12.nsoc.Gestion-luminaire</artifactId>
     <version>1.8.9</version>
+    <name>Gestion Luminaire</name>
 
     <properties>
         <kevoree.version>${project.version}</kevoree.version>
