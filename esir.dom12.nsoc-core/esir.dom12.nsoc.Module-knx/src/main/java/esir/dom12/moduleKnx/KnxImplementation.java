@@ -28,12 +28,11 @@ import java.util.logging.Logger;
 /**
  * Definition des ports
  */
-
+@Library(name = "JavaSE")
 @Requires({
         @RequiredPort(name = "getState", type = PortType.MESSAGE, optional = true)
 })
 @Provides({
-        @ProvidedPort(name = "getEquipementState", type = PortType.MESSAGE),
         @ProvidedPort(name = "setEquipementState", type = PortType.MESSAGE)
 })
 @DictionaryType({
@@ -140,7 +139,6 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
     /**
      * Récupère la valeur d'un équipement KNX
      */
-    @Port(name = "getEquipementState")
     public String getState(String addComposant){
 
         float value = 0; // Variable pour la valeur de Ligth room

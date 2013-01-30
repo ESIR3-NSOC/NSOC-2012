@@ -15,6 +15,6 @@ import java.sql.SQLException;
 
 public interface NFCTranslatorInterface {
 
-    public void sendNumeroTagNFCFromGestionAccesToNfc (Object o);
+    public String sendNumeroTagNFCFromGestionAccesToNfc (String numeroTagNfc);
 
 }
