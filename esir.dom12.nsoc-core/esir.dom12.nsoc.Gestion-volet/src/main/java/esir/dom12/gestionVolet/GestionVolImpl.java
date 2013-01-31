@@ -44,7 +44,7 @@ public class GestionVolImpl extends AbstractComponentType {
     // Variables necessaire pour le getShutterState et le setVolet
     String type = null; // Correspond au type de technologie
     String add = null;  // Adresse de l'équipement que l'on veut commander
-    float value = 0;    // Valeur a addresse au volet
+    String value = null;    // Valeur a addresse au volet
 
     @Start
     public void startComponent() {
@@ -79,7 +79,7 @@ public class GestionVolImpl extends AbstractComponentType {
 
             StringTokenizer tokens = new StringTokenizer(data,":");
             type = tokens.nextElement().toString();
-            value = Float.valueOf(tokens.nextElement().toString());
+            value = tokens.nextElement().toString();
 
             // Switch case impossible sur une variable String...
             if (type.equals("KNX")) {
