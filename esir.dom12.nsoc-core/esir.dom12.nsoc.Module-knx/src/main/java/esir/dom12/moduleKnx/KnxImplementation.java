@@ -79,6 +79,8 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
     @Update
     public void updateComponent() {
         System.out.println("Module KNX :: Update");
+        this.stopComponent();   // Stop the component
+        this.startComponent();  // Start the component
     }
 
     /**

@@ -58,6 +58,8 @@ public class GestionVolImpl extends AbstractComponentType {
 
     @Update
     public void updateComponent() {
+        this.stopComponent();
+        this.startComponent();
         System.out.println("Gestion Volet:: Update");
     }
 
