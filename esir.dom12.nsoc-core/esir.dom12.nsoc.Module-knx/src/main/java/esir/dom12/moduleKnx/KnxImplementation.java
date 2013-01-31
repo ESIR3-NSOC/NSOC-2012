@@ -3,7 +3,6 @@ package esir.dom12.moduleKnx;
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 import org.kevoree.framework.MessagePort;
-import tuwien.auto.calimero.GroupAddress;
 import tuwien.auto.calimero.exception.KNXException;
 import tuwien.auto.calimero.knxnetip.KNXnetIPConnection;
 import tuwien.auto.calimero.link.KNXNetworkLinkIP;
@@ -105,24 +104,27 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
         }
 
         // Connexion à la passerelle KNX (si l'on est pas deja connecté)
-        if (connect == false) {
+      /*  if (connect == false) {
             connexionKnx(ipPasserelle);
-        }
+            connect = true;
+        }  */
 
         // Action sur l'équipement
-        try {
+       // try {
             /* Cas ou l'on utilise la valeur float */
             if(isFloat == true){
-                pc.write(new GroupAddress(addComposant), fvalue);
+               // pc.write(new GroupAddress(addComposant), fvalue);
+                sendData("Valeur équipement modifié");
                 log.log(Level.INFO, String.format("Valeur équipement: %s modifié: %s", addComposant, fvalue));
             }
             else{
-                pc.write(new GroupAddress(addComposant), value);
+                //pc.write(new GroupAddress(addComposant), value);
+                sendData("Valeur équipement modifié");
                 log.log(Level.INFO, String.format("Valeur équipement: %s modifié: %s", addComposant, value));
             }
 
 
-        } catch (KNXException e) {
+       /* } catch (KNXException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             log.log(Level.WARNING, "KNX Exception lors de l'ecriture sur le composant");
 
@@ -134,7 +136,7 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
 
         // Sinon on retourne true et on se déconnect
         deconnexionKNX(netLinkIp);
-
+        */
         log.log(Level.INFO,"Déconnexion");
     }
 
@@ -147,12 +149,13 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
         boolean valueBool = false; // Variable utilisé pour la valeur des volets et de la lumiere du tableau
 
         // Connexion à la passerelle KNX (si l'on est pas deja connecté)
-        if (connect == false) {
+      /*  if (connect == false) {
             connexionKnx(ipPasserelle);
-        }
+            connect = true;
+        }    */
 
         // Action sur l'équipement
-        try {
+        /*try {
             // Cas ou on lit un float (Room_Light)
             if(addComposant.equals("3/0/2")){
                 value = pc.readFloat(new GroupAddress(addComposant));
@@ -189,8 +192,9 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
         // Cas on lit un float
         else{
             return addComposant + ":" + String.valueOf(value);
-        }
+        }     */
 
+       return addComposant + ":" + true;
     }
 
     /**
