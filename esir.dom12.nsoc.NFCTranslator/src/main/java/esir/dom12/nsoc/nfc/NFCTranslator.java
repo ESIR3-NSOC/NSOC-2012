@@ -7,18 +7,16 @@ package esir.dom12.nsoc.nfc;
  * To change this template use File | Settings | File Templates.
  */
 
+import esir.dom12.nsoc.bdd.ConnexionBDDInterface;
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
-import org.kevoree.framework.MessagePort;
 
 @Provides(value = {
-        @ProvidedPort(name = "entreeFromGaToNfc", type = PortType.SERVICE, className = NFCTranslatorInterface.class),
-        @ProvidedPort(name = "entreeFromBddToNfc", type = PortType.MESSAGE)
+        @ProvidedPort(name = "entreeFromGaToNfc", type = PortType.SERVICE, className = NFCTranslatorInterface.class)
 })
 
 @Requires(value = {
-        @RequiredPort(name = "sortieFromNfcToGa", type = PortType.SERVICE, className = NFCTranslatorInterface.class, optional = false),
-        @RequiredPort(name = "sortieFromNfcToBdd", type = PortType.MESSAGE, optional = true)
+        @RequiredPort(name = "sortieFromNfcToBdd", type = PortType.SERVICE, className = ConnexionBDDInterface.class, optional = true)
 })
 
 @DictionaryType({
@@ -47,33 +45,14 @@ public class NFCTranslator extends AbstractComponentType {
     }
 
     @Port(name = "entreeFromGaToNfc", method = "sendNumeroTagNFCFromGestionAccesToNfc")
-    public void receiveNumeroTagNFCFromGestionAcces (Object o) {
-        String data = new String((byte[]) o);
-        String [] temp = data.split(";");
+    public String receiveNumeroTagNFCFromGestionAcces (String numeroTagNfc) {
+        String [] temp = numeroTagNfc.split(";");
         numeroTagNFC = Integer.valueOf(temp[0]);
+        ConnexionBDDInterface cbi = getPortByName("sortieFromNfcToBdd", ConnexionBDDInterface.class);
 
-        sendRequestToConnexionBDD();
-        receiveNameFromConnexionBDD(o);
-
-        MessagePort portGA = getPortByName("sortieFromNfcToGa", MessagePort.class);
-        portGA.process(nomPrenomEtudiant);
-    }
-
- //   @Port(name = "entreeFromGaToNfc", method = "receiveNameFromNfcToGestionAcces")
- //   public void sendNameToGestionAcces(Object o) {
-
- //   }
-
-    public void sendRequestToConnexionBDD () {
         String requeteSQL = "SELECT nom FROM listeEtudiants WHERE numeroTagNFC = " + numeroTagNFC + ";" + "SELECT prenom FROM listeEtudiants WHERE numeroTagNFC = " + numeroTagNFC;
-        MessagePort portBDD = getPortByName("sortieFromNfcToBdd", MessagePort.class);
-        portBDD.process(requeteSQL);
+        nomPrenomEtudiant = cbi.sendRequestFromNfcToBdd(requeteSQL);
 
+        return nomPrenomEtudiant;
     }
-
-    @Port(name = "entreeFromBddToNfc")
-    public void receiveNameFromConnexionBDD (Object o) {
-        nomPrenomEtudiant = o.toString();
-    }
-
 }

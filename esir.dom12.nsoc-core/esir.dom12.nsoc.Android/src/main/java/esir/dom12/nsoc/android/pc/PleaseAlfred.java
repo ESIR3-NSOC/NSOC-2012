@@ -11,15 +11,16 @@ import org.kevoree.android.framework.service.KevoreeAndroidService;
 
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
+import org.kevoree.framework.MessagePort;
 
 
 @Requires({
         @RequiredPort(name = "scenario", type = PortType.MESSAGE, needCheckDependency = false , optional = true)
 })
 
-@Provides({
+/*@Provides({
         @ProvidedPort(name = "trombi", type = PortType.MESSAGE)
-})
+}) */
 
 
 @Library(name = "Android")
@@ -45,6 +46,7 @@ public class PleaseAlfred extends AbstractComponentType {
         buttonScenario.setText("Scenario");
         buttonScenario.setOnClickListener(new View.OnClickListener() {
             public void onClick (View v) {
+                sdmsg("");
 
             }
         });
@@ -64,7 +66,7 @@ public class PleaseAlfred extends AbstractComponentType {
         start();
     }
 
-    @Port(name = "trombi")
+    /*@Port(name = "trombi")
     public void tromb (Object message) {
         uiService.getRootActivity().runOnUiThread(new Runnable() {
             @Override
@@ -72,15 +74,16 @@ public class PleaseAlfred extends AbstractComponentType {
                 Toast.makeText(uiService.getRootActivity(), "Light on!", Toast.LENGTH_SHORT).show();
             }
         });
-    }
+    }  */
 
+    public void sdmsg(String selecButton){
 
-    public void scenario(){
+        if (isPortBinded("Scenario")){
 
-        if (isPortBinded("scenario")) {
-            String state = getPortByName("scenario", Scena.class).scena();
-            buttonScenario.setText(state);}
+        MessagePort sdmsgButton = getPortByName("Scenario", MessagePort.class) ;
+        sdmsgButton.process(selecButton);
 
+     }
     }
 }
 

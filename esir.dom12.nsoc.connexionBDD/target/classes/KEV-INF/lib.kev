@@ -4,18 +4,27 @@
    <attributes state="false" name="ConnexionDelay" xsi:type="kevoree:DictionaryAttribute" optional="true" fragmentDependant="false"></attributes>
    <defaultValues value="2000" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.0"></defaultValues>
   </dictionaryType>
-  <required noDependency="true" name="sortieFromBddToNfc" xsi:type="kevoree:PortTypeRef" optional="true" ref="//@typeDefinitions.2"></required>
-  <provided noDependency="false" name="entreeFromNfcToBdd" xsi:type="kevoree:PortTypeRef" optional="false" ref="//@typeDefinitions.2">
-   <mappings beanMethodName="receiveRequestFromNFCTranslator" xsi:type="kevoree:PortTypeMapping" serviceMethodName="process"></mappings>
-   <mappings beanMethodName="receiveRequestFromNFCTranslator" xsi:type="kevoree:PortTypeMapping" serviceMethodName="process"></mappings>
+  <provided noDependency="false" name="entreeBdd" xsi:type="kevoree:PortTypeRef" optional="false" ref="//@typeDefinitions.2">
+   <mappings beanMethodName="sendRequestFromNfcToBdd" xsi:type="kevoree:PortTypeMapping" serviceMethodName="sendRequestFromNfcToBdd"></mappings>
+   <mappings beanMethodName="sendRequestFromNfcToBdd" xsi:type="kevoree:PortTypeMapping" serviceMethodName="sendRequestFromNfcToBdd"></mappings>
+   <mappings beanMethodName="sendRequestFromTrombiToBdd" xsi:type="kevoree:PortTypeMapping" serviceMethodName="sendRequestFromTrombiToBdd"></mappings>
+   <mappings beanMethodName="sendRequestFromTrombiToBdd" xsi:type="kevoree:PortTypeMapping" serviceMethodName="sendRequestFromTrombiToBdd"></mappings>
   </provided>
  </typeDefinitions>
  <typeDefinitions xsi:type="kevoree:NodeType" name="JavaSENode"></typeDefinitions>
- <typeDefinitions name="org.kevoree.framework.MessagePort" xsi:type="kevoree:MessagePortType" synchrone="false"></typeDefinitions>
+ <typeDefinitions name="esir.dom12.nsoc.bdd.ConnexionBDDInterface" xsi:type="kevoree:ServicePortType" synchrone="false">
+  <operations name="sendRequestFromNfcToBdd" xsi:type="kevoree:Operation" returnType="//@dataTypes.0">
+   <parameters name="req" xsi:type="kevoree:Parameter" type="//@dataTypes.0"></parameters>
+  </operations>
+  <operations name="sendRequestFromTrombiToBdd" xsi:type="kevoree:Operation" returnType="//@dataTypes.0">
+   <parameters name="req" xsi:type="kevoree:Parameter" type="//@dataTypes.0"></parameters>
+  </operations>
+ </typeDefinitions>
  <repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/release"></repositories>
  <repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/snapshots"></repositories>
  <repositories xsi:type="kevoree:Repository" url="http://repo1.maven.org/maven2"></repositories>
- <deployUnits requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9" hashcode="201301211722922" unitName="esir.dom12.nsoc.connexionBDD" xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.connexionBDD" version="1.8.9" type="jar" targetNodeType="//@typeDefinitions.1"></deployUnits>
+ <dataTypes xsi:type="kevoree:TypedElement" name="java.lang.String"></dataTypes>
+ <deployUnits requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9" hashcode="201301301740453" unitName="esir.dom12.nsoc.connexionBDD" xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.connexionBDD" version="1.8.9" type="jar" targetNodeType="//@typeDefinitions.1"></deployUnits>
  <deployUnits type="jar" unitName="org.kevoree.tools.javase.framework" xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
  <deployUnits type="jar" unitName="org.kevoree.framework" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
  <deployUnits type="jar" unitName="org.kevoree.api" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
