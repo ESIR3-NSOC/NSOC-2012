@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc.Android.iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc.Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc.android.iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc.android.iml" />
     </modules>
   </component>
 </project>

@@ -22,9 +22,9 @@ import org.kevoree.framework.MessagePort;
         @ProvidedPort(name = "trombi", type = PortType.MESSAGE)
 }) */
 
-
-@Library(name = "Android")
 @ComponentType
+@Library(name = "Android")
+
 public class PleaseAlfred extends AbstractComponentType {
 
     private KevoreeAndroidService uiService = null;
@@ -62,8 +62,8 @@ public class PleaseAlfred extends AbstractComponentType {
 
     @Update
     public void update() {
-        stop();
-        start();
+        //stop();
+        //start();
     }
 
     /*@Port(name = "trombi")
