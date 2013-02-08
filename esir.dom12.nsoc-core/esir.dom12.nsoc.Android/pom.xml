@@ -54,6 +54,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+
             <!-- Java compiler plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -65,6 +67,8 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
+
+
             <!-- android dex phase -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -113,24 +117,31 @@
             <id>kevoree-libs-release-local</id>
             <url>http://maven.kevoree.org/release</url>
         </repository>
-        <repository>
-            <id>kevoree-snapshots</id>
-            <url>http://maven.kevoree.org/snapshots</url>
-        </repository>
-    </repositories>
+           <repository>
+               <id>kevoree-snapshots</id>
+               <url>http://maven.kevoree.org/snapshots</url>
+           </repository>
+         <repository>
+             <id>repoLocal_Tablette</id>
+             <url>file://sdcard</url>
+         </repository>
+     </repositories>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>plugin.kevoree-github</id>
-            <url>http://maven.kevoree.org/release</url>
-        </pluginRepository>
-        <pluginRepository>
-            <id>plugin.kevoree-snapshots</id>
-            <url>http://maven.kevoree.org/snapshots</url>
-        </pluginRepository>
-    </pluginRepositories>
+  <pluginRepositories>
+
+      <pluginRepository>
+          <id>plugin.kevoree-github</id>
+          <url>http://maven.kevoree.org/release</url>
+      </pluginRepository>
+
+         <pluginRepository>
+             <id>plugin.kevoree-snapshots</id>
+             <url>http://maven.kevoree.org/snapshots</url>
+         </pluginRepository>
+
+     </pluginRepositories>
 
 
 
 
-</project>
+ </project>

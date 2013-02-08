@@ -80,10 +80,10 @@ public class PleaseAlfred extends AbstractComponentType {
 
         if (isPortBinded("Scenario")){
 
-        MessagePort sdmsgButton = getPortByName("Scenario", MessagePort.class) ;
-        sdmsgButton.process(selecButton);
+            MessagePort sdmsgButton = getPortByName("Scenario", MessagePort.class) ;
+            sdmsgButton.process(selecButton);
 
-     }
+        }
     }
 }
 
