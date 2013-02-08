@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 
 @Library(name = "JavaSE")
 @Requires({
-        @RequiredPort(name = "getDataToKNX", type = PortType.MESSAGE, optional = true)
+        @RequiredPort(name = "getDataToKnx", type = PortType.MESSAGE, optional = true)
 })
 @Provides({
         @ProvidedPort(name = "getDataFromVincent", type = PortType.MESSAGE)
@@ -68,11 +68,14 @@ public class GestionDonnee extends AbstractComponentType {
          data = data + ";SHUTTER:" + (String)getDictionary().get("SHUTTER");
          data = data + ";BRIGHTNESS" + (String)getDictionary().get("BRIGHTNESS");
 
+         log.log(Level.INFO, data);
+
          // Une fois le String de donnée créé, on écrit sur le port qui sera lu par le module KNX
          // Variable pour écrire sur le port lu par le module KNX
          MessagePort portKnx = getPortByName("getDataToKnx", MessagePort.class);
-         portKnx.process(data);
-
+         if(portKnx != null){
+            portKnx.process(data);      // Ecrit les données sur le port
+         }
          log.log(Level.INFO, "Data sent from GestionDonnée to Module-KNX");
 
      }
