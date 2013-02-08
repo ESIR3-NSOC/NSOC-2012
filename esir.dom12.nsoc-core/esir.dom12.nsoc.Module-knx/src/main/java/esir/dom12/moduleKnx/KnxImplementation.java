@@ -29,45 +29,40 @@ import java.util.logging.Logger;
  */
 @Library(name = "JavaSE")
 @Requires({
-        @RequiredPort(name = "getState", type = PortType.MESSAGE, optional = true)
+        @RequiredPort(name = "getData", type = PortType.MESSAGE, optional = true),
+        @RequiredPort(name = "log", type = PortType.MESSAGE, optional = true)
 })
 @Provides({
-        @ProvidedPort(name = "setEquipementState", type = PortType.MESSAGE)
+        @ProvidedPort(name = "setEquipementState", type = PortType.MESSAGE),
+        @ProvidedPort(name = "getEquipementState", type = PortType.MESSAGE)
+
 })
 @DictionaryType({
         @DictionaryAttribute(name = "ipMaquette", defaultValue = "192.168.1.193", optional = true)
 })
 @ComponentType
-public class KnxImplementation extends AbstractComponentType implements KnxListener {
+public class KnxImplementation extends AbstractComponentType {
 
     /**
      * Attributs
      */
-    String ipPasserelle = (String) getDictionary().get("ipMaquette");
-    Boolean connect = false;
-    KNXNetworkLinkIP netLinkIp;
-    ProcessCommunicator pc;
-    Logger log = Logger.getLogger(KnxImplementation.class.getName());
+    String ipPasserelle = (String) getDictionary().get("ipMaquette");  // Récupere l'addres IP dans le Dictionnaire
+    Boolean connect = false;                                           // Boolean pour savoir si l'on est connecté
+    KNXNetworkLinkIP netLinkIp;                                        // Variable Calimero
+    ProcessCommunicator pc;                                            // Variable Calimero
+    Logger log = Logger.getLogger(KnxImplementation.class.getName());  // Variable logger
 
     // Variables neccessaire pour agir sur les équipements
-    String addComposant; // Adresse de l'équipement
-    float value ;        // Prochaine valeur du composant
+    String addComposant;                                                // Adresse de l'équipement
+    float value;                                                       // Prochaine valeur du composant
 
     // Variable pour le Thread
-    KnxThread threadKnx = new KnxThread();
+
 
     @Start
     public void startComponent() {
 
         System.out.println("Module KNX :: Start");
-        // Si le thread n'est pas démarré
-        if(threadKnx == null || threadKnx.isStopped()){
-            if (threadKnx != null) {
-                threadKnx.addKnxListener(this);
-            }
-            threadKnx.start(); // Démarre le thread
-        }
-
     }
 
     @Stop
@@ -78,8 +73,8 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
     @Update
     public void updateComponent() {
         System.out.println("Module KNX :: Update");
-        this.stopComponent();   // Stop the component
-        this.startComponent();  // Start the component
+        this.stopComponent();                                           // Stop the component
+        this.startComponent();                                          // Start the component
     }
 
     /**
@@ -89,44 +84,55 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
     @Port(name = "setEquipementState")
     public void setComposant(Object o) {
 
-        // On lit les paramètres ecrit sur le port
-        String data = new String(o.toString());
-        String [] temp = data.split(":"); // Split les parametres
-        addComposant = temp[0]; // Récupere l'adresse de l'équipement
-        String value = temp[1]; // Get the value
-        boolean isFloat = false;
-        float fvalue = 0;
+        /**
+         * Variable de la classe
+         */
+        String data = null;                                             // Variable pour stocke les données du port
+        String[] temp;                                                 // Tableau pour gérer les données
+        Boolean value = false;                                          // Valeur appliqué a l'équipement
 
-        // Cas ou la valeur est un float
-        if(value != "ON" || value != "OFF" || value != "UP" || value != "DOWN"){
-            fvalue = Float.parseFloat(value);
-            isFloat = true;
+        // On lit les paramètres ecrit sur le port
+        data = new String(o.toString());                                // Récupere les paramètres
+        temp = data.split(":");                                         // Split les parametres
+        addComposant = temp[0];                                         // Récupere l'adresse de l'équipement
+        String valueTemp = temp[1];                                     // Get the value
+
+        log.log(Level.INFO, "Valeur récupérés :: addComposant :: " + addComposant + " value :: " + valueTemp);
+
+        // Convert the value into a boolean
+        // Datatype we receive:
+        // 2/0/2:false
+        value = Boolean.valueOf(valueTemp);                             // Convert String into Boolean
+
+        MessagePort dataLog = getPortByName("log", MessagePort.class);
+        if (dataLog != null) {
+            dataLog.process("L'etat de l'équipement :: " + addComposant + " est maintenant :: " + value);
         }
 
         // Connexion à la passerelle KNX (si l'on est pas deja connecté)
       /*  if (connect == false) {
-            connexionKnx(ipPasserelle);
+            connexionKnx(ipPasserelle);                                 // Connexion a la passerelle
             connect = true;
-        }  */
+        }
 
         // Action sur l'équipement
-       // try {
-            /* Cas ou l'on utilise la valeur float */
-            if(isFloat == true){
-               // pc.write(new GroupAddress(addComposant), fvalue);
-                sendData("Valeur équipement modifié");
-                log.log(Level.INFO, String.format("Valeur équipement: %s modifié: %s", addComposant, fvalue));
-            }
-            else{
-                //pc.write(new GroupAddress(addComposant), value);
-                sendData("Valeur équipement modifié");
-                log.log(Level.INFO, String.format("Valeur équipement: %s modifié: %s", addComposant, value));
-            }
+        try {
+            pc.write(new GroupAddress(addComposant), value);            // Commande l'équipement
+            */
+
+        // Ecrit sur le port log que tout a bien été effectué
+
 
 
        /* } catch (KNXException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             log.log(Level.WARNING, "KNX Exception lors de l'ecriture sur le composant");
+
+            // Ecrit sur le port log l'erreur qui est retourné
+            MessagePort dataPort = getPortByName("log",MessagePort.class);
+            if(dataPort != null) {
+                dataPort.process("Erreur lors la modification de l'état d'un équipement :: " + e);
+             }
 
             // Si il y a un problème on returne false et on se déconnecte
             deconnexionKNX(netLinkIp);
@@ -137,64 +143,98 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
         // Sinon on retourne true et on se déconnect
         deconnexionKNX(netLinkIp);
         */
-        log.log(Level.INFO,"Déconnexion");
+        log.log(Level.INFO, "Déconnexion");
     }
 
     /**
-     * Récupère la valeur d'un équipement KNX
+     * Implémentation de la méthode GetState,
+     * Cette méthode retourne la valeur de chaque équipement
      */
-    public String getState(String addComposant){
+    @Port(name = "getEquipementState")
+    public void getEquipementStates(Object o) {
 
-        float value = 0; // Variable pour la valeur de Ligth room
-        boolean valueBool = false; // Variable utilisé pour la valeur des volets et de la lumiere du tableau
+        /* Variable de la Classe */
 
-        // Connexion à la passerelle KNX (si l'on est pas deja connecté)
-      /*  if (connect == false) {
-            connexionKnx(ipPasserelle);
-            connect = true;
+        int i = 0;                                                             // Variable utile pour les itérations
+        String data = null;                                                    // Variable qui stocke les donnée du port
+        String[] dataTemp = new String[0];                                     // Tableau temporaire pour le split
+        String[] tempName = new String[0];                                     // Tableau pour stocké les noms
+        String[] tempAdd = new String[0];                                      // Tableau pour stocké les addresses
+        String[] tempsData = new String[0];                                    // Tableau temporaire
+        String[] tempResult = new String[0];                                   // Tableau pour sauvegarder les résults
+        boolean tempValue = false;                                             // Temp val to store result
+        String finalData = null;                                               // Variable qui sera ecrite sur le port
+        MessagePort portSorti = getPortByName("getData", MessagePort.class);   // Variable du port de sorti
+
+        // Nous Allons recevoir une trame de la forme suivante:
+        // BOARD_LIGHT:0/0/3;
+        // ROOM_LIGHT:0/0/4;
+        // SHUTTER:0/0/5;
+        // BRIGHTNESS:0/0/6
+
+        /* Parse ans extract Data */
+        data = new String(o.toString());                                       // Convertie les données recu en String
+        dataTemp = data.split(";");                                            // Split les données par ligne
+
+        log.log(Level.INFO, "data :: " + data);
+
+        // Get name and address
+        for (i = 0; i < dataTemp.length; i++) {
+            String temp = dataTemp[i];
+            tempsData = temp.split(":");
+            if(tempsData.length>1){
+                tempName[i] = tempsData[0];
+                tempAdd[i] = tempsData[1];
+            }
+        }
+
+        /********** FAKE KNX MODULE **********/
+
+        tempResult[0] = "false";
+        tempResult[1] = "true";
+        tempResult[2] = "false";
+        tempResult[3] = "400";
+
+
+        // Once adresse are extract, we can make request
+
+        // Check if we are connected to the KNX bus
+      /*  if (connect != true) {
+            connexionKnx(ipPasserelle);                                        // Crée le pont entre la machine et KNX
+        }
+
+
+        try {
+
+            // Pour les 3 premieres addresse on lit juste le bus KNX
+            for (i = 0; i < 3; i++) {
+                tempValue = pc.readBool(new GroupAddress(tempAdd[i]));         // Récupere la valeur boolean du device
+                tempResult[i] = String.valueOf(tempValue);                     // Ajoute le résultat dans le tableau
+            }
+
+            // Le quatrieme équipement étant un capteur, nous avons besoin d'un DATAPOINT
+
+            /**
+             *  DATAPOINT !!!!!
+             */
+
+      /*  } catch (KNXException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }    */
 
-        // Action sur l'équipement
-        /*try {
-            // Cas ou on lit un float (Room_Light)
-            if(addComposant.equals("3/0/2")){
-                value = pc.readFloat(new GroupAddress(addComposant));
-                log.log(Level.INFO, String.format("Valeur équipement: %s: %s", addComposant, value));
-                return addComposant + ":" + String.valueOf(value);
+        // Une fois toutes les données récupéré, on créé le String que l'on va envoyé
+        for(i=0; i<tempResult.length; i++){
+            if(i == 0){
+                finalData = tempName[i] + ":" + tempResult[i] + ";";           // Cas de la premiere itération
+            } else {
+                finalData = finalData + tempName[i] + ":" + tempResult[i] + ";";
             }
-            // Sinon on lit un boolean true ou false
-            else{
-                valueBool = pc.readBool(new GroupAddress(addComposant));
-                log.log(Level.INFO, String.format("Valeur équipement: %s: %s", addComposant, valueBool));
-                return addComposant + ":" + String.valueOf(valueBool);
-            }
-
-        } catch (KNXException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            log.log(Level.WARNING, "KNX Exception lors de l'ecriture sur le composant");
-            // Si il y a un problème on returne false et on se déconnecte
-            deconnexionKNX(netLinkIp);
-
-            log.log(Level.INFO, "Déconnexion");
-
-
         }
 
-        // Sinon on retourne true et on se déconnect
-        deconnexionKNX(netLinkIp);
-
-        log.log(Level.INFO,"Déconnexion");
-
-        // Cas on lit un boolean
-        if(value == 0){
-            return addComposant + ":" + String.valueOf(valueBool);
+        // Ecris les données sur le port de Sortie
+        if (portSorti != null) {
+            portSorti.process(finalData);
         }
-        // Cas on lit un float
-        else{
-            return addComposant + ":" + String.valueOf(value);
-        }     */
-
-       return addComposant + ":" + true;
     }
 
     /**
@@ -213,6 +253,7 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
             log.log(Level.INFO, "KNX netLinkIp créé");
 
             pc = new ProcessCommunicatorImpl(netLinkIp);
+
 
             log.log(Level.INFO, "Process Communicator créé");
         } catch (KNXException e) {
@@ -246,17 +287,5 @@ public class KnxImplementation extends AbstractComponentType implements KnxListe
             }
         }
 
-    }
-
-
-    /**
-     * Cette fonction écrit les données sur le port getState du module KNX
-     * Les données correspondent aux différentes valeur des capteurs
-     */
-    public void sendData(String data){
-        MessagePort dataPort = getPortByName("getState",MessagePort.class);
-        if(dataPort != null) {
-            dataPort.process(data);
-        }
     }
 }
