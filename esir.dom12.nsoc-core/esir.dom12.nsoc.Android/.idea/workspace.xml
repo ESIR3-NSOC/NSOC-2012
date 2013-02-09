@@ -1,33 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidDesignerProfile">
+    <option name="fullProfile">
+      <profile>
+        <option name="device" value="7in WSVGA (Tablet)" />
+        <option name="deviceConfiguration" value="Landscape" />
+        <option name="targetHashString" value="android-14" />
+        <option name="theme" value="Theme" />
+      </profile>
+    </option>
+    <option name="selection" value="[Full]" />
+  </component>
+  <component name="AndroidLayoutPreviewToolWindow">
+    <option name="state">
+      <GlobalState>
+        <option name="device" value="2.7in QVGA" />
+        <option name="dockMode" value="" />
+        <option name="nightMode" value="notnight" />
+        <option name="targetHashString" value="android-14" />
+        <option name="theme" value="Theme" />
+        <option name="visible" value="false" />
+      </GlobalState>
+    </option>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2f2f3c6b-67df-496f-84fb-6455fafa60d3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_adaptation_model_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_api_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_framework_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_kcl_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_model_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_model_context_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_tools_org_kevoree_tools_android_framework_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_tools_org_kevoree_tools_annotation_api_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_tools_org_kevoree_tools_javase_framework_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_9_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pc/AppliComponent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pc/FirstView.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java" afterPath="" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/esir.dom12.nsoc.Android.iml" afterPath="$PROJECT_DIR$/esir.dom12.nsoc.android.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java" afterPath="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/Scena.java" afterPath="$PROJECT_DIR$/src/main/java/pc/Scena.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="esir.dom12.nsoc.Android.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360310652669" ignored="false" />
+    <file path="/Dummy.txt" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360351308540" ignored="false" />
     <file path="/pom.xml" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360232131237" ignored="false" />
-    <file path="/PleaseAlfred.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360234109755" ignored="false" />
-    <file path="/fragment.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1359989439036" ignored="false" />
+    <file path="/PleaseAlfred.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360317585673" ignored="false" />
+    <file path="/fragment.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360411540539" ignored="false" />
     <file path="/DummyFile.xpath" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360145539440" ignored="false" />
     <file path="/Scena.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360145876395" ignored="false" />
     <file path="/dummy.xml" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360231381611" ignored="false" />
+    <file path="/AppliComponent.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360427119696" ignored="false" />
+    <file path="/FirstScreen.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360425422976" ignored="false" />
+    <file path="$PROJECT_DIR$/src/main/resources/k.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360411184112" ignored="false" />
+    <file path="/MyActivity.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360414305026" ignored="false" />
+    <file path="/a.xml" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360414553792" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360415176129" ignored="false" />
+    <file path="/FirstView.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360430316211" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,33 +107,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="AppliComponent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pc/AppliComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="31" selection-start="5189" selection-end="5189" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PleaseAlfred.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="32" selection-start="1527" selection-end="1527" vertical-scroll-proportion="0.46341464">
+            <state line="23" column="52" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1429#1552#0" expanded="true" />
-                <element signature="e#1541#1542#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scena.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/Scena.java">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="17" selection-start="210" selection-end="215" vertical-scroll-proportion="0.0">
+            <state line="15" column="41" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="esir.dom12.nsoc.android.iml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/esir.dom12.nsoc.android.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="3201" selection-end="3201" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstView.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pc/FirstView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="56" selection-start="579" selection-end="579" vertical-scroll-proportion="0.40133038">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,12 +165,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/PleaseAlfred.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Scena.java" />
-        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/Scena.java" />
-        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/ToggleLightService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/AppliComponent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/FirstScreen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/src/MyActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/src/AppliComponent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/src/PleaseAlfred.java" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/src/FirstScreen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/res/layout/nfcScreen.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/src/pcm/MyActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/src/pcm/FirstScreen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/src/pcm/FirstView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/src/pcm/AppliComponent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FirstView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AppliComponent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pc/AppliComponent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pc/FirstView.java" />
       </list>
     </option>
   </component>
@@ -166,20 +206,6 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="Plugins" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Android" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
           <option name="myItemId" value="Lifecycle" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
@@ -190,6 +216,25 @@
     <option name="y" value="22" />
     <option name="width" value="1280" />
     <option name="height" value="774" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AndroidDomInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -220,6 +265,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -227,10 +273,6 @@
               <option name="myItemId" value="esir.dom12.nsoc.Android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -253,24 +295,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -302,17 +326,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.settings.project.maven.importing" />
+    <property name="options.lastSelected" value="preferences.sourceCode.XML" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../GitWorkspaceTazPad/AppTazTag" />
+    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -324,11 +349,40 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/src" />
+      <recent name="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc" />
+      <recent name="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/src/pcm" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android Application.pc">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -437,7 +491,39 @@
       <patterns />
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="pc" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="pc" />
+      <option name="ACTIVITY_CLASS" value="com.example.pc.MyActivity" />
+      <option name="MODE" value="specific_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Android Application.pc" />
+    </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -484,16 +570,24 @@
       <created>1360145603762</created>
       <updated>1360145603762</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed problem repositories - new kevoree framework">
+      <created>1360310833109</created>
+      <updated>1360310833109</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2382496" sideWeight="0.7652439" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09319287" sideWeight="0.7652439" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16951567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.7652439" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3246951" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -501,18 +595,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29867256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2972561" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22204214" sideWeight="0.7675841" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23419774" sideWeight="0.7652439" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.267423" sideWeight="0.7675841" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23122239" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.267423" sideWeight="0.7652439" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2347561" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13675214" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -555,7 +650,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.9.0 Kevoree , pom and apk changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed problem repositories - new kevoree framework" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -572,6 +667,7 @@
     <MESSAGE value="First Activity" />
     <MESSAGE value="Changement valeur envoyé bouton" />
     <MESSAGE value="1.9.0 Kevoree , pom and apk changed" />
+    <MESSAGE value="fixed problem repositories - new kevoree framework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -585,92 +681,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="40" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1429#1552#0" expanded="true" />
-            <element signature="e#1541#1542#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/Scena.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="210" selection-end="215" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="67" selection-start="1135" selection-end="1135" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1429#1552#0" expanded="true" />
-            <element signature="e#1541#1542#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/Scena.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="210" selection-end="215" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="21" selection-start="4780" selection-end="4780" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="28" selection-start="2169" selection-end="2169" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1429#1552#0" expanded="true" />
-            <element signature="e#1541#1542#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/Scena.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="66" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="21" selection-start="4780" selection-end="4780" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="28" selection-start="2169" selection-end="2169" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1429#1552#0" expanded="true" />
-            <element signature="e#1541#1542#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/Scena.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="66" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="47" selection-start="1773" selection-end="1773" vertical-scroll-proportion="0.0">
@@ -678,45 +688,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="32" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1429#1552#0" expanded="true" />
-            <element signature="e#1541#1542#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/Scena.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pc/Scena.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="17" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/Scena.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pc/Scena.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="210" selection-end="215" vertical-scroll-proportion="0.0">
+        <state line="9" column="17" selection-start="187" selection-end="192" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="31" selection-start="5189" selection-end="5189" vertical-scroll-proportion="0.0">
+        <state line="15" column="41" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java">
+    <entry file="file://$PROJECT_DIR$/esir.dom12.nsoc.android.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="32" selection-start="1527" selection-end="1527" vertical-scroll-proportion="0.46341464">
+        <state line="39" column="0" selection-start="3201" selection-end="3201" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pc/AppliComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="52" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1429#1552#0" expanded="true" />
-            <element signature="e#1541#1542#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pc/FirstView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="56" selection-start="579" selection-end="579" vertical-scroll-proportion="0.40133038">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -738,7 +751,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Android (pc)|Android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -761,7 +774,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Android Platform</last-edited>
+          <last-edited>1.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -773,7 +786,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>esir.dom12.nsoc.Android</last-edited>
+          <last-edited>esir.dom12.nsoc.android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -1,4 +1,4 @@
-package esir.dom12.nsoc.android.pc;
+package pc;
 
 /**
  * Created with IntelliJ IDEA.
