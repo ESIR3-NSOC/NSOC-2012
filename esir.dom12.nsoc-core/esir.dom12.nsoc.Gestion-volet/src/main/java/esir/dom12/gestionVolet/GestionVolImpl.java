@@ -99,11 +99,11 @@ public class GestionVolImpl extends AbstractComponentType {
                 log.log(Level.INFO, "Differnce: " + value.compareTo(up));
 
                 // Determine si l'on doit monter ou descendre les volets
-                if((new String(value)).compareTo(up) == 1){
+                if(value.compareTo(up) == 1 || value.compareTo(up) == 0 ){
                     // Dans la cas ou l'on recoit UP, le volet doit monter
                     shutterValue = true;                               // Convertie les données en Boolean
                     add = (String) getDictionary().get("voletUp");     // Définie l'addresse sur laquelle écrire
-                } else if((new String(value)).compareTo(down) == 1){
+                } else if(value.compareTo(down) == 1 || value.compareTo(down) == 0){
                     // Dans l'autre cas, on baisse le volet en lui envoyant FALSE
                     shutterValue = false;                              // Convertie les données en Boolean
                     add = (String) getDictionary().get("voletDown");   // Définie l'addresse sur laquelle écrire
