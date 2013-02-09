@@ -4,7 +4,6 @@ import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 import org.kevoree.framework.MessagePort;
 
-import java.net.Inet4Address;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -36,9 +35,6 @@ public class GestionLumImpl extends AbstractComponentType {
     /**
      * Global Variable
      */
-    String ipadd;           // Adresse de la machine
-    Inet4Address ip;        // Objet pour connaitre l'adresse ip de notre machine
-    String ipPasserelle;    // Adresse ip de la passerelle
     Logger log = Logger.getLogger(GestionLumImpl.class.getName());
 
     /* Variables necessaire pour le getShutterState et le setVolet */
@@ -62,14 +58,14 @@ public class GestionLumImpl extends AbstractComponentType {
     }
     @Stop
     public void stopComponent() {
-        System.out.println("Gestion Volet:: Stop");
+        System.out.println("Gestion Luminaire :: Stop");
     }
 
     @Update
     public void updateComponent() {
         this.stopComponent();
         this.startComponent();
-        System.out.println("Gestion Volet:: Update");
+        System.out.println("Gestion Luminaire :: Update");
     }
 
     /**
@@ -123,10 +119,10 @@ public class GestionLumImpl extends AbstractComponentType {
                     log.log(Level.INFO, "Difference between on :: " + valBoardLightTemp.compareTo(on));
                     log.log(Level.INFO, "Diiference betwwen off :: " + valBoardLightTemp.compareTo(off));
 
-                    if((new String(valBoardLightTemp)).compareTo(on) == 1){
+                    if(valBoardLightTemp.compareTo(on) == 1 || valBoardLightTemp.compareTo(on) == 0){
                         // Cas on l'on doit allumer la lampe
                         valLight = true;
-                    } else if(valBoardLightTemp.compareTo(off) == 1){
+                    } else if(valBoardLightTemp.compareTo(off) == 1 || valBoardLightTemp.compareTo(off) == 0){
                         // Sinon on l'éteint
                         valLight = false;
                     } else {
@@ -139,12 +135,13 @@ public class GestionLumImpl extends AbstractComponentType {
 
                     // Récupere l'adresse des équipements
                     equipementAdd = (String) getDictionary().get("Room_light");
-                    //valRoomLightTemp = Integer.parseInt(temp[1]); // Lit la valeur passer en paramètre
+                    String tempLux = new String(temp[1]);
+                    valRoomLightTemp = Integer.parseInt(tempLux); // Lit la valeur passer en paramètre
                     log.log(Level.INFO, "Valeur :: " + valRoomLightTemp);
 
                     // On ne peut pas faire de régulation de lumiere donc si la valeur
                     // est égale a 0 on éteint sinon on allume
-                    if(temp[1].equals("0")){
+                    if(valRoomLightTemp == 0){
                         // On passe le parametre false pour éteindre la lampe
                         valLight = false;
                     }  else {
