@@ -25,30 +25,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f2f3c6b-67df-496f-84fb-6455fafa60d3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pc/AppliComponent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pc/FirstView.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/PleaseAlfred.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/esir.dom12.nsoc.Android.iml" afterPath="$PROJECT_DIR$/esir.dom12.nsoc.android.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/Scena.java" afterPath="$PROJECT_DIR$/src/main/java/pc/Scena.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pc/Welcome.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pc/AppliComponent.java" afterPath="$PROJECT_DIR$/src/main/java/pc/AppliComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pc/FirstView.java" afterPath="$PROJECT_DIR$/src/main/java/pc/FirstView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="esir.dom12.nsoc.Android.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360351308540" ignored="false" />
+    <file path="/Dummy.txt" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360431152353" ignored="false" />
     <file path="/pom.xml" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360232131237" ignored="false" />
     <file path="/PleaseAlfred.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360317585673" ignored="false" />
     <file path="/fragment.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360411540539" ignored="false" />
     <file path="/DummyFile.xpath" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360145539440" ignored="false" />
     <file path="/Scena.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360145876395" ignored="false" />
     <file path="/dummy.xml" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360231381611" ignored="false" />
-    <file path="/AppliComponent.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360427119696" ignored="false" />
+    <file path="/AppliComponent.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360431660832" ignored="false" />
     <file path="/FirstScreen.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360425422976" ignored="false" />
     <file path="$PROJECT_DIR$/src/main/resources/k.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360411184112" ignored="false" />
     <file path="/MyActivity.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360414305026" ignored="false" />
     <file path="/a.xml" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360414553792" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360415176129" ignored="false" />
-    <file path="/FirstView.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360430316211" ignored="false" />
+    <file path="/FirstView.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360431870064" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,7 @@
       <file leaf-file-name="AppliComponent.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pc/AppliComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="52" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
+            <state line="29" column="0" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,10 +136,21 @@
       <file leaf-file-name="FirstView.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pc/FirstView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="56" selection-start="579" selection-end="579" vertical-scroll-proportion="0.40133038">
+            <state line="36" column="0" selection-start="742" selection-end="742" vertical-scroll-proportion="0.40222222">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#771#957#0" expanded="true" />
+                <element signature="e#945#946#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Welcome.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pc/Welcome.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="20" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -574,12 +582,16 @@
       <created>1360310833109</created>
       <updated>1360310833109</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="First View Application Kevoree working !!">
+      <created>1360431156716</created>
+      <updated>1360431156716</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2382496" sideWeight="0.7652439" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09319287" sideWeight="0.7652439" order="-1" side_tool="false" content_ui="tabs" />
@@ -595,17 +607,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2972561" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29663607" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13675214" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23419774" sideWeight="0.7652439" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23419774" sideWeight="0.76605505" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.267423" sideWeight="0.7652439" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2347561" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.267423" sideWeight="0.76605505" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23394495" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13675214" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -650,7 +662,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed problem repositories - new kevoree framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="First View Application Kevoree working !!" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -668,6 +680,7 @@
     <MESSAGE value="Changement valeur envoyé bouton" />
     <MESSAGE value="1.9.0 Kevoree , pom and apk changed" />
     <MESSAGE value="fixed problem repositories - new kevoree framework" />
+    <MESSAGE value="First View Application Kevoree working !!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -716,9 +729,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pc/Welcome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="20" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pc/AppliComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="52" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
+        <state line="29" column="0" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -727,9 +747,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pc/FirstView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="56" selection-start="579" selection-end="579" vertical-scroll-proportion="0.40133038">
+        <state line="36" column="0" selection-start="742" selection-end="742" vertical-scroll-proportion="0.40222222">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#771#957#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -17,8 +17,8 @@ public class FirstView extends RelativeLayout {
 
 
     private Context ctx;
-    private Button btn_connect;
-    private OnClickListener listener;
+    private Button btn;
+    private TextView nfcText;
 
     public FirstView(Context context) {
         super(context);
@@ -28,20 +28,33 @@ public class FirstView extends RelativeLayout {
 
     private void initUI() {
 
-     TextView nfcText = new TextView(ctx);
-     nfcText.setText("Please Check Your NFC card");
+     nfcText = new TextView(ctx);
+     btn = new Button(ctx);
 
+
+     nfcText.setText("Please Check Your NFC card");
+     btn.setText("next");
+
+     btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                  Toast.makeText(ctx,"Test",Toast.LENGTH_LONG);
+
+            }
+
+        });
 
      RelativeLayout.LayoutParams params = new LayoutParams(
-                LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-     nfcText.setLayoutParams(params);
+                LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+
 
      addView(nfcText, params);
+     addView(btn,params);
+
+
 
     }
-
-
-
 
 
 }

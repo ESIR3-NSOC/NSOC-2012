@@ -25,7 +25,9 @@ public class AppliComponent extends AbstractComponentType {
 
         firstView = new FirstView(uiService.getRootActivity());
 
-        uiService.addToGroup("FirstView", firstView);
+
+        uiService.addToGroup("Appli", firstView);
+
 
 
     }
