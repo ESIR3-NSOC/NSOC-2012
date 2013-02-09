@@ -102,7 +102,15 @@ public class KnxImplementation extends AbstractComponentType {
         // Convert the value into a boolean
         // Datatype we receive:
         // 2/0/2:false
-        value = Boolean.valueOf(valueTemp);                             // Convert String into Boolean
+
+        log.log(Level.INFO, "Difference between false :: " + valueTemp.compareTo("false"));
+
+        if (valueTemp.compareTo("false") == 0) {
+            value = false;
+        } else if (valueTemp.compareTo("true") == 0) {
+            value = true;
+        }
+        log.log(Level.INFO, "Valeur Boolean :: " + value);
 
         MessagePort dataLog = getPortByName("log", MessagePort.class);
         if (dataLog != null) {
@@ -157,11 +165,11 @@ public class KnxImplementation extends AbstractComponentType {
 
         int i = 0;                                                             // Variable utile pour les itérations
         String data = null;                                                    // Variable qui stocke les donnée du port
-        String[] dataTemp = new String[0];                                     // Tableau temporaire pour le split
-        String[] tempName = new String[0];                                     // Tableau pour stocké les noms
-        String[] tempAdd = new String[0];                                      // Tableau pour stocké les addresses
-        String[] tempsData = new String[0];                                    // Tableau temporaire
-        String[] tempResult = new String[0];                                   // Tableau pour sauvegarder les résults
+        String[] dataTemp = new String[4];                                     // Tableau temporaire pour le split
+        String[] tempName = new String[4];                                                  // Tableau pour stocké les noms
+        String[] tempAdd = new String[4];                                      // Tableau pour stocké les addresses
+        String[] tempsData = new String[4];                                    // Tableau temporaire
+        String[] tempResult = new String[4];                                   // Tableau pour sauvegarder les résults
         boolean tempValue = false;                                             // Temp val to store result
         String finalData = null;                                               // Variable qui sera ecrite sur le port
         MessagePort portSorti = getPortByName("getData", MessagePort.class);   // Variable du port de sorti
@@ -176,15 +184,19 @@ public class KnxImplementation extends AbstractComponentType {
         data = new String(o.toString());                                       // Convertie les données recu en String
         dataTemp = data.split(";");                                            // Split les données par ligne
 
-        log.log(Level.INFO, "data :: " + data);
+        log.log(Level.INFO, dataTemp[0]);
 
         // Get name and address
-        for (i = 0; i < dataTemp.length; i++) {
-            String temp = dataTemp[i];
-            tempsData = temp.split(":");
-            if(tempsData.length>1){
-                tempName[i] = tempsData[0];
-                tempAdd[i] = tempsData[1];
+       for (i = 0; i < dataTemp.length; i++) {
+            if (dataTemp[i] != null) {
+                tempsData = new String[0];                                     // Re initialise le tableau temporaire
+                String temp = dataTemp[i];
+                tempsData = temp.split(":");
+                log.log(Level.INFO, String.valueOf(tempsData));
+                if (tempsData.length > 1) {
+                    tempName[i] = tempsData[0];
+                    tempAdd[i] = tempsData[1];
+                }
             }
         }
 
@@ -223,8 +235,8 @@ public class KnxImplementation extends AbstractComponentType {
         }    */
 
         // Une fois toutes les données récupéré, on créé le String que l'on va envoyé
-        for(i=0; i<tempResult.length; i++){
-            if(i == 0){
+        for (i = 0; i < tempResult.length; i++) {
+            if (i == 0) {
                 finalData = tempName[i] + ":" + tempResult[i] + ";";           // Cas de la premiere itération
             } else {
                 finalData = finalData + tempName[i] + ":" + tempResult[i] + ";";
