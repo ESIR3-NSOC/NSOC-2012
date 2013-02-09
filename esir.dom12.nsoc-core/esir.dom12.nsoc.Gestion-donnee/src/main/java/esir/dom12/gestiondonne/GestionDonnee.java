@@ -66,7 +66,7 @@ public class GestionDonnee extends AbstractComponentType {
          data = "BOARD_LIGHT:" + (String)getDictionary().get("BOARD_LIGHT");
          data = data + ";ROOM_LIGHT:" + (String)getDictionary().get("ROOM_LIGHT");
          data = data + ";SHUTTER:" + (String)getDictionary().get("SHUTTER");
-         data = data + ";BRIGHTNESS" + (String)getDictionary().get("BRIGHTNESS");
+         data = data + ";BRIGHTNESS:" + (String)getDictionary().get("BRIGHTNESS") + ";";
 
          log.log(Level.INFO, data);
 
