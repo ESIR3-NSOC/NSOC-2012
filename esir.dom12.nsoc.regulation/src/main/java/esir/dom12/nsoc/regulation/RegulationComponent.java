@@ -1,10 +1,10 @@
 package esir.dom12.nsoc.regulation;
 
-import java.util.StringTokenizer;
-
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 import org.kevoree.framework.MessagePort;
+
+import java.util.StringTokenizer;
 
 
 
@@ -175,9 +175,44 @@ public class RegulationComponent extends AbstractComponentType {
 			System.out.println("The component 'RegulationComponent' received :: " + msg);
 			System.out.println("\n");
 
+            // DataType We'll get
+            // BOARD_LIGHT:true;
+            // ROOM_Light:400;
+            // SHUTTER:TRUE;
+            // BRIGHTNESS:500;
+
+			/******** New parsing *****/
+            String [] temp1 = msg.split(";"); // Split data by ;
+
+            // Extract board state
+            String [] temp2 = temp1[0].split(":"); // temp2[0] = BOARD_LIGHT, temp2[1] = true
+            if(temp2[1].equals("false")){
+                boardStateKNX = "OFF";
+            }  else {
+                boardStateKNX = "ON";
+            }
+
+            // Extract room value
+            temp2 = temp1[1].split(":"); // temp2[0] = ROOM_LIGHT, temp2[1] = 400
+            roomValue = temp2[1];
+            parseValueKNX = Integer.parseInt(roomValue);
+
+            // Extract Shutter value
+            temp2 = temp1[2].split(":"); // temp2[0] = SHUTTER, temp2[1] = true
+            if(temp2[1].equals("false")){
+                shutterStateKNX = "DOWN";
+            } else {
+                shutterStateKNX = "UP";
+            }
+
+            // Extract Brightness Value
+            temp2 = temp1[1].split(":"); // temp2[0] = BRIGHTNESS, temp2[1] = 500
+            outsideValueKNX= temp2[1];
+            parseOutsideValueKNX = Integer.parseInt(outsideValueKNX);
+
 			// Who is the recipient of the message ?
 			// Extraction of the recipient
-			StringTokenizer tokens = new StringTokenizer(msg,";:");
+			/*StringTokenizer tokens = new StringTokenizer(msg,";:");
 			String receiverKNXString = tokens.nextToken();
 
 			// Iteration to know the regulation
@@ -221,7 +256,7 @@ public class RegulationComponent extends AbstractComponentType {
 			}
 			else{
 				System.out.println("Error Information");
-			}
+			}       */
 
 			// Intelligence of the regulation
 			// Regulation is ON
@@ -344,7 +379,7 @@ public class RegulationComponent extends AbstractComponentType {
 	/**
 	 * EN: SEND ORDER "LUX" FOR THE MANAGEMENT OF THE ROOM LIGHTS
 	 * FR: ENVOI DE LA COMMANDE "LUX" POUR LA GESTION DES LUMIERES DE LA SALLE
-	 * @param luxLevel
+	 * @param
 	 */
 	public void sendLightCommandRegulationRoom(String newRoomValueKNX){
 		MessagePort prodPort = getPortByName("lightCommandRegulation",MessagePort.class);
@@ -392,7 +427,7 @@ public class RegulationComponent extends AbstractComponentType {
 	/**
 	 * EN: SEND ORDER "UP" OR "DOWN" FOR THE MANAGEMENT OF COMPONENTS OF THE ROOM
 	 * FR: ENVOI DE LA COMMANDE "UP" OR "DOWN" POUR LA GESTION DES VOLETS DE LA SALLE
-	 * @param newstateShutterKNX
+	 *
 	 */
 	private void sendShutterCommandState(String newShutterStateKNX){
 		MessagePort prodPort = getPortByName("lightCommandRegulation",MessagePort.class);
@@ -421,7 +456,7 @@ public class RegulationComponent extends AbstractComponentType {
 	/**
 	 * EN: SENDING THE APPLICATION INFORMATION COMPONENT TO "GET DATA"
 	 * FR: ENVOI DE LA DEMANDE D'INFORMATIONS AU COMPOSANT "GET DATA"
-	 * @param receiveStringDataKNX
+	 * @param
 	 */
 	private void receiveDataKNX(String askDataKNX){
 		
