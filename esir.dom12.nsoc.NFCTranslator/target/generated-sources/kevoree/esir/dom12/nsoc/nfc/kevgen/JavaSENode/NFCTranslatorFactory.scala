@@ -17,12 +17,8 @@ override def updateComponent(){getKevoreeComponentType.asInstanceOf[esir.dom12.n
 def createNFCTranslator() : esir.dom12.nsoc.nfc.NFCTranslator ={
 val newcomponent = new esir.dom12.nsoc.nfc.NFCTranslator();
 newcomponent.getHostedPorts().put("entreeFromGaToNfc",createNFCTranslatorPORTentreeFromGaToNfc(newcomponent))
-newcomponent.getHostedPorts().put("entreeFromBddToNfc",createNFCTranslatorPORTentreeFromBddToNfc(newcomponent))
-newcomponent.getNeededPorts().put("sortieFromNfcToGa",createNFCTranslatorPORTsortieFromNfcToGa(newcomponent))
 newcomponent.getNeededPorts().put("sortieFromNfcToBdd",createNFCTranslatorPORTsortieFromNfcToBdd(newcomponent))
 newcomponent}
 def createNFCTranslatorPORTentreeFromGaToNfc(component : NFCTranslator) : NFCTranslatorPORTentreeFromGaToNfc ={ new NFCTranslatorPORTentreeFromGaToNfc(component)}
-def createNFCTranslatorPORTentreeFromBddToNfc(component : NFCTranslator) : NFCTranslatorPORTentreeFromBddToNfc ={ new NFCTranslatorPORTentreeFromBddToNfc(component)}
-def createNFCTranslatorPORTsortieFromNfcToGa(component : NFCTranslator) : NFCTranslatorPORTsortieFromNfcToGa ={ return new NFCTranslatorPORTsortieFromNfcToGa(component);}
 def createNFCTranslatorPORTsortieFromNfcToBdd(component : NFCTranslator) : NFCTranslatorPORTsortieFromNfcToBdd ={ return new NFCTranslatorPORTsortieFromNfcToBdd(component);}
 }

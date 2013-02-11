@@ -16,9 +16,7 @@ override def updateComponent(){getKevoreeComponentType.asInstanceOf[esir.dom12.n
 }}
 def createConnexionBDD() : esir.dom12.nsoc.bdd.ConnexionBDD ={
 val newcomponent = new esir.dom12.nsoc.bdd.ConnexionBDD();
-newcomponent.getHostedPorts().put("entreeFromNfcToBdd",createConnexionBDDPORTentreeFromNfcToBdd(newcomponent))
-newcomponent.getNeededPorts().put("sortieFromBddToNfc",createConnexionBDDPORTsortieFromBddToNfc(newcomponent))
+newcomponent.getHostedPorts().put("entreeBdd",createConnexionBDDPORTentreeBdd(newcomponent))
 newcomponent}
-def createConnexionBDDPORTentreeFromNfcToBdd(component : ConnexionBDD) : ConnexionBDDPORTentreeFromNfcToBdd ={ new ConnexionBDDPORTentreeFromNfcToBdd(component)}
-def createConnexionBDDPORTsortieFromBddToNfc(component : ConnexionBDD) : ConnexionBDDPORTsortieFromBddToNfc ={ return new ConnexionBDDPORTsortieFromBddToNfc(component);}
+def createConnexionBDDPORTentreeBdd(component : ConnexionBDD) : ConnexionBDDPORTentreeBdd ={ new ConnexionBDDPORTentreeBdd(component)}
 }

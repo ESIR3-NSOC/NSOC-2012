@@ -29,6 +29,9 @@
         <module name="esir.dom12.nsoc.Gestion-volet" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="esir.dom12.nsoc.Gestion-volet" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 
