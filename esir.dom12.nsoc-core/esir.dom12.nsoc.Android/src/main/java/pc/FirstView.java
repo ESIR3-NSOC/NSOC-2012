@@ -61,7 +61,7 @@ public class FirstView extends LinearLayout {
 
 
 
-        nfcText.setText("Please Check Your NFC card");
+        nfcText.setText("Please Check Your NFC card 4");
         nfcText.setTextSize(40);
         nfcText.setLayoutParams(paramstv);
         //nfcText.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
@@ -88,7 +88,7 @@ public class FirstView extends LinearLayout {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               ac.start();
+               ac.changeView();
             }
 
         });

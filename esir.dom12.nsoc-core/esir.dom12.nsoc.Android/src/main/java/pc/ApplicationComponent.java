@@ -19,18 +19,30 @@ public class ApplicationComponent extends AbstractComponentType {
 
 
     private KevoreeAndroidService uiService = null;
-    private FirstView firstView;
-    private WelcomeView welcomeView;
+    private FirstView firstView ;
+    private WelcomeView welcomeView ;
 
     @Start
     public void start () {
 
 
         uiService = UIServiceHandler.getUIService();
+        uiService.getRootActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                //To change body of implemented methods use File | Settings | File Templates.
 
-        firstView = new FirstView(uiService.getRootActivity());
+                firstView = new FirstView (uiService.getRootActivity());
+                welcomeView =new WelcomeView(uiService.getRootActivity());
+                uiService.addToGroup("First", firstView);
+                uiService.addToGroup("Welcome",welcomeView);
 
-        uiService.addToGroup("Appli", firstView);
+
+            }
+        });
+        //uiService.getRootActivity().setContentView(firstView);
+
+
 
 
 
@@ -50,13 +62,20 @@ public class ApplicationComponent extends AbstractComponentType {
 
 
     public void changeView(){
+        /*uiService.getRootActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                //To change body of implemented methods use File | Settings | File Templates.
+                uiService.remove(firstView);
+                welcomeView = new WelcomeView (uiService.getRootActivity());
+                uiService.addToGroup("Appli", welcomeView);
 
-         uiService.remove(firstView);
-         welcomeView= new WelcomeView (uiService.getRootActivity());
+            }
+            //uiService.remove(firstView);
 
 
-
-    }
+    });*/
+}
 }
 
 

@@ -1,6 +1,7 @@
 package pc;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -24,16 +25,15 @@ public class WelcomeView extends RelativeLayout
     }
 
     private void initUI() {
-
-
-
-
-
+       welcomeTv = new TextView(ctx);
     }
 
     private void configUI() {
 
-
+      welcomeTv.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.CENTER_HORIZONTAL);
+      welcomeTv.setText("Welcome Mister Professor");
+      welcomeTv.setTextSize(40);
+      addView(welcomeTv);
 
     }
 
