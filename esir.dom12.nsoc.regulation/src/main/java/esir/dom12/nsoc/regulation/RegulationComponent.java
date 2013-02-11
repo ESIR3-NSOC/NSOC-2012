@@ -35,8 +35,8 @@ public class RegulationComponent extends AbstractComponentType {
 	 * EN: DECLARATION OF VARIABLES
 	 * FR: DECLARATION DES VARIABLES
 	 */
-	private static String LIGHT_ROOM = "LIGHT_ROOM";
-	private static String LIGHT_BOARD = "LIGHT_BOARD";
+	private static String LIGHT_ROOM = "ROOM_LIGHT";
+	private static String LIGHT_BOARD = "BOARD_LIGHT";
 	private static String SHUTTER = "SHUTTER";
 	private static String ON = "ON";
 	private static String OFF = "OFF";
@@ -181,11 +181,15 @@ public class RegulationComponent extends AbstractComponentType {
             // SHUTTER:TRUE;
             // BRIGHTNESS:500;
 
+            // Déclaration Variable
+            String [] temp1 = new String[4];        // init array with size of 4 (Array for lines)
+            String [] temp2 = new String[2];        // init array with size of 2 (Array split lines)
+
 			/******** New parsing *****/
-            String [] temp1 = msg.split(";"); // Split data by ;
+            temp1 = msg.split(";"); // Split data by ;
 
             // Extract board state
-            String [] temp2 = temp1[0].split(":"); // temp2[0] = BOARD_LIGHT, temp2[1] = true
+            temp2 = temp1[0].split(":");            // temp2[0] = BOARD_LIGHT, temp2[1] = true
             if(temp2[1].equals("false")){
                 boardStateKNX = "OFF";
             }  else {
@@ -193,12 +197,14 @@ public class RegulationComponent extends AbstractComponentType {
             }
 
             // Extract room value
-            temp2 = temp1[1].split(":"); // temp2[0] = ROOM_LIGHT, temp2[1] = 400
+            temp2 = new String[2];                  // initiate variable
+            temp2 = temp1[1].split(":");            // temp2[0] = ROOM_LIGHT, temp2[1] = 400
             roomValue = temp2[1];
             parseValueKNX = Integer.parseInt(roomValue);
 
             // Extract Shutter value
-            temp2 = temp1[2].split(":"); // temp2[0] = SHUTTER, temp2[1] = true
+            temp2 = new String[2];                  // initiate variable
+            temp2 = temp1[2].split(":");            // temp2[0] = SHUTTER, temp2[1] = true
             if(temp2[1].equals("false")){
                 shutterStateKNX = "DOWN";
             } else {
@@ -206,7 +212,8 @@ public class RegulationComponent extends AbstractComponentType {
             }
 
             // Extract Brightness Value
-            temp2 = temp1[1].split(":"); // temp2[0] = BRIGHTNESS, temp2[1] = 500
+            temp2 = new String[2];                  // initiate variable
+            temp2 = temp1[1].split(":");            // temp2[0] = BRIGHTNESS, temp2[1] = 500
             outsideValueKNX= temp2[1];
             parseOutsideValueKNX = Integer.parseInt(outsideValueKNX);
 
@@ -460,7 +467,7 @@ public class RegulationComponent extends AbstractComponentType {
 	 */
 	private void receiveDataKNX(String askDataKNX){
 		
-		MessagePort prodPort = getPortByName("commandKNX",MessagePort.class);
+		MessagePort prodPort = getPortByName("askDataEquipment",MessagePort.class);
 		String msg = "getData";
 		prodPort.process(msg);
 
