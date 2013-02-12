@@ -6,7 +6,7 @@ import java.util.Calendar;
 public class fonctionsAde implements Ade{
     
 	private donneesAde da;
-	
+
 	public fonctionsAde (){
 		da = new donneesAde();
 	}
