@@ -3,6 +3,7 @@ package esir.dom12.nsoc.donneesAde;
 import java.io.IOException;
 
 public interface Ade {
+	
 	public String[] planningSalleParDate (int annee, int mois, int jour, String batiment, String salle) throws IOException;
 	/*
 	 * exemple : String[] data = fonctionsAde.planningSalleParDate (2013,01,22, "41","3");
