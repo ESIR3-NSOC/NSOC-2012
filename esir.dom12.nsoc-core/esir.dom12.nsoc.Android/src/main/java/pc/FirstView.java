@@ -25,7 +25,7 @@ public class FirstView extends LinearLayout {
     private ImageView logoEsirIm;
     private TextView nfcText;
     public Boolean secondView;
-    ApplicationComponent ac = new ApplicationComponent();
+
 
     public FirstView(Context context) {
         super(context);
@@ -37,8 +37,8 @@ public class FirstView extends LinearLayout {
     private void initUI() {
 
         nfcText = new TextView(ctx);
-        btn = new Button(ctx);
-        logoEsirIm = new ImageView(ctx);
+       // btn = new Button(ctx);
+       // logoEsirIm = new ImageView(ctx);
         secondView = false;
 
     }
@@ -50,10 +50,6 @@ public class FirstView extends LinearLayout {
 
         paramstv.gravity = Gravity.CENTER_HORIZONTAL|Gravity.CENTER_VERTICAL;
 
-        LinearLayout.LayoutParams paramsBtn = new LayoutParams(
-                LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-
-        paramsBtn.gravity = (Gravity.CENTER_HORIZONTAL|Gravity.BOTTOM);
         //String imageInSD = "/sdcard/logoESIR.PNG";
         //Bitmap image = BitmapFactory.decodeFile(imageInSD);
 
@@ -61,9 +57,10 @@ public class FirstView extends LinearLayout {
 
 
 
-        nfcText.setText("Please Check Your NFC card 4");
+        nfcText.setText("Please Check Your NFC card 6");
         nfcText.setTextSize(40);
         nfcText.setLayoutParams(paramstv);
+        addView(nfcText);
         //nfcText.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
 
         //RelativeLayout.LayoutParams paramstv = new LayoutParams(
@@ -81,26 +78,13 @@ public class FirstView extends LinearLayout {
         //        LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         //logoEsirIm.setLayoutParams(new FrameLayout.LayoutParams(val_highW,val_highH,(Gravity.CENTER_HORIZONTAL|Gravity.CENTER_VERTICAL)));
 
-        btn.setText("nfc");
 
 
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               ac.changeView();
-            }
-
-        });
-
-        btn.setLayoutParams(paramsBtn);
         //RelativeLayout.LayoutParams paramsBn = new LayoutParams(
         //        LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 
 
-        addView(nfcText);
-       // addView(logoEsirIm);
-        addView(btn);
 
 
     }
