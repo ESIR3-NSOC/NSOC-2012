@@ -20,7 +20,8 @@ import org.kevoree.framework.MessagePort;
 
 @Requires({
         @RequiredPort(name = "SCN", type = PortType.MESSAGE, needCheckDependency = false , optional = true),
-        @RequiredPort(name = "Trombi", type = PortType.SERVICE, needCheckDependency = false, className = ConnexionBDDInterface.class)
+        @RequiredPort(name = "Trombi", type = PortType.SERVICE, needCheckDependency = false, className = ConnexionBDDInterface.class),
+        @RequiredPort(name = "Empl", type = PortType.SERVICE, needCheckDependency = false, className = Ade.class)
 })
 @Provides({
         @ProvidedPort(name = "NFC_Tager", type = PortType.MESSAGE)
@@ -128,6 +129,14 @@ public class ApplicationComponent extends AbstractComponentType {
 
        Bitmap bp = getPortByName("toggle",ConnexionBDDInterface.class).sendRequestFromTrombiToBdd(st);
        trombinoscopeView.viewImgIcon(bp,st);
+
+    }
+
+
+    public void emploi(String[] st){
+
+
+
 
     }
 }

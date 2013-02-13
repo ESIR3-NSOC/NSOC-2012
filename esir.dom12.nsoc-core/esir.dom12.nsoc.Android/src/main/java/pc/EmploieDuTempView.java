@@ -1,10 +1,7 @@
 package pc;
 
 import android.content.Context;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.widget.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -29,9 +26,6 @@ public class EmploieDuTempView extends LinearLayout {
 
         TextView textView = new TextView(ctx);
         textView.setText(st);
-        a
-
-
     }
 
 
