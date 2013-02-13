@@ -255,7 +255,7 @@ public class donneesAde {
 		String idEtudiant=null;
 		boolean ok=false;
 		
-		InputStream ips=new FileInputStream("tree"); 
+		InputStream ips = getClass().getResourceAsStream("/tree");
 		InputStreamReader ipsr=new InputStreamReader(ips);
 		BufferedReader br=new BufferedReader(ipsr);
 		String ligne;
