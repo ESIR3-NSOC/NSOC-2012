@@ -10,7 +10,6 @@ import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 
 import javax.swing.*;
-import java.awt.*;
 import java.sql.*;
 
 @Provides({
