@@ -8,8 +8,9 @@ package esir.dom12.nsoc.bdd; /**
 
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
-import org.kevoree.framework.MessagePort;
 
+import javax.swing.*;
+import java.awt.*;
 import java.sql.*;
 
 @Provides({
@@ -21,30 +22,16 @@ import java.sql.*;
 })
 
 @ComponentType
-public class ConnexionBDD extends AbstractComponentType {
+public class ConnexionBDD extends AbstractComponentType implements ConnexionBDDInterface {
+
     String url;
     String user;
     String password;
-    String requeteNom;
-    String requetePrenom;
+    String requeteNomPrenom;
     String requeteTrombi;
     String nomPrenomEtudiant;
-    String trombiEtudiant;
-
-    @Start
-    public void startComponent() {
-        System.out.println("Connexion Base de Données:: Start");
-    }
-
-    @Stop
-    public void stopComponent() {
-        System.out.println("Connexion Base de Données:: Stop");
-    }
-
-    @Update
-    public void updateComponent() {
-        System.out.println("Connexion Base de Données:: Update");
-    }
+    ImageIcon trombiEtudiant;
+    Connection connection;
 
     public ConnexionBDD () {
         this.url = "nsoc";
@@ -52,53 +39,65 @@ public class ConnexionBDD extends AbstractComponentType {
         this.password = "";
     }
 
-    /**
-     * execute la connexion avec le SGBD (MySQL)
-     */
-    public Connection execute () throws ClassNotFoundException, SQLException {
+    @Start
+    public void startComponent() throws ClassNotFoundException, SQLException {
+        System.out.println("Connexion Base de Donnees:: Start");
         Class.forName("com.mysql.jdbc.Driver");
         System.out.println("Driver OK !");
 
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + url + user + password);
-        System.out.println("Connection effective");
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + url, user, password);
+        System.out.println("Connexion reussie !");
 
-        return connection;
     }
 
+    @Stop
+    public void stopComponent() throws SQLException {
+        System.out.println("Connexion Base de Donnees:: Stop");
+    }
+
+    @Update
+    public void updateComponent() {
+        System.out.println("Connexion Base de Donnees:: Update");
+    }
+
+
     @Port(name = "entreeBdd", method = "sendRequestFromNfcToBdd")
-    public String sendRequestFromNfcToBdd (String req) throws SQLException, ClassNotFoundException {
+     public String sendRequestFromNfcToBdd (String req) throws SQLException, ClassNotFoundException {
+        System.out.println("SendRequestFromNfcToBdd");
+        requeteNomPrenom = req;
 
-        String [] temp = req.split(";");
-        requeteNom = temp[0];
-        requetePrenom = temp[1];
+        Statement state = connection.createStatement();
 
-        Statement state = execute().createStatement();
+        ResultSet nomPrenom = state.executeQuery(requeteNomPrenom);
+        nomPrenom.next();
 
-        ResultSet nom = state.executeQuery(requeteNom);
-        nom.next();
-        nom.getString(1);
-
-        ResultSet prenom = state.executeQuery(requetePrenom);
-        prenom.next();
-        prenom.getString(1);
-
-        nomPrenomEtudiant = nom + " " + prenom;
+        nomPrenomEtudiant = nomPrenom.getString(1) + " " + nomPrenom.getString(2);
+        System.out.println(nomPrenomEtudiant);
 
         return nomPrenomEtudiant;
     }
 
+    /**
+     *
+     * @param req : numero de l'etudiant (String)
+     * @return  ImageIcon trombiEtudiant
+     * @throws SQLException
+     * @throws ClassNotFoundException
+     */
+
     @Port(name = "entreeBdd", method = "sendRequestFromTrombiToBdd")
-    public String sendRequestFromTrombiToBdd (String req) throws SQLException, ClassNotFoundException {
+    public ImageIcon sendRequestFromTrombiToBdd (String req) throws SQLException, ClassNotFoundException {
 
-        requeteTrombi = req;
+        requeteTrombi = "SELECT trombi FROM listeEtudiants WHERE numeroEtudiant = " + req;
 
-        Statement state = execute().createStatement();
+        Statement state = connection.createStatement();
 
         ResultSet trombi = state.executeQuery(requeteTrombi);
         trombi.next();
-        trombi.getString(1);
+        ImageIcon trombiImage = new ImageIcon(trombi.getString(1));
 
-        trombiEtudiant = trombi + "";
+
+        trombiEtudiant = trombiImage;
 
         return trombiEtudiant;
     }

@@ -1,5 +1,9 @@
 package esir.dom12.nsoc.bdd;
 
+import javax.swing.*;
+import java.awt.*;
+import java.sql.SQLException;
+
 /**
  * Created with IntelliJ IDEA.
  * User: marc
@@ -9,7 +13,7 @@ package esir.dom12.nsoc.bdd;
  */
 public interface ConnexionBDDInterface {
 
-    public String sendRequestFromNfcToBdd (String req);
+    public String sendRequestFromNfcToBdd (String req) throws SQLException, ClassNotFoundException;
 
-    public String sendRequestFromTrombiToBdd (String req);
+    public ImageIcon sendRequestFromTrombiToBdd (String req)  throws SQLException, ClassNotFoundException;
 }
