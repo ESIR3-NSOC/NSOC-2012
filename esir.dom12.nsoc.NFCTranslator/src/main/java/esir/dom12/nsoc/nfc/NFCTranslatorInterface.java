@@ -15,6 +15,6 @@ import java.sql.SQLException;
 
 public interface NFCTranslatorInterface {
 
-    public String sendNumeroTagNFCFromGestionAccesToNfc (String numeroTagNfc);
+    public String sendNumeroTagNFCFromGestionAccesToNfc (String numeroTagNfc) throws SQLException, ClassNotFoundException;
 
 }

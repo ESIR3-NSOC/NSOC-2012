@@ -4,11 +4,22 @@
     <list default="true" id="ff2b0869-a345-41d7-954a-28303d2567aa" name="Default" comment="" />
     <ignored path="esir.dom12.nsoc.connexionBDD.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/ConnexionBDD.java" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1357726768820" ignored="false" />
+    <file path="/ConnexionBDD.java" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360621096308" ignored="false" />
     <file path="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/src/main/java/NFCTranslator.java" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1357738709496" ignored="false" />
-    <file path="/NFCTranslator.java" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1357738695086" ignored="false" />
-    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/pom.xml" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1357739249919" ignored="false" />
-    <file path="/pom.xml" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1357739309440" ignored="false" />
+    <file path="/NFCTranslator.java" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360659842896" ignored="false" />
+    <file path="/pom.xml" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360591720692" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.donneesAAfficher/src/main/java/esir/dom12/nsoc/donnees/donneesAAfficher.java" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360334047541" ignored="false" />
+    <file path="/donneesAAfficher.java" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360334044088" ignored="false" />
+    <file path="$PROJECT_DIR$/target/generated-sources/kevoree/esir/dom12/nsoc/bdd/kevgen/JavaSENode/ConnexionBDDPORTentreeBdd.scala" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360576268060" ignored="false" />
+    <file path="$PROJECT_DIR$/target/generated-sources/kevoree/KEV-INF/lib.kev" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360619099472" ignored="false" />
+    <file path="/ConnexionBDDInterface.java" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360620438625" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/target/generated-sources/kevoree/KEV-INF/lib.kev" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360660064055" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/target/generated-sources/kevoree/esir/dom12/nsoc/nfc/kevgen/JavaSENode/NFCTranslatorFactory.scala" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360660064055" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/target/generated-sources/kevoree/esir/dom12/nsoc/nfc/kevgen/JavaSENode/NFCTranslatorPORTsortieFromNfcToBdd.scala" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360660064055" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/target/generated-sources/kevoree/KEV-INF/lib.kev.debug" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360660064055" ignored="false" />
+    <file path="$PROJECT_DIR$/target/classes.timestamp" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360615416723" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/target/generated-sources/kevoree/esir/dom12/nsoc/nfc/kevgen/JavaSENode/NFCTranslatorPORTentreeFromGaToNfc.scala" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360620007602" ignored="false" />
+    <file path="$PROJECT_DIR$/target/generated-sources/kevoree/KEV-INF/lib.kev.debug" changelist="ff2b0869-a345-41d7-954a-28303d2567aa" time="1360620151429" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +34,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -58,7 +69,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -68,22 +78,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="32" column="51" selection-start="1300" selection-end="1300" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="26" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NFCTranslator.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/src/main/java/esir/dom12/nsoc/nfc/NFCTranslator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="20" selection-start="1767" selection-end="1776" vertical-scroll-proportion="0.471831">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NFCTranslatorInterface.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/src/main/java/esir/dom12/nsoc/nfc/NFCTranslatorInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="121" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ConnexionBDD.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ConnexionBDD.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="101" column="65" selection-start="2961" selection-end="2961" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnexionBDDInterface.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDDInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="62" selection-start="30" selection-end="505" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,6 +145,13 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/ConnexionBDD.java" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDDInterface.java" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/src/main/java/esir/dom12/nsoc/nfc/NFCTranslatorInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/src/main/java/esir/dom12/nsoc/nfc/ConnexionBDDInterface.java" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/src/main/java/esir/dom12/nsoc/nfc/NFCTranslator.java" />
       </list>
     </option>
   </component>
@@ -110,7 +163,69 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="ConnexionBDD" />
+          <option name="myItemId" value="esir.dom12.nsoc.nfc.NFCTranslator" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="esir.dom12.nsoc.nfc.NFCTranslator" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="esir.dom12.nsoc.nfc.NFCTranslator" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="esir.dom12.nsoc.bdd.ConnexionBDD" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="esir.dom12.nsoc.bdd.ConnexionBDD" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="esir.dom12.nsoc.bdd.ConnexionBDD" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -121,9 +236,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="27" />
-    <option name="width" value="1442" />
+    <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -163,6 +277,10 @@
               <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -170,7 +288,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
+              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -180,11 +298,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
+              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nfc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -227,21 +399,49 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.side.proportion" value="0.1853147" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -279,19 +479,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -318,6 +505,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -363,6 +563,24 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ff2b0869-a345-41d7-954a-28303d2567aa" name="Default" comment="" />
@@ -372,7 +590,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1442" height="873" extended-state="6" />
+    <frame x="0" y="27" width="1440" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -388,14 +606,15 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3352518" sideWeight="0.6713092" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21902017" sideWeight="0.68802226" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964029" sideWeight="0.6713092" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24927954" sideWeight="0.68802226" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3119777" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -455,29 +674,15 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDDInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="9" column="17" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ConnexionBDD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="55" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ConnexionBDD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -488,6 +693,265 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/src/main/java/esir/dom12/nsoc/nfc/NFCTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="66" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="17" selection-start="2120" selection-end="2120" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDDInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/esir.dom12.nsoc.NFCTranslator:esir.dom12.nsoc.NFCTranslator:1.9.0">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>esir.dom12.nsoc.NFCTranslator:esir.dom12.nsoc.NFCTranslator:1.9.0</OriginalElement>
+          <nodes>
+            <node x="" y="">esir.dom12.nsoc.NFCTranslator:esir.dom12.nsoc.NFCTranslator:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.annotation.api:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.adaptation.model:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">esir.dom12.nsoc.connexionBDD:esir.dom12.nsoc.connexionBDD:jar:1.9.0/org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.adaptation.model:jar:1.9.0</node>
+            <node x="" y="">esir.dom12.nsoc.connexionBDD:esir.dom12.nsoc.connexionBDD:jar:1.9.0/org.kevoree.tools:org.kevoree.tools.annotation.api:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.kcl:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model.context:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.adaptation.model:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model.context:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.kcl:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.adaptation.model:jar:1.9.0/org.kevoree:org.kevoree.model:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model.context:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.kcl:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">esir.dom12.nsoc.connexionBDD:esir.dom12.nsoc.connexionBDD:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.annotation.api:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.annotation.api:jar:1.9.0</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.5296469020652899" x="740.0" y="394.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="26" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/esir.dom12.nsoc.connexionBDD:esir.dom12.nsoc.connexionBDD:1.9.0">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>esir.dom12.nsoc.connexionBDD:esir.dom12.nsoc.connexionBDD:1.9.0</OriginalElement>
+          <nodes>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.annotation.api:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.adaptation.model:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.adaptation.model:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.kcl:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">mysql.connector.jdbc:mysql.connector.jdbc:jar:1.9.0</node>
+            <node x="" y="">esir.dom12.nsoc.connexionBDD:esir.dom12.nsoc.connexionBDD:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model.context:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.adaptation.model:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model.context:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.kcl:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.adaptation.model:jar:1.9.0/org.kevoree:org.kevoree.model:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.kcl:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.javase.framework:jar:1.9.0/org.kevoree:org.kevoree.framework:jar:1.9.0/org.kevoree:org.kevoree.api:jar:1.9.0/org.kevoree:org.kevoree.model.context:jar:1.9.0/org.scala-lang:scala-library:jar:2.9.2</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.annotation.api:jar:1.9.0/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.kevoree.tools:org.kevoree.tools.annotation.api:jar:1.9.0</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.520265780730897" x="743.0" y="553.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="51" selection-start="1300" selection-end="1300" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/src/main/java/esir/dom12/nsoc/nfc/NFCTranslatorInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="121" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="65" selection-start="2961" selection-end="2961" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDDInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="62" selection-start="30" selection-end="505" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/src/main/java/esir/dom12/nsoc/nfc/NFCTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="20" selection-start="1767" selection-end="1776" vertical-scroll-proportion="0.471831">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.1853147" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>mysql-connector-java-5.1.22-bin</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.1853147" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.1853147" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>esir.dom12.nsoc.connexionBDD</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.1853147" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>esir.dom12.nsoc</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.1853147" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 
