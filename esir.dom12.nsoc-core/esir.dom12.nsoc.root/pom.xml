@@ -20,6 +20,9 @@
         <module>../esir.dom12.nsoc.Gestion-luminaire</module>
         <module>../esir.dom12.nsoc.Module-knx</module>
         <module>../esir.dom12.nsoc.Gestion-volet</module>
+        <module>../esir.dom12.nsoc.Arduino-NFC</module>
+        <module>../esir.dom12.nsoc.regulation</module>
+
     </modules>
 
     <repositories>
