@@ -31,8 +31,13 @@
             <version>${kevoree.version}</version>
         </dependency>
         <dependency>
-            <groupId>mysql.connector.jdbc</groupId>
-            <artifactId>mysql.connector.jdbc</artifactId>
+            <groupId>esir.dom12.nsoc.donneesAde</groupId>
+            <artifactId>esir.dom12.nsoc.donneesAde</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>esir.dom12.nsoc.module_gestion_dacces</groupId>
+            <artifactId>esir.dom12.nsoc.module_gestion_dacces</artifactId>
             <version>1.9.0</version>
         </dependency>
     </dependencies>

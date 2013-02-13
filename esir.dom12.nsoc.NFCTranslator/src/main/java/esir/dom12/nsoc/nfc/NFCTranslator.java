@@ -15,8 +15,7 @@ import java.sql.SQLException;
 
 
 @Provides(value = {
-        @ProvidedPort(name = "entreeFromGaToNfc", type = PortType.SERVICE, className = NFCTranslatorInterface.class) ,
-        @ProvidedPort(name = "entree", type = PortType.MESSAGE)
+        @ProvidedPort(name = "entreeFromGaToNfc", type = PortType.SERVICE, className = NFCTranslatorInterface.class)
 })
 
 @Requires(value = {
@@ -61,16 +60,5 @@ public class NFCTranslator extends AbstractComponentType implements NFCTranslato
         nomPrenomEtudiant = cbi.sendRequestFromNfcToBdd(requeteSQL);
         // Rend la variable nomPrenomEtudiant
         return nomPrenomEtudiant;
-    }
-
-    @Port(name = "entree")
-    public void  test(Object o){
-        try {
-            sendNumeroTagNFCFromGestionAccesToNfc("2");
-        } catch (SQLException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
     }
 }
