@@ -27,6 +27,7 @@ import java.io.IOException;
 @Requires({
 
         @RequiredPort(name = "identification_entree", type = PortType.MESSAGE),
+        @RequiredPort(name = "identification_personne", type = PortType.MESSAGE),
         @RequiredPort(name = "ADE_communication_entree", type = PortType.SERVICE,className = Ade.class  ,optional = false),
         @RequiredPort(name = "BDD_communication_entree", type = PortType.SERVICE,className = NFCTranslatorInterface.class, optional = false),
         @RequiredPort(name = "occupation",type = PortType.MESSAGE)
@@ -67,6 +68,8 @@ public class ModuleGestionDacces extends AbstractComponentType {
         // TODO Appel methode de Marc
         NFCTranslatorInterface nfci = getPortByName("BDD_communication_entree", NFCTranslatorInterface.class);
         String nomPrenom =  nfci.sendNumeroTagNFCFromGestionAccesToNfc(tag_recu);
+        //  TODO envoie pour seb
+        getPortByName("identification_personne",MessagePort.class).process(nomPrenom);
         // TODO appel methode Antoine avec Resultat de Marc
         Ade ADEI = getPortByName("ADE_communication_entree",Ade.class);
         try {
