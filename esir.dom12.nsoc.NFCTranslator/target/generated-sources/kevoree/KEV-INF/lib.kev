@@ -1,54 +1,185 @@
-<kevoree:ContainerRoot xmlns:xml="http://www.omg.org/XMI" xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" xmlns:kevoree="http://kevoree/1.0" xmi:version="2.0" xsi:type="kevoree:ContainerRoot">
- <typeDefinitions updateMethod="updateComponent" startMethod="startComponent" factoryBean="esir.dom12.nsoc.nfc.NFCTranslatorFactory" xsi:type="kevoree:ComponentType" name="NFCTranslator" bean="esir.dom12.nsoc.nfc.NFCTranslator" stopMethod="stopComponent" deployUnits="//@deployUnits.0">
-  <dictionaryType>
-   <attributes state="false" name="NfcTranslatorDelay" xsi:type="kevoree:DictionaryAttribute" optional="true" fragmentDependant="false"></attributes>
-   <defaultValues value="2000" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.0"></defaultValues>
-  </dictionaryType>
-  <required noDependency="true" name="sortieFromNfcToBdd" xsi:type="kevoree:PortTypeRef" optional="true" ref="//@typeDefinitions.3"></required>
-  <provided noDependency="false" name="entreeFromGaToNfc" xsi:type="kevoree:PortTypeRef" optional="false" ref="//@typeDefinitions.2">
-   <mappings beanMethodName="receiveNumeroTagNFCFromGestionAcces" xsi:type="kevoree:PortTypeMapping" serviceMethodName="sendNumeroTagNFCFromGestionAccesToNfc"></mappings>
-   <mappings beanMethodName="receiveNumeroTagNFCFromGestionAcces" xsi:type="kevoree:PortTypeMapping" serviceMethodName="sendNumeroTagNFCFromGestionAccesToNfc"></mappings>
-  </provided>
- </typeDefinitions>
- <typeDefinitions xsi:type="kevoree:NodeType" name="JavaSENode"></typeDefinitions>
- <typeDefinitions name="esir.dom12.nsoc.nfc.NFCTranslatorInterface" xsi:type="kevoree:ServicePortType" synchrone="false">
-  <operations name="sendNumeroTagNFCFromGestionAccesToNfc" xsi:type="kevoree:Operation" returnType="//@dataTypes.0">
-   <parameters name="numeroTagNfc" xsi:type="kevoree:Parameter" type="//@dataTypes.0"></parameters>
-  </operations>
- </typeDefinitions>
- <typeDefinitions name="esir.dom12.nsoc.bdd.ConnexionBDDInterface" xsi:type="kevoree:ServicePortType" synchrone="false">
-  <operations name="sendRequestFromNfcToBdd" xsi:type="kevoree:Operation" returnType="//@dataTypes.0">
-   <parameters name="arg0" xsi:type="kevoree:Parameter" type="//@dataTypes.0"></parameters>
-  </operations>
-  <operations name="sendRequestFromTrombiToBdd" xsi:type="kevoree:Operation" returnType="//@dataTypes.0">
-   <parameters name="arg0" xsi:type="kevoree:Parameter" type="//@dataTypes.0"></parameters>
-  </operations>
- </typeDefinitions>
- <typeDefinitions updateMethod="updateComponent" startMethod="startComponent" factoryBean="esir.dom12.nsoc.bdd.ConnexionBDDFactory" xsi:type="kevoree:ComponentType" name="ConnexionBDD" bean="esir.dom12.nsoc.bdd.ConnexionBDD" stopMethod="stopComponent" deployUnits="//@deployUnits.10">
-  <dictionaryType>
-   <attributes state="false" name="ConnexionDelay" xsi:type="kevoree:DictionaryAttribute" optional="true" fragmentDependant="false"></attributes>
-   <defaultValues value="2000" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.4/@dictionaryType/@attributes.0"></defaultValues>
-  </dictionaryType>
-  <provided noDependency="false" name="entreeBdd" xsi:type="kevoree:PortTypeRef" optional="false" ref="//@typeDefinitions.3">
-   <mappings beanMethodName="sendRequestFromNfcToBdd" xsi:type="kevoree:PortTypeMapping" serviceMethodName="sendRequestFromNfcToBdd"></mappings>
-   <mappings beanMethodName="sendRequestFromNfcToBdd" xsi:type="kevoree:PortTypeMapping" serviceMethodName="sendRequestFromNfcToBdd"></mappings>
-   <mappings beanMethodName="sendRequestFromTrombiToBdd" xsi:type="kevoree:PortTypeMapping" serviceMethodName="sendRequestFromTrombiToBdd"></mappings>
-   <mappings beanMethodName="sendRequestFromTrombiToBdd" xsi:type="kevoree:PortTypeMapping" serviceMethodName="sendRequestFromTrombiToBdd"></mappings>
-  </provided>
- </typeDefinitions>
- <repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/release"></repositories>
- <repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/snapshots"></repositories>
- <repositories xsi:type="kevoree:Repository" url="http://repo1.maven.org/maven2"></repositories>
- <dataTypes xsi:type="kevoree:TypedElement" name="java.lang.String"></dataTypes>
- <deployUnits requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10" hashcode="201301301738894" unitName="esir.dom12.nsoc.NFCTranslator" xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.NFCTranslator" version="1.8.9" type="jar" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.tools.javase.framework" xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.framework" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.api" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.model" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="scala-library" xsi:type="kevoree:DeployUnit" groupName="org.scala-lang" version="2.9.2" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="slf4j-api" xsi:type="kevoree:DeployUnit" groupName="org.slf4j" version="1.6.4" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.adaptation.model" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.kcl" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.tools.annotation.api" xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9" hashcode="201301301736931" unitName="esir.dom12.nsoc.connexionBDD" xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.connexionBDD" version="1.8.9" type="jar" targetNodeType="//@typeDefinitions.1"></deployUnits>
+<?xml version="1.0" encoding="UTF-8"?>
+<kevoree:ContainerRoot xmlns:kevoree="http://kevoree/1.0" xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xsi:type="kevoree:ContainerRoot">
+<typeDefinitions xsi:type="kevoree:ComponentType" name="ConnexionBDD" factoryBean="esir.dom12.nsoc.bdd.ConnexionBDDFactory" bean="esir.dom12.nsoc.bdd.ConnexionBDD" startMethod="startComponent" stopMethod="stopComponent" updateMethod="updateComponent" deployUnits="//@deployUnits.11">
+<dictionaryType>
+<attributes xsi:type="kevoree:DictionaryAttribute" name="ConnexionDelay" optional="true" state="false" fragmentDependant="false">
+</attributes>
+<defaultValues xsi:type="kevoree:DictionaryValue" value="2000" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.0">
+</defaultValues>
+</dictionaryType>
+<provided xsi:type="kevoree:PortTypeRef" name="entreeBdd" optional="false" noDependency="false" ref="//@typeDefinitions.2">
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="sendRequestFromNfcToBdd" serviceMethodName="sendRequestFromNfcToBdd">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="sendRequestFromNfcToBdd" serviceMethodName="sendRequestFromNfcToBdd">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="sendRequestFromTrombiToBdd" serviceMethodName="sendRequestFromTrombiToBdd">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="sendRequestFromTrombiToBdd" serviceMethodName="sendRequestFromTrombiToBdd">
+</mappings>
+</provided>
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:ServicePortType" name="esir.dom12.nsoc.donneesAde.Ade" synchrone="false">
+<operations xsi:type="kevoree:Operation" name="planningEtudiantParDate" returnType="//@dataTypes.3">
+<parameters xsi:type="kevoree:Parameter" name="etudiant" order="3" type="//@dataTypes.4">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="mois" order="1" type="//@dataTypes.2">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="jour" order="2" type="//@dataTypes.2">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="annee" order="0" type="//@dataTypes.2">
+</parameters>
+</operations>
+<operations xsi:type="kevoree:Operation" name="planningSalleParDate" returnType="//@dataTypes.3">
+<parameters xsi:type="kevoree:Parameter" name="salle" order="4" type="//@dataTypes.4">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="batiment" order="3" type="//@dataTypes.4">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="mois" order="1" type="//@dataTypes.2">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="jour" order="2" type="//@dataTypes.2">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="annee" order="0" type="//@dataTypes.2">
+</parameters>
+</operations>
+<operations xsi:type="kevoree:Operation" name="coursActuelParEtudiant" returnType="//@dataTypes.4">
+<parameters xsi:type="kevoree:Parameter" name="etudiant" order="0" type="//@dataTypes.4">
+</parameters>
+</operations>
+<operations xsi:type="kevoree:Operation" name="autorisation" returnType="//@dataTypes.1">
+<parameters xsi:type="kevoree:Parameter" name="nom" order="0" type="//@dataTypes.4">
+</parameters>
+</operations>
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:ServicePortType" name="esir.dom12.nsoc.bdd.ConnexionBDDInterface" synchrone="false">
+<operations xsi:type="kevoree:Operation" name="sendRequestFromNfcToBdd" returnType="//@dataTypes.4">
+<parameters xsi:type="kevoree:Parameter" name="arg0" order="0" type="//@dataTypes.4">
+</parameters>
+</operations>
+<operations xsi:type="kevoree:Operation" name="sendRequestFromTrombiToBdd" returnType="//@dataTypes.0">
+<parameters xsi:type="kevoree:Parameter" name="arg0" order="0" type="//@dataTypes.4">
+</parameters>
+</operations>
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:ComponentType" name="NFCTranslator" factoryBean="esir.dom12.nsoc.nfc.NFCTranslatorFactory" bean="esir.dom12.nsoc.nfc.NFCTranslator" startMethod="startComponent" stopMethod="stopComponent" updateMethod="updateComponent" deployUnits="//@deployUnits.0">
+<dictionaryType>
+<attributes xsi:type="kevoree:DictionaryAttribute" name="NfcTranslatorDelay" optional="true" state="false" fragmentDependant="false">
+</attributes>
+<defaultValues xsi:type="kevoree:DictionaryValue" value="2000" attribute="//@typeDefinitions.3/@dictionaryType/@attributes.0">
+</defaultValues>
+</dictionaryType>
+<required xsi:type="kevoree:PortTypeRef" name="sortieFromNfcToBdd" optional="true" noDependency="true" ref="//@typeDefinitions.2">
+</required>
+<provided xsi:type="kevoree:PortTypeRef" name="entreeFromGaToNfc" optional="false" noDependency="false" ref="//@typeDefinitions.6">
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="receiveNumeroTagNFCFromGestionAcces" serviceMethodName="sendNumeroTagNFCFromGestionAccesToNfc">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="receiveNumeroTagNFCFromGestionAcces" serviceMethodName="sendNumeroTagNFCFromGestionAccesToNfc">
+</mappings>
+</provided>
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:ComponentType" name="comAde" factoryBean="esir.dom12.nsoc.donneesAde.comAdeFactory" bean="esir.dom12.nsoc.donneesAde.comAde" startMethod="startComponent" stopMethod="stopComponent" updateMethod="updateComponent" deployUnits="//@deployUnits.13">
+<dictionaryType>
+<attributes xsi:type="kevoree:DictionaryAttribute" name="helloProductionDelay" optional="true" state="false" fragmentDependant="false">
+</attributes>
+<defaultValues xsi:type="kevoree:DictionaryValue" value="2000" attribute="//@typeDefinitions.4/@dictionaryType/@attributes.0">
+</defaultValues>
+</dictionaryType>
+<provided xsi:type="kevoree:PortTypeRef" name="comAde" optional="false" noDependency="false" ref="//@typeDefinitions.1">
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="autorisation" serviceMethodName="autorisation">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="autorisation" serviceMethodName="autorisation">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="planningSalleParDate" serviceMethodName="planningSalleParDate">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="planningSalleParDate" serviceMethodName="planningSalleParDate">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="planningEtudiantParDate" serviceMethodName="planningEtudiantParDate">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="planningEtudiantParDate" serviceMethodName="planningEtudiantParDate">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="coursActuelParEtudiant" serviceMethodName="coursActuelParEtudiant">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="coursActuelParEtudiant" serviceMethodName="coursActuelParEtudiant">
+</mappings>
+</provided>
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:NodeType" name="JavaSENode">
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:ServicePortType" name="esir.dom12.nsoc.nfc.NFCTranslatorInterface" synchrone="false">
+<operations xsi:type="kevoree:Operation" name="sendNumeroTagNFCFromGestionAccesToNfc" returnType="//@dataTypes.4">
+<parameters xsi:type="kevoree:Parameter" name="numeroTagNfc" order="0" type="//@dataTypes.4">
+</parameters>
+</operations>
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:ComponentType" name="ModuleGestionDacces" factoryBean="esir.dom12.nsoc.module_gestion_dacces.ModuleGestionDaccesFactory" bean="esir.dom12.nsoc.module_gestion_dacces.ModuleGestionDacces" startMethod="startComponent" stopMethod="stopComponent" updateMethod="updateComponent" deployUnits="//@deployUnits.15">
+<required xsi:type="kevoree:PortTypeRef" name="BDD_communication_entree" optional="false" noDependency="true" ref="//@typeDefinitions.6">
+</required>
+<required xsi:type="kevoree:PortTypeRef" name="ADE_communication_entree" optional="false" noDependency="true" ref="//@typeDefinitions.1">
+</required>
+<required xsi:type="kevoree:PortTypeRef" name="identification_entree" optional="false" noDependency="true" ref="//@typeDefinitions.8">
+</required>
+<provided xsi:type="kevoree:PortTypeRef" name="entree_test" optional="false" noDependency="false" ref="//@typeDefinitions.8">
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="test" serviceMethodName="process">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="test" serviceMethodName="process">
+</mappings>
+</provided>
+<provided xsi:type="kevoree:PortTypeRef" name="identification_sortie" optional="false" noDependency="false" ref="//@typeDefinitions.8">
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="traitement_message" serviceMethodName="process">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="traitement_message" serviceMethodName="process">
+</mappings>
+</provided>
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:MessagePortType" name="org.kevoree.framework.MessagePort" synchrone="false">
+</typeDefinitions>
+<repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/release">
+</repositories>
+<repositories xsi:type="kevoree:Repository" url="http://repo1.maven.org/maven2">
+</repositories>
+<repositories xsi:type="kevoree:Repository" url="http://repo.maven.apache.org/maven2">
+</repositories>
+<repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/snapshots">
+</repositories>
+<dataTypes xsi:type="kevoree:TypedElement" name="javax.swing.ImageIcon">
+</dataTypes>
+<dataTypes xsi:type="kevoree:TypedElement" name="scala.Boolean">
+</dataTypes>
+<dataTypes xsi:type="kevoree:TypedElement" name="scala.Int">
+</dataTypes>
+<dataTypes xsi:type="kevoree:TypedElement" name="Array[java.lang.String]">
+</dataTypes>
+<dataTypes xsi:type="kevoree:TypedElement" name="java.lang.String">
+</dataTypes>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.NFCTranslator" unitName="esir.dom12.nsoc.NFCTranslator" version="1.9.0" hashcode="201302131624411" type="jar" requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10 //@deployUnits.11" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" unitName="org.kevoree.tools.javase.framework" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.framework" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.api" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.model" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.scala-lang" unitName="scala-library" version="2.9.2" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.slf4j" unitName="slf4j-api" version="1.6.4" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.model.context" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.adaptation.model" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.kcl" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" unitName="org.kevoree.tools.annotation.api" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.connexionBDD" unitName="esir.dom12.nsoc.connexionBDD" version="1.9.0" hashcode="201302131623574" type="jar" requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10 //@deployUnits.12" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="mysql.connector.jdbc" unitName="mysql.connector.jdbc" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.donneesAde" unitName="esir.dom12.nsoc.donneesAde" version="1.9.0" hashcode="201302131100256" type="jar" requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.module_gestion_dacces" unitName="esir.dom12.nsoc.module_gestion_dacces" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc" unitName="esir.dom12.nsoc.module_gestion_dacces" version="1.9.0" hashcode="201302131130213" type="jar" requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.5 //@deployUnits.6 //@deployUnits.10 //@deployUnits.11 //@deployUnits.13 //@deployUnits.0" targetNodeType="//@typeDefinitions.5">
+</deployUnits>
 </kevoree:ContainerRoot>

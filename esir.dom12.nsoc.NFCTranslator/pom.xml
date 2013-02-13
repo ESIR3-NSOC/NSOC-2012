@@ -6,7 +6,7 @@
 
     <groupId>esir.dom12.nsoc.NFCTranslator</groupId>
     <artifactId>esir.dom12.nsoc.NFCTranslator</artifactId>
-    <version>1.8.9</version>
+    <version>1.9.0</version>
     <name>esir.dom12.nsoc.nfc.NFCTranslator</name>
 
     <properties>
@@ -29,6 +29,16 @@
             <groupId>esir.dom12.nsoc.connexionBDD</groupId>
             <artifactId>esir.dom12.nsoc.connexionBDD</artifactId>
             <version>${kevoree.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>esir.dom12.nsoc.donneesAde</groupId>
+            <artifactId>esir.dom12.nsoc.donneesAde</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>esir.dom12.nsoc.module_gestion_dacces</groupId>
+            <artifactId>esir.dom12.nsoc.module_gestion_dacces</artifactId>
+            <version>1.9.0</version>
         </dependency>
     </dependencies>
 
