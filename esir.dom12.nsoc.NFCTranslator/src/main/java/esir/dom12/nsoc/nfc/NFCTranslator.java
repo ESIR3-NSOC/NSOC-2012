@@ -35,7 +35,6 @@ public class NFCTranslator extends AbstractComponentType implements NFCTranslato
     @Start
     public void startComponent() {
         System.out.println("NFCTranslator:: Start");
-        //sendNumeroTagNFCFromGestionAccesToNfc("2");
     }
 
     @Stop
