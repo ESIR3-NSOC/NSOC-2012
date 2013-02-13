@@ -40,7 +40,7 @@
 </dataTypes>
 <dataTypes xsi:type="kevoree:TypedElement" name="java.lang.String">
 </dataTypes>
-<deployUnits xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.connexionBDD" unitName="esir.dom12.nsoc.connexionBDD" version="1.9.0" hashcode="201302131430283" type="jar" requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10 //@deployUnits.11" targetNodeType="//@typeDefinitions.2">
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.connexionBDD" unitName="esir.dom12.nsoc.connexionBDD" version="1.9.0" hashcode="201302131623574" type="jar" requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10 //@deployUnits.11" targetNodeType="//@typeDefinitions.2">
 </deployUnits>
 <deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" unitName="org.kevoree.tools.javase.framework" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.2">
 </deployUnits>

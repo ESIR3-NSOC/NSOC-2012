@@ -44,9 +44,8 @@ public class ConnexionBDD extends AbstractComponentType implements ConnexionBDDI
         Class.forName("com.mysql.jdbc.Driver");
         System.out.println("Driver OK !");
 
-        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + url, user, password);
+        connection  = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + url, user, password);
         System.out.println("Connexion reussie !");
-
     }
 
     @Stop
@@ -93,7 +92,7 @@ public class ConnexionBDD extends AbstractComponentType implements ConnexionBDDI
 
         ResultSet trombi = state.executeQuery(requeteTrombi);
         trombi.next();
-        ImageIcon trombiImage = new ImageIcon(trombi.getString(1));
+        ImageIcon trombiImage = new ImageIcon("../BDD/" + trombi.getString(1));
 
 
         trombiEtudiant = trombiImage;
