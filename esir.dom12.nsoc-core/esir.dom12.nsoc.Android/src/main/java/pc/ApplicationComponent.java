@@ -126,8 +126,8 @@ public class ApplicationComponent extends AbstractComponentType {
 
     public void trombi (String st) {
 
-       Bitmap bp = getPortByName("toggle",ConnexionBDDInterface.class).sendRequestFromTrombiToBdd();
-       trombinoscopeView.viewImgIcon(bp);
+       Bitmap bp = getPortByName("toggle",ConnexionBDDInterface.class).sendRequestFromTrombiToBdd(st);
+       trombinoscopeView.viewImgIcon(bp,st);
 
     }
 }
