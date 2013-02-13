@@ -1,10 +1,8 @@
 package esir.dom12.nsoc.testComAde;
 
 import java.io.IOException;
-
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
-import org.kevoree.framework.MessagePort;
 
 
 @Requires({
@@ -38,19 +36,21 @@ public class testComAde extends AbstractComponentType{
     	if(o instanceof String) {
     		msg = (String)o;
         }
+    	//if (msg.equalsIgnoreCase("Start")){
     	if (msg!=null){
     		System.out.println("testComAde:: Received : "+msg);
-    		String output;
+    		String output=null;
+    		output +="planningSalleParDate(2013,2,12,41,1)";
     		String []planning = getPortByName("comAde", Ade.class).planningSalleParDate(2013,2,12,"41","1");
-    		output=planning[0]+"\n"+planning[1];
+    		if (planning[0]!=null && planning[1]!=null)
+    			output=planning[0]+"\n"+planning[1];
+    		output +="coursActuelParEtudiant(Thebault Antoine";
     		output+=getPortByName("comAde", Ade.class).coursActuelParEtudiant("Thebault Antoine");
+    		output += "planningetudiantpardate2013,2,13 (Thebault Antoine";
     		planning = getPortByName("comAde", Ade.class).planningEtudiantParDate(2013,2,13,"Thebault Antoine");
-    		output="    "+planning[0]+planning[1]+planning[2];
+    		if (planning[0]!=null && planning[1]!=null && planning[2]!=null)
+    			output="    "+planning[0]+planning[1]+planning[2];
     		System.out.println("resultat : "+output);
-    		MessagePort portKnx = getPortByName("output", MessagePort.class);
-    		if(portKnx != null){
-    			portKnx.process(output); // Ecrit les données sur le port
-    		}
     	}
     }
 
