@@ -1,57 +1,99 @@
-<kevoree:ContainerRoot xmlns:xml="http://www.omg.org/XMI" xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" xmlns:kevoree="http://kevoree/1.0" xmi:version="2.0" xsi:type="kevoree:ContainerRoot">
- <typeDefinitions updateMethod="updateComponent" startMethod="startComponent" factoryBean="esir.dom12.nsoc.donneesAde.comAdeFactory" xsi:type="kevoree:ComponentType" name="comAde" bean="esir.dom12.nsoc.donneesAde.comAde" stopMethod="stopComponent" deployUnits="//@deployUnits.0">
-  <dictionaryType>
-   <attributes state="false" name="helloProductionDelay" xsi:type="kevoree:DictionaryAttribute" optional="true" fragmentDependant="false"></attributes>
-   <defaultValues value="2000" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.0"></defaultValues>
-  </dictionaryType>
-  <provided noDependency="false" name="comAde" xsi:type="kevoree:PortTypeRef" optional="false" ref="//@typeDefinitions.2">
-   <mappings beanMethodName="autorisation" xsi:type="kevoree:PortTypeMapping" serviceMethodName="autorisation"></mappings>
-   <mappings beanMethodName="autorisation" xsi:type="kevoree:PortTypeMapping" serviceMethodName="autorisation"></mappings>
-   <mappings beanMethodName="planningSalleParDate" xsi:type="kevoree:PortTypeMapping" serviceMethodName="planningSalleParDate"></mappings>
-   <mappings beanMethodName="planningSalleParDate" xsi:type="kevoree:PortTypeMapping" serviceMethodName="planningSalleParDate"></mappings>
-   <mappings beanMethodName="planningEtudiantParDate" xsi:type="kevoree:PortTypeMapping" serviceMethodName="planningEtudiantParDate"></mappings>
-   <mappings beanMethodName="planningEtudiantParDate" xsi:type="kevoree:PortTypeMapping" serviceMethodName="planningEtudiantParDate"></mappings>
-   <mappings beanMethodName="coursActuelParEtudiant" xsi:type="kevoree:PortTypeMapping" serviceMethodName="coursActuelParEtudiant"></mappings>
-   <mappings beanMethodName="coursActuelParEtudiant" xsi:type="kevoree:PortTypeMapping" serviceMethodName="coursActuelParEtudiant"></mappings>
-  </provided>
- </typeDefinitions>
- <typeDefinitions xsi:type="kevoree:NodeType" name="JavaSENode"></typeDefinitions>
- <typeDefinitions name="esir.dom12.nsoc.donneesAde.Ade" xsi:type="kevoree:ServicePortType" synchrone="false">
-  <operations name="planningSalleParDate" xsi:type="kevoree:Operation" returnType="//@dataTypes.0">
-   <parameters name="annee" xsi:type="kevoree:Parameter" type="//@dataTypes.1"></parameters>
-   <parameters name="mois" xsi:type="kevoree:Parameter" type="//@dataTypes.1"></parameters>
-   <parameters name="jour" xsi:type="kevoree:Parameter" type="//@dataTypes.1"></parameters>
-   <parameters name="batiment" xsi:type="kevoree:Parameter" type="//@dataTypes.2"></parameters>
-   <parameters name="salle" xsi:type="kevoree:Parameter" type="//@dataTypes.2"></parameters>
-  </operations>
-  <operations name="coursActuelParEtudiant" xsi:type="kevoree:Operation" returnType="//@dataTypes.2">
-   <parameters name="etudiant" xsi:type="kevoree:Parameter" type="//@dataTypes.2"></parameters>
-  </operations>
-  <operations name="planningEtudiantParDate" xsi:type="kevoree:Operation" returnType="//@dataTypes.0">
-   <parameters name="annee" xsi:type="kevoree:Parameter" type="//@dataTypes.1"></parameters>
-   <parameters name="mois" xsi:type="kevoree:Parameter" type="//@dataTypes.1"></parameters>
-   <parameters name="jour" xsi:type="kevoree:Parameter" type="//@dataTypes.1"></parameters>
-   <parameters name="etudiant" xsi:type="kevoree:Parameter" type="//@dataTypes.2"></parameters>
-  </operations>
-  <operations name="autorisation" xsi:type="kevoree:Operation" returnType="//@dataTypes.3">
-   <parameters name="nom" xsi:type="kevoree:Parameter" type="//@dataTypes.2"></parameters>
-  </operations>
- </typeDefinitions>
- <repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/release"></repositories>
- <repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/snapshots"></repositories>
- <repositories xsi:type="kevoree:Repository" url="http://repo1.maven.org/maven2"></repositories>
- <dataTypes xsi:type="kevoree:TypedElement" name="Array[java.lang.String]"></dataTypes>
- <dataTypes xsi:type="kevoree:TypedElement" name="scala.Int"></dataTypes>
- <dataTypes xsi:type="kevoree:TypedElement" name="java.lang.String"></dataTypes>
- <dataTypes xsi:type="kevoree:TypedElement" name="scala.Boolean"></dataTypes>
- <deployUnits requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9" hashcode="201302112021131" unitName="esir.dom12.nsoc.donneesAde" xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.donneesAde" version="1.8.9" type="jar" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.tools.javase.framework" xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.framework" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.api" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.model" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="scala-library" xsi:type="kevoree:DeployUnit" groupName="org.scala-lang" version="2.9.2" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="slf4j-api" xsi:type="kevoree:DeployUnit" groupName="org.slf4j" version="1.6.4" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.adaptation.model" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.kcl" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
- <deployUnits type="jar" unitName="org.kevoree.tools.annotation.api" xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" version="1.8.9" targetNodeType="//@typeDefinitions.1"></deployUnits>
+<?xml version="1.0" encoding="UTF-8"?>
+<kevoree:ContainerRoot xmlns:kevoree="http://kevoree/1.0" xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xsi:type="kevoree:ContainerRoot">
+<typeDefinitions xsi:type="kevoree:ServicePortType" name="esir.dom12.nsoc.donneesAde.Ade" synchrone="false">
+<operations xsi:type="kevoree:Operation" name="planningSalleParDate" returnType="//@dataTypes.2">
+<parameters xsi:type="kevoree:Parameter" name="batiment" order="3" type="//@dataTypes.3">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="salle" order="4" type="//@dataTypes.3">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="mois" order="1" type="//@dataTypes.1">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="jour" order="2" type="//@dataTypes.1">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="annee" order="0" type="//@dataTypes.1">
+</parameters>
+</operations>
+<operations xsi:type="kevoree:Operation" name="planningEtudiantParDate" returnType="//@dataTypes.2">
+<parameters xsi:type="kevoree:Parameter" name="etudiant" order="3" type="//@dataTypes.3">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="mois" order="1" type="//@dataTypes.1">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="jour" order="2" type="//@dataTypes.1">
+</parameters>
+<parameters xsi:type="kevoree:Parameter" name="annee" order="0" type="//@dataTypes.1">
+</parameters>
+</operations>
+<operations xsi:type="kevoree:Operation" name="coursActuelParEtudiant" returnType="//@dataTypes.3">
+<parameters xsi:type="kevoree:Parameter" name="etudiant" order="0" type="//@dataTypes.3">
+</parameters>
+</operations>
+<operations xsi:type="kevoree:Operation" name="autorisation" returnType="//@dataTypes.0">
+<parameters xsi:type="kevoree:Parameter" name="nom" order="0" type="//@dataTypes.3">
+</parameters>
+</operations>
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:ComponentType" name="comAde" factoryBean="esir.dom12.nsoc.donneesAde.comAdeFactory" bean="esir.dom12.nsoc.donneesAde.comAde" startMethod="startComponent" stopMethod="stopComponent" updateMethod="updateComponent" deployUnits="//@deployUnits.0">
+<dictionaryType>
+<attributes xsi:type="kevoree:DictionaryAttribute" name="helloProductionDelay" optional="true" state="false" fragmentDependant="false">
+</attributes>
+<defaultValues xsi:type="kevoree:DictionaryValue" value="2000" attribute="//@typeDefinitions.1/@dictionaryType/@attributes.0">
+</defaultValues>
+</dictionaryType>
+<provided xsi:type="kevoree:PortTypeRef" name="comAde" optional="false" noDependency="false" ref="//@typeDefinitions.0">
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="autorisation" serviceMethodName="autorisation">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="autorisation" serviceMethodName="autorisation">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="planningSalleParDate" serviceMethodName="planningSalleParDate">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="planningSalleParDate" serviceMethodName="planningSalleParDate">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="planningEtudiantParDate" serviceMethodName="planningEtudiantParDate">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="planningEtudiantParDate" serviceMethodName="planningEtudiantParDate">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="coursActuelParEtudiant" serviceMethodName="coursActuelParEtudiant">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="coursActuelParEtudiant" serviceMethodName="coursActuelParEtudiant">
+</mappings>
+</provided>
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:NodeType" name="JavaSENode">
+</typeDefinitions>
+<repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/release">
+</repositories>
+<repositories xsi:type="kevoree:Repository" url="http://repo1.maven.org/maven2">
+</repositories>
+<repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/snapshots">
+</repositories>
+<dataTypes xsi:type="kevoree:TypedElement" name="scala.Boolean">
+</dataTypes>
+<dataTypes xsi:type="kevoree:TypedElement" name="scala.Int">
+</dataTypes>
+<dataTypes xsi:type="kevoree:TypedElement" name="Array[java.lang.String]">
+</dataTypes>
+<dataTypes xsi:type="kevoree:TypedElement" name="java.lang.String">
+</dataTypes>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.donneesAde" unitName="esir.dom12.nsoc.donneesAde" version="1.9.0" hashcode="201302131100256" type="jar" requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10" targetNodeType="//@typeDefinitions.2">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" unitName="org.kevoree.tools.javase.framework" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.2">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.framework" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.2">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.api" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.2">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.model" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.2">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.scala-lang" unitName="scala-library" version="2.9.2" type="jar" targetNodeType="//@typeDefinitions.2">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.slf4j" unitName="slf4j-api" version="1.6.4" type="jar" targetNodeType="//@typeDefinitions.2">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.model.context" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.2">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.adaptation.model" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.2">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.kcl" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.2">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" unitName="org.kevoree.tools.annotation.api" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.2">
+</deployUnits>
 </kevoree:ContainerRoot>

@@ -11,20 +11,24 @@ import esir.dom12.nsoc.bdd.ConnexionBDDInterface;
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 
+import java.sql.SQLException;
+
+
 @Provides(value = {
-        @ProvidedPort(name = "entreeFromGaToNfc", type = PortType.SERVICE, className = NFCTranslatorInterface.class)
+        @ProvidedPort(name = "entreeFromGaToNfc", type = PortType.SERVICE, className = NFCTranslatorInterface.class) ,
+        @ProvidedPort(name = "entree", type = PortType.MESSAGE)
 })
 
 @Requires(value = {
         @RequiredPort(name = "sortieFromNfcToBdd", type = PortType.SERVICE, className = ConnexionBDDInterface.class, optional = true)
 })
-
 @DictionaryType({
-        @DictionaryAttribute(name = "NfcTranslatorDelay", defaultValue = "2000", optional = true)
+        @DictionaryAttribute(name = "ConnexionDelay", defaultValue = "2000", optional = true)
 })
 
+
 @ComponentType
-public class NFCTranslator extends AbstractComponentType {
+public class NFCTranslator extends AbstractComponentType implements NFCTranslatorInterface {
 
     int numeroTagNFC;
     String nomPrenomEtudiant;
@@ -32,6 +36,7 @@ public class NFCTranslator extends AbstractComponentType {
     @Start
     public void startComponent() {
         System.out.println("NFCTranslator:: Start");
+        //sendNumeroTagNFCFromGestionAccesToNfc("2");
     }
 
     @Stop
@@ -45,14 +50,27 @@ public class NFCTranslator extends AbstractComponentType {
     }
 
     @Port(name = "entreeFromGaToNfc", method = "sendNumeroTagNFCFromGestionAccesToNfc")
-    public String receiveNumeroTagNFCFromGestionAcces (String numeroTagNfc) {
-        String [] temp = numeroTagNfc.split(";");
-        numeroTagNFC = Integer.valueOf(temp[0]);
+    public String sendNumeroTagNFCFromGestionAccesToNfc (String numeroTagNfc) throws SQLException, ClassNotFoundException {
+        // Recupere la valeur de numeroTagNfc
+        numeroTagNFC = Integer.valueOf(numeroTagNfc);
+        // Etablie la connexion via le port sortieFromNfcToBdd
         ConnexionBDDInterface cbi = getPortByName("sortieFromNfcToBdd", ConnexionBDDInterface.class);
-
-        String requeteSQL = "SELECT nom FROM listeEtudiants WHERE numeroTagNFC = " + numeroTagNFC + ";" + "SELECT prenom FROM listeEtudiants WHERE numeroTagNFC = " + numeroTagNFC;
+        // Ecrit la requete dans une chaine de caracteres
+        String requeteSQL = "SELECT nom, prenom FROM listeEtudiants WHERE numeroTagNFC = " + numeroTagNFC;
+        //  & Envoie cette requete a travers ce port afin de recuperer nomPrenomEtudiant
         nomPrenomEtudiant = cbi.sendRequestFromNfcToBdd(requeteSQL);
-
+        // Rend la variable nomPrenomEtudiant
         return nomPrenomEtudiant;
+    }
+
+    @Port(name = "entree")
+    public void  test(Object o){
+        try {
+            sendNumeroTagNFCFromGestionAccesToNfc("2");
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 }

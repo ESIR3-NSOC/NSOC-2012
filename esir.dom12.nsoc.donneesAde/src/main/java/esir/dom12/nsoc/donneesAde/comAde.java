@@ -4,11 +4,10 @@ import java.io.IOException;
 import java.util.Calendar;
 
 import org.kevoree.framework.AbstractComponentType;
-import org.kevoree.framework.MessagePort;
 import org.kevoree.annotation.*;
 
-@Provides(value={
-        @ProvidedPort(name = "comAde", type = PortType.SERVICE, className = Ade.class)
+@Provides({
+        @ProvidedPort(name = "comAde", type = PortType.SERVICE, className=Ade.class)
 })
 @DictionaryType({
         @DictionaryAttribute(name = "helloProductionDelay", defaultValue = "2000", optional = true)
@@ -16,10 +15,14 @@ import org.kevoree.annotation.*;
 
 @ComponentType
 public class comAde extends AbstractComponentType implements Ade{
-    
+	private donneesAde da;
+	public comAde (){
+		da = new donneesAde();
+	}
     @Start
     public void startComponent() {
         System.out.println("Consumer:: Start");
+        
     }
 
     @Stop
@@ -31,34 +34,26 @@ public class comAde extends AbstractComponentType implements Ade{
     public void updateComponent() {
         System.out.println("Consumer:: Update");
     }
-
-    public void helloProduced(String helloValue) {
-        MessagePort prodPort = getPortByName("produce",MessagePort.class);
-        if(prodPort != null) {
-            prodPort.process(helloValue);
-        }
-    }
-    private donneesAde da;
-	
-	public comAde (){
-		da = new donneesAde();
-	}
-	@Port(name = "comAde", method = "autorisation")
+    
+   
+	@Port(name = "comAde", method="autorisation")
 	public boolean autorisation (String nom) throws IOException{
 		if (coursActuelParEtudiant(nom)==null)
 				return false;
 		return true;
 	}
-	@Port(name = "comAde", method = "planningSalleParDate")
+
+	    
+	@Port(name = "comAde", method= "planningSalleParDate")
 	public String[] planningSalleParDate (int annee, int mois, int jour, String batiment, String salle) throws IOException {
 		//ex : init("982",2012,12,18,"41","1") 
 		
 		da.init ("5238",annee,mois,jour+1,batiment,salle);
 		String[] planning = da.getPlanningSalle();
-		
+			
 		return planning;
 	}
-	@Port(name = "comAde", method = "planningEtudiantParDate")
+	@Port(name ="comAde", method="planningEtudiantParDate")
 	public String[] planningEtudiantParDate(int annee, int mois, int jour, String etudiant) throws IOException{
 		da.init(da.recupererIdEtudiant(etudiant),annee,mois,jour+1,"","");		
 		String[] infos=new String[15];
