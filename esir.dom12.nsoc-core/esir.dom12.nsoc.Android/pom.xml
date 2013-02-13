@@ -9,13 +9,13 @@
     <version>1.9.0</version>
     <name>Android</name>
 
-<properties>
-    <kevoree.version>${project.version}</kevoree.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <android.tools.aapt>/Users/Sebastien/Downloads/adt-bundle-mac/sdk/platform-tools/aapt</android.tools.aapt>
-    <android.tools.dx>/Users/Sebastien/Downloads/adt-bundle-mac/sdk/platform-tools/dx</android.tools.dx>
-    <kevoree.exclude>com.google.android:*,commons-*:*,org.apache.httpcomponents:*,org.khronos:*,xerces:*,xpp3:*,org.json:*</kevoree.exclude>
-</properties>
+    <properties>
+        <kevoree.version>${project.version}</kevoree.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <android.tools.aapt>/Users/Sebastien/Downloads/adt-bundle-mac/sdk/platform-tools/aapt</android.tools.aapt>
+        <android.tools.dx>/Users/Sebastien/Downloads/adt-bundle-mac/sdk/platform-tools/dx</android.tools.dx>
+        <kevoree.exclude>com.google.android:*,commons-*:*,org.apache.httpcomponents:*,org.khronos:*,xerces:*,xpp3:*,org.json:*</kevoree.exclude>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -117,31 +117,31 @@
             <id>kevoree-libs-release-local</id>
             <url>http://maven.kevoree.org/release</url>
         </repository>
-           <repository>
-               <id>kevoree-snapshots</id>
-               <url>http://maven.kevoree.org/snapshots</url>
-           </repository>
-         <repository>
-             <id>repoLocal_Tablette</id>
-             <url>file://sdcard</url>
-         </repository>
-     </repositories>
+        <repository>
+            <id>kevoree-snapshots</id>
+            <url>http://maven.kevoree.org/snapshots</url>
+        </repository>
+        <repository>
+            <id>repoLocal_Tablette</id>
+            <url>file://sdcard</url>
+        </repository>
+    </repositories>
 
-  <pluginRepositories>
+    <pluginRepositories>
 
-      <pluginRepository>
-          <id>plugin.kevoree-github</id>
-          <url>http://maven.kevoree.org/release</url>
-      </pluginRepository>
+        <pluginRepository>
+            <id>plugin.kevoree-github</id>
+            <url>http://maven.kevoree.org/release</url>
+        </pluginRepository>
 
-         <pluginRepository>
-             <id>plugin.kevoree-snapshots</id>
-             <url>http://maven.kevoree.org/snapshots</url>
-         </pluginRepository>
+        <pluginRepository>
+            <id>plugin.kevoree-snapshots</id>
+            <url>http://maven.kevoree.org/snapshots</url>
+        </pluginRepository>
 
-     </pluginRepositories>
-
-
+    </pluginRepositories>
 
 
- </project>
+
+
+</project>

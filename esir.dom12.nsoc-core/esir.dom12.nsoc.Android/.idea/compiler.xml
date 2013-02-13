@@ -6,6 +6,11 @@
       <directory url="file://$PROJECT_DIR$/target/generated-sources/annotations" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/android/pc/gen" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/gen" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/untitled/gen" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/activity/gen" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/src/main/java/activity/gen" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/androidTest/gen" includeSubdirectories="true" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>
@@ -27,11 +32,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="esir.dom12.nsoc.Android" />
+        <module name="android_maven" />
         <module name="esir.dom12.nsoc.android" />
+        <module name="esir.dom12.nsoc.Android" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="android_maven" target="1.6" />
       <module name="esir.dom12.nsoc.Android" target="1.6" />
       <module name="esir.dom12.nsoc.android" target="1.6" />
     </bytecodeTargetLevel>
