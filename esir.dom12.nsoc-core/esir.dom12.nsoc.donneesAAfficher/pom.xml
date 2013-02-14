@@ -1,56 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
-<modelVersion>4.0.0</modelVersion>
-
-    <groupId>esir.dom12.nsoc.JavaSe</groupId>
-    <artifactId>esir.dom12.nsoc.JavaSe</artifactId>
-    <packaging>pom</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>donneesAAfficher</groupId>
+    <artifactId>donneesAAfficher</artifactId>
     <version>1.9.0</version>
-    <name>Compilation modules JavaSe</name>
+    <name>donneesAAfficher</name>
 
-    <parent>
-        <groupId>esir.dom12.nsoc.root</groupId>
-        <artifactId>esir.dom12.nsoc.root</artifactId>
-        <version>1.9.0</version>
-        <relativePath>../esir.dom12.nsoc.root/pom.xml</relativePath>
-    </parent>
-
-    <modules>
-    <module>../esir.dom12.nsoc.Gestion-donnee</module>
-    <module>../esir.dom12.nsoc.Gestion-luminaire</module>
-    <module>../esir.dom12.nsoc.Module-knx</module>
-    <module>../esir.dom12.nsoc.Gestion-volet</module>
-    <module>../esir.dom12.nsoc.regulation</module>
-    <module>../esir.dom12.nsoc.scenarii</module>
-    <module>../esir.dom12.nsoc.gateManager</module>
-
-    <module>../esir.dom12.nsoc.donneesAde</module>
-    <module>../esir.dom12.nsoc.connexionBDD</module>
-    <module>../esir.dom12.nsoc.NFCTranslator</module>
-    <module>../esir.dom12.nsoc.module_gestion_dacces</module>
-    </modules>
-
-    <repositories>
-        <repository>
-            <id>kevoree-release</id>
-            <url>http://maven.kevoree.org/release</url>
-        </repository>
-        <repository>
-            <id>kevoree-snapshot</id>
-            <url>http://maven.kevoree.org/snapshots</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>kevoree-release</id>
-            <url>http://maven.kevoree.org/release</url>
-        </pluginRepository>
-        <pluginRepository>
-            <id>kevoree-snapshot</id>
-            <url>http://maven.kevoree.org/snapshots</url>
-        </pluginRepository>
-    </pluginRepositories>
+    <properties>
+        <kevoree.version>${project.version}</kevoree.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -64,6 +25,7 @@
             <version>${kevoree.version}</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -110,7 +72,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- Java compiler plugin -->
+             <!-- Java compiler plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -129,5 +91,26 @@
         </plugins>
     </build>
 
-    
+    <repositories>
+        <repository>
+            <id>kevoree-release</id>
+            <url>http://maven.kevoree.org/release</url>
+        </repository>
+        <repository>
+            <id>kevoree-snapshot</id>
+            <url>http://maven.kevoree.org/snapshots</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>kevoree-release</id>
+            <url>http://maven.kevoree.org/release</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>kevoree-snapshot</id>
+            <url>http://maven.kevoree.org/snapshots</url>
+        </pluginRepository>
+    </pluginRepositories>
+
 </project>
+            

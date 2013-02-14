@@ -6,12 +6,10 @@ package esir.dom12.nsoc.bdd; /**
  * To change this template use File | Settings | File Templates.
  */
 
-import android.graphics.Bitmap;
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 
 import java.sql.*;
-import android.graphics.BitmapFactory;
 
 
 @Provides({
@@ -31,7 +29,7 @@ public class ConnexionBDD extends AbstractComponentType implements ConnexionBDDI
     String requeteNomPrenom;
     String requeteTrombi;
     String nomPrenomEtudiant;
-    Bitmap trombiEtudiant;
+    String trombiEtudiant;
     Connection connection;
 
     public ConnexionBDD () {
@@ -86,18 +84,18 @@ public class ConnexionBDD extends AbstractComponentType implements ConnexionBDDI
      */
 
     @Port(name = "entreeBdd", method = "sendRequestFromTrombiToBdd")
-    public Bitmap sendRequestFromTrombiToBdd (String req) throws SQLException, ClassNotFoundException {
-        //String [] temp = req.split(" ");
-        //String nom = temp[0];
-        //String prenom = temp[1];
-        requeteTrombi = "SELECT trombi FROM listeEtudiants WHERE numeroEtudiant = " + req; //nom = " + nom + " AND prenom = " + prenom;
+    public String sendRequestFromTrombiToBdd (String req) throws SQLException, ClassNotFoundException {
+        String [] temp = req.split(" ");
+        String nom = temp[0];
+        String prenom = temp[1];
+        requeteTrombi = "SELECT trombi FROM listeEtudiants WHERE numeroEtudiant = nom = " + nom + " AND prenom = " + prenom;
 
         Statement state = connection.createStatement();
 
         ResultSet trombi = state.executeQuery(requeteTrombi);
         trombi.next();
 
-        Bitmap im = BitmapFactory.decodeFile("../../BDD/" + trombi.getString(1));
+        String im = "../../BDD/" + trombi.getString(1);
 
         trombiEtudiant = im;
 
