@@ -3,6 +3,7 @@ package esir.dom12.moduleKnx;
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 import org.kevoree.framework.MessagePort;
+import tuwien.auto.calimero.GroupAddress;
 import tuwien.auto.calimero.exception.KNXException;
 import tuwien.auto.calimero.knxnetip.KNXnetIPConnection;
 import tuwien.auto.calimero.link.KNXNetworkLinkIP;
@@ -38,7 +39,8 @@ import java.util.logging.Logger;
 
 })
 @DictionaryType({
-        @DictionaryAttribute(name = "ipMaquette", defaultValue = "192.168.1.193", optional = true)
+        @DictionaryAttribute(name = "ipMaquette", defaultValue = "192.168.1.193", optional = true),
+        @DictionaryAttribute(name = "myIp", defaultValue = "192.168.1.100", optional = true)
 })
 @ComponentType
 public class KnxImplementation extends AbstractComponentType {
@@ -47,6 +49,7 @@ public class KnxImplementation extends AbstractComponentType {
      * Attributs
      */
     String ipPasserelle = (String) getDictionary().get("ipMaquette");  // Récupere l'addres IP dans le Dictionnaire
+    String myIp = null;
     Boolean connect = false;                                           // Boolean pour savoir si l'on est connecté
     KNXNetworkLinkIP netLinkIp;                                        // Variable Calimero
     ProcessCommunicator pc;                                            // Variable Calimero
@@ -62,7 +65,10 @@ public class KnxImplementation extends AbstractComponentType {
     @Start
     public void startComponent() {
 
+        ipPasserelle = (String) getDictionary().get("ipMaquette");      // Get Ip
+        myIp =(String) getDictionary().get("myIp");                     // Get Ip
         System.out.println("Module KNX :: Start");
+        connexionKnx(ipPasserelle);                                     // Connexion Calimero
     }
 
     @Stop
@@ -211,7 +217,7 @@ public class KnxImplementation extends AbstractComponentType {
         // Once adresse are extract, we can make request
 
         // Check if we are connected to the KNX bus
-      /*  if (connect != true) {
+        if (connect != true) {
             connexionKnx(ipPasserelle);                                        // Crée le pont entre la machine et KNX
         }
 
@@ -230,9 +236,9 @@ public class KnxImplementation extends AbstractComponentType {
              *  DATAPOINT !!!!!
              */
 
-      /*  } catch (KNXException e) {
+        } catch (KNXException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }    */
+        }
 
         // Une fois toutes les données récupéré, on créé le String que l'on va envoyé
         for (i = 0; i < tempResult.length; i++) {
@@ -258,7 +264,7 @@ public class KnxImplementation extends AbstractComponentType {
 
         log.log(Level.INFO, "Connexion a la passerelle");
         try {
-            netLinkIp = new KNXNetworkLinkIP(KNXNetworkLinkIP.TUNNEL, new InetSocketAddress(InetAddress.getLocalHost(), 0), new InetSocketAddress(
+            netLinkIp = new KNXNetworkLinkIP(KNXNetworkLinkIP.TUNNEL, new InetSocketAddress(InetAddress.getByName(myIp), 0), new InetSocketAddress(
                     InetAddress.getByName(ip),
                     KNXnetIPConnection.IP_PORT), false, new TPSettings(
                     false));
