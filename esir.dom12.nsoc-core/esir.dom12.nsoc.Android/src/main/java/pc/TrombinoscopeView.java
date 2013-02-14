@@ -30,14 +30,14 @@ public class TrombinoscopeView extends LinearLayout {
 
     }
 
-    public void viewImgIcon (Bitmap imBm,String nom){
+    public void viewBitmap (Bitmap imBm){
 
     ImageView iV = new ImageView(ctx);
-    TextView  tV = new TextView(ctx);
+    //TextView  tV = new TextView(ctx);
 
-    tV.setText(nom+" :");
+   // tV.setText(nom+" :");
     iV.setImageBitmap(imBm);
-    addView(tV);
+    //addView(tV);
     addView(iV);
     }
 

@@ -1,6 +1,7 @@
 package pc;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.View;
 import android.widget.Button;
 import org.kevoree.MessagePortType;
@@ -21,12 +22,12 @@ import java.sql.SQLException;
  */
 
 @Requires({
-        @RequiredPort(name = "SCN", type = PortType.MESSAGE, needCheckDependency = false , optional = true)
-      //  @RequiredPort(name = "Trombi", type = PortType.SERVICE, needCheckDependency = false, className = ConnexionBDDInterface.class)
+        @RequiredPort(name = "SCN", type = PortType.MESSAGE, needCheckDependency = false , optional = true),
+        @RequiredPort(name = "trombiRequest", type = PortType.SERVICE, needCheckDependency = false)
         //@RequiredPort(name = "Empl", type = PortType.SERVICE, needCheckDependency = false, className = Ade.class)
 })
 @Provides({
-        @ProvidedPort(name = "NFC_Tager", type = PortType.MESSAGE)
+        @ProvidedPort(name = "Trombi", type = PortType.MESSAGE)
 })
 
 
@@ -118,8 +119,17 @@ public class ApplicationComponent extends AbstractComponentType {
     return(sendBool);
     }
 
+    @Port(name= "Trombi")
+    public void trombi(Object oId) {
+
+        String URL = oId.toString();
+        Bitmap bp = BitmapFactory.decodeFile(URL)  ;
+        trombinoscopeView.viewBitmap(bp);
+
+    }
+
     @Port(name = "NFC_Tager")
-    public void nfc_check(Object oId) throws SQLException, ClassNotFoundException {
+    public void nfc_check(Object oId) {
 
     String id = oId.toString();
     trombi(id);
@@ -127,10 +137,9 @@ public class ApplicationComponent extends AbstractComponentType {
     }
 
 
-    public void trombi (String st) throws SQLException, ClassNotFoundException {
+    public void trombi(String st){
 
-      // Bitmap bp = getPortByName("Trombi",ConnexionBDDInterface.class).sendRequestFromTrombiToBdd(st);
-      // trombinoscopeView.viewImgIcon(bp,st);
+       getPortByName("trombiRequest", MessagePort.class).process(st);
 
     }
 
