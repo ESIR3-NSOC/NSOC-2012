@@ -9,9 +9,9 @@
     <name>Gestion des donnees</name>
 
     <parent>
-        <groupId>esir.dom12.nsoc.root</groupId>
-        <artifactId>esir.dom12.nsoc.root</artifactId>
+        <groupId>esir.dom12.nsoc.JavaSe</groupId>
+        <artifactId>esir.dom12.nsoc.JavaSe</artifactId>
         <version>1.9.0</version>
-        <relativePath>../esir.dom12.nsoc.root/pom.xml</relativePath>
+        <relativePath>../esir.dom12.nsoc.JavaSe/pom.xml</relativePath>
     </parent>
 </project>
