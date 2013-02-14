@@ -11,7 +11,7 @@ import org.kevoree.tools.arduino.framework.ArduinoGenerator;
  * Time: 11:58 AM
  * To change this template use File | Settings | File Templates.
  */
-@Library(name = "ArduinoNFC")
+@Library(name = "Arduino")
 @ComponentType
 @Requires({
         @RequiredPort(name = "serial", type = PortType.MESSAGE, needCheckDependency = false)

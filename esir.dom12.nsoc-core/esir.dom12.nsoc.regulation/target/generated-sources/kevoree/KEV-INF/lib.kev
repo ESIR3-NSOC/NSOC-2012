@@ -30,7 +30,9 @@
 </repositories>
 <libraries xsi:type="kevoree:TypeLibrary" name="JavaSE" subTypes="//@typeDefinitions.0">
 </libraries>
-<deployUnits xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.regulation" unitName="esir.dom12.nsoc.regulation" version="1.9.0" hashcode="201302131056872" type="jar" requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10" targetNodeType="//@typeDefinitions.1">
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="esir.dom12.nsoc.regulation" unitName="esir.dom12.nsoc.regulation" version="1.9.0" hashcode="201302141026163" type="jar" requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10 //@deployUnits.11" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="calimero" unitName="calimero" version="2.04" type="jar" targetNodeType="//@typeDefinitions.1">
 </deployUnits>
 <deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" unitName="org.kevoree.tools.javase.framework" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.1">
 </deployUnits>
