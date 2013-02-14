@@ -24,6 +24,9 @@
     <module>../esir.dom12.nsoc.regulation</module>
     <module>../esir.dom12.nsoc.scenarii</module>
     <module>../esir.dom12.nsoc.gateManager</module>
+
+    <module>../esir.dom12.nsoc.donneesAde</module>
+    <module>../esir.dom12.nsoc.connexionBDD</module>
     </modules>
 
     <repositories>
