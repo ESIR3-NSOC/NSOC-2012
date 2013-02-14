@@ -4,11 +4,11 @@
     <list default="true" id="5317e188-1a5f-4205-ad2b-1bfc15390e37" name="Default" comment="" />
     <ignored path="esir.dom12.nsoc.JavaSe.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.root/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360833468584" ignored="false" />
-    <file path="/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360833591835" ignored="false" />
-    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.root/.idea/compiler.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360833814399" ignored="false" />
-    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.root/.idea/modules.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360833328029" ignored="false" />
-    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.root/.idea/workspace.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360833953687" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.root/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360834341031" ignored="false" />
+    <file path="/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360834519807" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.root/.idea/compiler.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360834581497" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.root/.idea/modules.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360834581497" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.root/.idea/workspace.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360835117267" ignored="false" />
     <file path="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-luminaire/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360833812152" ignored="false" />
     <file path="$PROJECT_DIR$/../esir.dom12.nsoc.regulation/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360833857015" ignored="false" />
     <file path="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360833848033" ignored="false" />
@@ -16,7 +16,10 @@
     <file path="$PROJECT_DIR$/../esir.dom12.nsoc.gateManager/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360833834827" ignored="false" />
     <file path="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360833841207" ignored="false" />
     <file path="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-donnee/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360833893414" ignored="false" />
-    <file path="/Dummy.txt" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360834027796" ignored="false" />
+    <file path="/Dummy.txt" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360834982118" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.AndroidMaven/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360834460686" ignored="false" />
+    <file path="$PROJECT_DIR$/../esir.dom12.nsoc.Android/pom.xml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360834520958" ignored="false" />
+    <file path="$PROJECT_DIR$/esir.dom12.nsoc.JavaSe.iml" changelist="5317e188-1a5f-4205-ad2b-1bfc15390e37" time="1360834581497" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
