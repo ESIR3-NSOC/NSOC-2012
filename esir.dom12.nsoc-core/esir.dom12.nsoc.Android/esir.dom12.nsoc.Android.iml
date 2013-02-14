@@ -30,6 +30,8 @@
     <orderEntry type="library" name="Maven: org.kevoree:org.kevoree.model.context:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree:org.kevoree.adaptation.model:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree:org.kevoree.kcl:1.9.0" level="project" />
+    <orderEntry type="library" name="Maven: esir.dom12.nsoc.connexionBDD:esir.dom12.nsoc.connexionBDD:1.9.0" level="project" />
+    <orderEntry type="library" name="esir.dom12.nsoc.connexionBDD-1.9.0" level="project" />
   </component>
 </module>
 
