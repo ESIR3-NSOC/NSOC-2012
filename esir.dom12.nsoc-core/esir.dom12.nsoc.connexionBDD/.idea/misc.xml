@@ -49,6 +49,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../../../NSOC-2012-master/esir.dom12.nsoc-core/esir.dom12.nsoc.Android/pom.xml" />
       </list>
     </option>
   </component>

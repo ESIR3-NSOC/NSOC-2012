@@ -6,11 +6,11 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/NFCTranslator.java" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1360745667783" ignored="false" />
     <file path="/pom.xml" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1360752730993" ignored="false" />
-    <file path="/ConnexionBDD.java" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1360773727000" ignored="false" />
+    <file path="/ConnexionBDD.java" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1360791367661" ignored="false" />
     <file path="/fragment.java" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1358763145534" ignored="false" />
     <file path="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/target/generated-sources/kevoree/KEV-INF/lib.kev" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1357746901734" ignored="false" />
     <file path="/NFCTranslatorInterface.java" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1359562855863" ignored="false" />
-    <file path="/ConnexionBDDInterface.java" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1360747937892" ignored="false" />
+    <file path="/ConnexionBDDInterface.java" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1360791379522" ignored="false" />
     <file path="$PROJECT_DIR$/target/generated-sources/kevoree/KEV-INF/lib.kev.debug" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1360743246779" ignored="false" />
     <file path="$PROJECT_DIR$/target/generated-sources/kevoree/KEV-INF/lib.kev" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1360692199589" ignored="false" />
     <file path="$PROJECT_DIR$/target/generated-sources/kevoree/esir/dom12/nsoc/nfc/kevgen/JavaSENode/NFCTranslatorFactory.scala" changelist="9556dee8-08da-4e69-8807-8d22ddd546f4" time="1360743246779" ignored="false" />
@@ -76,64 +76,7 @@
     <favorites_list name="esir.dom12.nsoc.NFCTranslator" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="NFCTranslatorInterface.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/nfc/NFCTranslatorInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="68" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnexionBDDInterface.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDDInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="53" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NFCTranslator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/nfc/NFCTranslator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="33" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="76" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnexionBDD.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="18" selection-start="307" selection-end="307" vertical-scroll-proportion="0.42056075">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -143,16 +86,18 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/src/main/java/ConnexionBDD.java" />
         <option value="$PROJECT_DIR$/src/main/java/NFCTranslator.java" />
         <option value="$PROJECT_DIR$/src/test/java/esir/dom12/nsoc/nfc/NFCTranslatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/nfc/NFCTranslatorInterface.java" />
-        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDDInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/nfc/ConnexionBDDInterface.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/nfc/NFCTranslator.java" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/pom.xml" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDDInterface.java" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc-core/esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc-core/esir.dom12.nsoc.NFCTranslator/src/main/java/esir/dom12/nsoc/nfc/NFCTranslator.java" />
       </list>
     </option>
   </component>
@@ -269,7 +214,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -277,10 +221,6 @@
               <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -289,64 +229,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -357,70 +239,13 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.NFCTranslator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.connexionBDD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bdd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -432,17 +257,17 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/pom.xml" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../esir.dom12.nsoc-core/esir.dom12.nsoc.connexionBDD" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -460,6 +285,23 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -491,19 +333,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -530,6 +359,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -601,6 +443,26 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1440" height="873" extended-state="0" />
     <editor active="false" />
@@ -608,25 +470,25 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27437326" sideWeight="0.50072044" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27348065" sideWeight="0.50359195" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32734805" sideWeight="0.49425286" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.49711815" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21685879" sideWeight="0.72562677" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2341954" sideWeight="0.72790056" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2629683" sideWeight="0.72562677" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27437326" sideWeight="0.49423632" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26293105" sideWeight="0.72790056" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27209944" sideWeight="0.49137932" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -687,55 +549,25 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java">
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc-core/esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="32" selection-start="2687" selection-end="2687" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="64" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
+        <state line="97" column="52" selection-start="2908" selection-end="2908" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/nfc/NFCTranslator.java">
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc-core/esir.dom12.nsoc.NFCTranslator/src/main/java/esir/dom12/nsoc/nfc/NFCTranslator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+        <state line="9" column="33" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc-core/esir.dom12.nsoc.NFCTranslator/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="64" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
+        <state line="28" column="45" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="64" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/esir/dom12/nsoc/nfc/NFCTranslatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="212" selection-end="212" vertical-scroll-proportion="0.20361991" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/kevoree/tools/org.kevoree.tools.javase.framework/1.8.9/org.kevoree.tools.javase.framework-1.8.9.jar!/org/kevoree/framework/AbstractComponentType.class">
@@ -748,52 +580,24 @@
         <state line="20" column="18" selection-start="961" selection-end="961" vertical-scroll-proportion="0.57178843" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/esir.dom12.nsoc.NFCTranslator.iml">
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc-core/esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.41095892" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/nfc/NFCTranslatorInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="68" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
+        <state line="97" column="52" selection-start="2908" selection-end="2908" vertical-scroll-proportion="1.8321168">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDDInterface.java">
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc-core/esir.dom12.nsoc.NFCTranslator/src/main/java/esir/dom12/nsoc/nfc/NFCTranslator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="53" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
+        <state line="9" column="33" selection-start="214" selection-end="214" vertical-scroll-proportion="0.02189781">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/pom.xml">
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc-core/esir.dom12.nsoc.NFCTranslator/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+        <state line="28" column="45" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.02189781">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="76" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/esir/dom12/nsoc/nfc/NFCTranslator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="33" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/src/main/java/esir/dom12/nsoc/bdd/ConnexionBDD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="18" selection-start="307" selection-end="307" vertical-scroll-proportion="0.42056075">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -814,7 +618,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -850,7 +654,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Android|esir.dom12.nsoc.connexionBDD</last-edited>
+          <last-edited>esir.dom12.nsoc.NFCTranslator</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

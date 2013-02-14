@@ -87,8 +87,10 @@ public class ConnexionBDD extends AbstractComponentType implements ConnexionBDDI
 
     @Port(name = "entreeBdd", method = "sendRequestFromTrombiToBdd")
     public Bitmap sendRequestFromTrombiToBdd (String req) throws SQLException, ClassNotFoundException {
-
-        requeteTrombi = "SELECT trombi FROM listeEtudiants WHERE numeroEtudiant = " + req;
+        //String [] temp = req.split(" ");
+        //String nom = temp[0];
+        //String prenom = temp[1];
+        requeteTrombi = "SELECT trombi FROM listeEtudiants WHERE numeroEtudiant = " + req; //nom = " + nom + " AND prenom = " + prenom;
 
         Statement state = connection.createStatement();
 

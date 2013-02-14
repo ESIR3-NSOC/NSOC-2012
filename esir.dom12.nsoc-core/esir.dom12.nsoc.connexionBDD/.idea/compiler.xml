@@ -22,11 +22,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="esir.dom12.nsoc.Android" />
         <module name="esir.dom12.nsoc.connexionBDD" />
         <module name="esir.dom12.nsoc.NFCTranslator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="esir.dom12.nsoc.Android" target="1.6" />
       <module name="esir.dom12.nsoc.connexionBDD" target="1.6" />
       <module name="esir.dom12.nsoc.NFCTranslator" target="1.6" />
     </bytecodeTargetLevel>

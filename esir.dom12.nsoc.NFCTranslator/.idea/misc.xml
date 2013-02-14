@@ -9,6 +9,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/pom.xml" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc-core/esir.dom12.nsoc.connexionBDD/pom.xml" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc-core/esir.dom12.nsoc.NFCTranslator/pom.xml" />
       </list>
     </option>
   </component>
