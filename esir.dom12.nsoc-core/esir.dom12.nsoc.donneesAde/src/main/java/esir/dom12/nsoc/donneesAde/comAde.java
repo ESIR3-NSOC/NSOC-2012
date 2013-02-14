@@ -2,12 +2,11 @@ package esir.dom12.nsoc.donneesAde;
 
 import java.io.IOException;
 import java.util.Calendar;
-
 import org.kevoree.framework.AbstractComponentType;
 import org.kevoree.annotation.*;
 
 @Provides({
-        @ProvidedPort(name = "comAde", type = PortType.SERVICE, className=Ade.class)
+    @ProvidedPort(name = "comAde", type = PortType.SERVICE, className=Ade.class)
 })
 @DictionaryType({
         @DictionaryAttribute(name = "helloProductionDelay", defaultValue = "2000", optional = true)
@@ -34,7 +33,6 @@ public class comAde extends AbstractComponentType implements Ade{
     public void updateComponent() {
         System.out.println("comAde:: Update");
     }
-    
    
 	@Port(name = "comAde", method="autorisation")
 	public boolean autorisation (String nom) throws IOException{
