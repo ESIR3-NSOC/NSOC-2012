@@ -4,7 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-donnee/Gestion-donnee.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-donnee/Gestion-donnee.iml" />
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/Module-knx.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/Module-knx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.Android/esir.dom12.nsoc.Android.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.Android/esir.dom12.nsoc.Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.AndroidMaven/esir.dom12.nsoc.AndroidMaven.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.AndroidMaven/esir.dom12.nsoc.AndroidMaven.iml" />
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.Arduino-NFC/esir.dom12.nsoc.Arduino.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.Arduino-NFC/esir.dom12.nsoc.Arduino.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.ArduinoMaven/esir.dom12.nsoc.ArduinoMaven.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.ArduinoMaven/esir.dom12.nsoc.ArduinoMaven.iml" />
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-luminaire/esir.dom12.nsoc.Gestion-luminaire.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-luminaire/esir.dom12.nsoc.Gestion-luminaire.iml" />
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/esir.dom12.nsoc.Gestion-volet.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/esir.dom12.nsoc.Gestion-volet.iml" />
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/esir.dom12.nsoc.JavaSe.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/esir.dom12.nsoc.JavaSe.iml" />

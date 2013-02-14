@@ -18,6 +18,7 @@
     <modules>
         <module>../esir.dom12.nsoc.JavaSe</module>
         <module>../esir.dom12.nsoc.AndroidMaven</module>
+        <module>../esir.dom12.nsoc.ArduinoMaven</module>
     </modules>
 
 
