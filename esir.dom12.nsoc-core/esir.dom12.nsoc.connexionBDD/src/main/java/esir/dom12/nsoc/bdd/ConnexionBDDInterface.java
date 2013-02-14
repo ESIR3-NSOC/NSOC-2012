@@ -12,6 +12,4 @@ import java.sql.SQLException;
 public interface ConnexionBDDInterface {
 
     public String sendRequestFromNfcToBdd (String req) throws SQLException, ClassNotFoundException;
-
-    public String sendRequestFromTrombiToBdd (String req)  throws SQLException, ClassNotFoundException;
 }

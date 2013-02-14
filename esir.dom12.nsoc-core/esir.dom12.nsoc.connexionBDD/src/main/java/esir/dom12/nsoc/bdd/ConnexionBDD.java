@@ -8,12 +8,18 @@ package esir.dom12.nsoc.bdd; /**
 
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
+import org.kevoree.framework.MessagePort;
 
 import java.sql.*;
 
 
 @Provides({
-        @ProvidedPort(name = "entreeBdd", type = PortType.SERVICE, className = ConnexionBDDInterface.class)
+        @ProvidedPort(name = "entreeBdd", type = PortType.SERVICE, className = ConnexionBDDInterface.class),
+        @ProvidedPort(name = "Trombi", type = PortType.MESSAGE)
+})
+
+@Requires({
+        @RequiredPort(name = "trombiSortie", type = PortType.MESSAGE, optional = true)
 })
 
 @DictionaryType({
@@ -77,28 +83,31 @@ public class ConnexionBDD extends AbstractComponentType implements ConnexionBDDI
 
     /**
      *
-     * @param req : numero de l'etudiant (String)
+     * @param o : numero de l'etudiant (String)
      * @return  ImageIcon trombiEtudiant
      * @throws SQLException
      * @throws ClassNotFoundException
      */
 
-    @Port(name = "entreeBdd", method = "sendRequestFromTrombiToBdd")
-    public String sendRequestFromTrombiToBdd (String req) throws SQLException, ClassNotFoundException {
+    @Port(name = "Trombi")
+    public void sendRequestFromTrombiToBdd (Object o) throws SQLException, ClassNotFoundException {
+        String req = new String(o.toString());
         String [] temp = req.split(" ");
         String nom = temp[0];
         String prenom = temp[1];
-        requeteTrombi = "SELECT trombi FROM listeEtudiants WHERE numeroEtudiant = nom = " + nom + " AND prenom = " + prenom;
+
+        requeteTrombi = "SELECT trombinoscope FROM listeEtudiants WHERE nom = " + nom + " AND prenom = " + prenom;
 
         Statement state = connection.createStatement();
 
         ResultSet trombi = state.executeQuery(requeteTrombi);
         trombi.next();
 
-        String im = "../../BDD/" + trombi.getString(1);
+        trombiEtudiant = "/sdcard/ressource/" + trombi.getString(1);
 
-        trombiEtudiant = im;
-
-        return trombiEtudiant;
+        MessagePort messagePort = getPortByName("trombiSortie", MessagePort.class);
+        if (messagePort != null) {
+            messagePort.process(trombiEtudiant);
+        }
     }
 }
