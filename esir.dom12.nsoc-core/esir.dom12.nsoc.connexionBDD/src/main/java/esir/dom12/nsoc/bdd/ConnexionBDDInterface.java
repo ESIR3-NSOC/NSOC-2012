@@ -1,9 +1,5 @@
 package esir.dom12.nsoc.bdd;
 
-import android.graphics.Bitmap;
-
-import javax.swing.*;
-import java.awt.*;
 import java.sql.SQLException;
 
 /**
@@ -17,5 +13,5 @@ public interface ConnexionBDDInterface {
 
     public String sendRequestFromNfcToBdd (String req) throws SQLException, ClassNotFoundException;
 
-    public Bitmap sendRequestFromTrombiToBdd (String req)  throws SQLException, ClassNotFoundException;
+    public String sendRequestFromTrombiToBdd (String req)  throws SQLException, ClassNotFoundException;
 }
