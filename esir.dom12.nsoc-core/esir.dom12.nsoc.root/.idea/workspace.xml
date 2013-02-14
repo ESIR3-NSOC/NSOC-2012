@@ -45,14 +45,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.scenarii/target/classes/META-INF/MANIFEST.MF" afterPath="" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.Android/esir.dom12.nsoc.Android.iml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.AndroidMaven/esir.dom12.nsoc.AndroidMaven.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/Module-knx.iml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/Module-knx.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-luminaire/esir.dom12.nsoc.Gestion-luminaire.iml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-luminaire/esir.dom12.nsoc.Gestion-luminaire.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/esir.dom12.nsoc.Gestion-volet.iml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/esir.dom12.nsoc.Gestion-volet.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/esir.dom12.nsoc.JavaSe.iml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/esir.dom12.nsoc.JavaSe.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/pom.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -60,7 +56,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360837664641" ignored="false" />
     <file path="$PROJECT_DIR$/../root/.idea/workspace.xml" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360765980768" ignored="false" />
-    <file path="/Dummy.txt" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360838246560" ignored="false" />
+    <file path="/Dummy.txt" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360838277158" ignored="false" />
     <file path="/KnxImplementation.java" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360770823721" ignored="false" />
     <file path="/Arduino.java" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360775903198" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -257,16 +253,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="esir.dom12.nsoc.JavaSe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.root" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="esir.dom12.nsoc.ArduinoMaven" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -488,7 +474,11 @@
       <created>1360838252656</created>
       <updated>1360838252656</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Adding arduinomaven in maven architecture&#10;">
+      <created>1360838290897</created>
+      <updated>1360838290897</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">

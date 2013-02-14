@@ -49,11 +49,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>calimero</groupId>
-            <artifactId>calimero</artifactId>
-            <version>2.04</version>
-        </dependency>
-        <dependency>
             <groupId>org.kevoree.tools</groupId>
             <artifactId>org.kevoree.tools.javase.framework</artifactId>
             <version>${kevoree.version}</version>
