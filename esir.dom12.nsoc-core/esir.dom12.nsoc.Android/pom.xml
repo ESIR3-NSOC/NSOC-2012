@@ -29,10 +29,17 @@
             <version>4.0.1.2</version>
         </dependency>
         <dependency>
-            <groupId>org.kevoree.tools</groupId>
-            <artifactId>org.kevoree.tools.android.framework</artifactId>
-            <version>${kevoree.version}</version>
+        <groupId>org.kevoree.tools</groupId>
+        <artifactId>org.kevoree.tools.android.framework</artifactId>
+        <version>${kevoree.version}</version>
+    </dependency>
+
+        <dependency>
+            <groupId>esir.dom12.nsoc.connexionBDD</groupId>
+            <artifactId>esir.dom12.nsoc.connexionBDD</artifactId>
+            <version>1.9.0</version>
         </dependency>
+
     </dependencies>
 
     <build>
