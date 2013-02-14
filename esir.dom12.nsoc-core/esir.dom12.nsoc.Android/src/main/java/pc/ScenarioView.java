@@ -39,7 +39,6 @@ public class ScenarioView extends LinearLayout
         btnSCNP = new Button(ctx);
         btnSCNM = new Button(ctx);
         btnSCNE = new Button(ctx);
-
 }
 
     private void configUI() {

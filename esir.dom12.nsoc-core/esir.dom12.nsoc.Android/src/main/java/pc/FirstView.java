@@ -45,15 +45,13 @@ public class FirstView extends LinearLayout {
 
     public void configUI() {
 
-
         //String imageInSD = "/sdcard/logoESIR.PNG";
         //Bitmap image = BitmapFactory.decodeFile(imageInSD);
 
+        this.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
 
-
-        nfcText.setText("Please Check Your NFC card ");
+        nfcText.setText("Please Check Your NFC CARD");
         nfcText.setTextSize(40);
-        nfcText.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.CENTER_VERTICAL);
         addView(nfcText);
         //nfcText.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
 

@@ -1,13 +1,17 @@
 package pc;
 
+import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.Button;
+import esir.dom12.nsoc.bdd.ConnexionBDDInterface;
 import org.kevoree.MessagePortType;
 import org.kevoree.android.framework.helper.UIServiceHandler;
 import org.kevoree.android.framework.service.KevoreeAndroidService;
 import org.kevoree.annotation.*;
 import org.kevoree.framework.AbstractComponentType;
 import org.kevoree.framework.MessagePort;
+
+import java.sql.SQLException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,8 +22,15 @@ import org.kevoree.framework.MessagePort;
  */
 
 @Requires({
-        @RequiredPort(name = "SCN", type = PortType.MESSAGE, needCheckDependency = false , optional = true)
+        @RequiredPort(name = "SCN", type = PortType.MESSAGE, needCheckDependency = false , optional = true),
+        @RequiredPort(name = "Trombi", type = PortType.SERVICE, needCheckDependency = false, className = ConnexionBDDInterface.class)
+        //@RequiredPort(name = "Empl", type = PortType.SERVICE, needCheckDependency = false, className = Ade.class)
 })
+@Provides({
+        @ProvidedPort(name = "NFC_Tager", type = PortType.MESSAGE)
+})
+
+
 
 @Library(name = "Android")
 @ComponentType
@@ -29,10 +40,11 @@ public class ApplicationComponent extends AbstractComponentType {
     private KevoreeAndroidService uiService = null;
     private FirstView firstView ;
     private ScenarioView scenarioView;
-    private Boolean theBoolean = false;
-    private Boolean theBoolean1 = false;
-    private Boolean theBoolean2 = false;
-    private Boolean theBoolean3 = false;
+    private TrombinoscopeView trombinoscopeView;
+    private Boolean theBoolean = true;
+    private Boolean theBoolean1 = true;
+    private Boolean theBoolean2 = true;
+    private Boolean theBoolean3 = true;
 
     @Start
     public void start () {
@@ -46,9 +58,13 @@ public class ApplicationComponent extends AbstractComponentType {
 
                 firstView = new FirstView (uiService.getRootActivity());
                 scenarioView =new ScenarioView(uiService.getRootActivity());
+                trombinoscopeView =new TrombinoscopeView(uiService.getRootActivity());
+
                 uiService.addToGroup("NFC", firstView);
                 uiService.addToGroup("SCENARIO", scenarioView);
+                uiService.addToGroup("TROMBI",trombinoscopeView);
 
+                /**** BOUTON SCENARIO ****/
 
                 scenarioView.btnSCNP.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
@@ -97,14 +113,29 @@ public class ApplicationComponent extends AbstractComponentType {
 
     private String onOff(Boolean bn) {
 
-    String sendBool= new String ();
+    String sendBool;
     if(bn.equals(true)){sendBool ="ON";}
     else{sendBool="OFF";}
     return(sendBool);
     }
 
-}
+    @Port(name = "NFC_Tager")
+    public void nfc_check(Object oId) throws SQLException, ClassNotFoundException {
 
+    String id = oId.toString();
+    trombi(id);
+
+    }
+
+
+    public void trombi (String st) throws SQLException, ClassNotFoundException {
+
+       Bitmap bp = getPortByName("Trombi",ConnexionBDDInterface.class).sendRequestFromTrombiToBdd(st);
+       trombinoscopeView.viewImgIcon(bp,st);
+
+    }
+
+}
 
 
 
