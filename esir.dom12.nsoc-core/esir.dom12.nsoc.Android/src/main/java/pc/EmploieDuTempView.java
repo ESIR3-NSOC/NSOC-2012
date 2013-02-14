@@ -1,9 +1,7 @@
 package pc;
 
 import android.content.Context;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
+import android.widget.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,19 +19,14 @@ public class EmploieDuTempView extends LinearLayout {
 
         super(context);
         this.ctx = context;
-        initUI();
-        configUI();
-    }
-
-    private void initUI() {
-        //To change body of created methods use File | Settings | File Templates.
-
-
 
     }
 
-    private void configUI(){
+    public void affichEmploi (String st){
 
-
+        TextView textView = new TextView(ctx);
+        textView.setText(st);
     }
+
+
 }
