@@ -25,34 +25,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f2f3c6b-67df-496f-84fb-6455fafa60d3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/esir_dom12_nsoc_connexionBDD_1_9_0.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_android_android_4_0_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20080701.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_adaptation_model_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_api_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_framework_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_kcl_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_model_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_org_kevoree_model_context_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_tools_org_kevoree_tools_android_framework_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_tools_org_kevoree_tools_annotation_api_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kevoree_tools_org_kevoree_tools_javase_framework_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_khronos_opengl_api_gl1_1_android_2_1_r1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_9_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xmlParserAPIs_2_6_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_1_1_4c.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/esir.dom12.nsoc.Android.iml" afterPath="$PROJECT_DIR$/esir.dom12.nsoc.android.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/esir.dom12.nsoc.Android.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="esir.dom12.nsoc.Android.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360839036170" ignored="false" />
-    <file path="/pom.xml" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360836684977" ignored="false" />
+    <file path="/Dummy.txt" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360839071938" ignored="false" />
+    <file path="/pom.xml" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360839350302" ignored="false" />
     <file path="/PleaseAlfred.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360317585673" ignored="false" />
     <file path="/fragment.java" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360750431294" ignored="false" />
     <file path="/DummyFile.xpath" changelist="2f2f3c6b-67df-496f-84fb-6455fafa60d3" time="1360145539440" ignored="false" />
@@ -136,7 +116,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="66" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.72897196">
+            <state line="23" column="53" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.30155212">
               <folding />
             </state>
           </provider>
@@ -182,15 +162,6 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/pc/TrombinoscopeView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="37" column="49" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="esir.dom12.nsoc.android.iml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/esir.dom12.nsoc.android.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -441,7 +412,7 @@
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.XML" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/PROJET NSOC/Developpement Projet/Source Marc/esir.dom12.nsoc.connexionBDD-1.9.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../esir.dom12.nsoc.AndroidMaven" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -772,7 +743,11 @@
       <created>1360839039260</created>
       <updated>1360839039260</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="enfant pom root&#10;&#10;">
+      <created>1360839078483</created>
+      <updated>1360839078483</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -797,7 +772,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16666667" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -816,7 +791,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25364667" sideWeight="0.78746176" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21961102" sideWeight="0.78746176" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21961102" sideWeight="0.78746176" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24770643" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="22" width="1024" height="742" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2382496" sideWeight="0.76710814" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -925,13 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/esir.dom12.nsoc.android.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pc/FirstView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="13" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.0">
@@ -968,23 +936,9 @@
         <state line="5" column="35" selection-start="139" selection-end="139" vertical-scroll-proportion="0.08792497" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/esir.dom12.nsoc.android.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pc/ScenarioView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="2" selection-start="589" selection-end="667" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pc/FirstView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="33" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1003,6 +957,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pc/FirstView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="33" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pc/ApplicationComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="132" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0">
@@ -1012,7 +973,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="66" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.72897196">
+        <state line="23" column="53" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.30155212">
           <folding />
         </state>
       </provider>

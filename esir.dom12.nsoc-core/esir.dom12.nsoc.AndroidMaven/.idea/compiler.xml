@@ -26,9 +26,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="esir.dom12.nsoc.AndroidMaven" />
+        <module name="esir.dom12.nsoc.Android" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="esir.dom12.nsoc.Android" target="1.6" />
+      <module name="esir.dom12.nsoc.AndroidMaven" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

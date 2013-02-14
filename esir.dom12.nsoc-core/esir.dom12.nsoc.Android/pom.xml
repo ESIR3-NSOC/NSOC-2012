@@ -9,19 +9,11 @@
     <version>1.9.0</version>
     <name>Android</name>
 
-    <properties>
-        <kevoree.version>${project.version}</kevoree.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <android.tools.aapt>/Users/Sebastien/Downloads/adt-bundle-mac/sdk/platform-tools/aapt</android.tools.aapt>
-        <android.tools.dx>/Users/Sebastien/Downloads/adt-bundle-mac/sdk/platform-tools/dx</android.tools.dx>
-        <kevoree.exclude>com.google.android:*,commons-*:*,org.apache.httpcomponents:*,org.khronos:*,xerces:*,xpp3:*,org.json:*</kevoree.exclude>
-    </properties>
-
     <parent>
-        <groupId>esir.dom12.nsoc.root</groupId>
-        <artifactId>esir.dom12.nsoc.root</artifactId>
+        <groupId>esir.dom12.nsoc.AndroidMaven</groupId>
+        <artifactId>esir.dom12.nsoc.AndroidMaven</artifactId>
         <version>1.9.0</version>
-        <relativePath>../esir.dom12.nsoc.root/pom.xml</relativePath>
+        <relativePath>../esir.dom12.nsoc.AndroidMaven/pom.xml</relativePath>
     </parent>
 
     <repositories>

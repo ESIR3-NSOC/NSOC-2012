@@ -3,7 +3,6 @@ package pc;
 import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.Button;
-import esir.dom12.nsoc.bdd.ConnexionBDDInterface;
 import org.kevoree.MessagePortType;
 import org.kevoree.android.framework.helper.UIServiceHandler;
 import org.kevoree.android.framework.service.KevoreeAndroidService;
@@ -22,8 +21,8 @@ import java.sql.SQLException;
  */
 
 @Requires({
-        @RequiredPort(name = "SCN", type = PortType.MESSAGE, needCheckDependency = false , optional = true),
-        @RequiredPort(name = "Trombi", type = PortType.SERVICE, needCheckDependency = false, className = ConnexionBDDInterface.class)
+        @RequiredPort(name = "SCN", type = PortType.MESSAGE, needCheckDependency = false , optional = true)
+      //  @RequiredPort(name = "Trombi", type = PortType.SERVICE, needCheckDependency = false, className = ConnexionBDDInterface.class)
         //@RequiredPort(name = "Empl", type = PortType.SERVICE, needCheckDependency = false, className = Ade.class)
 })
 @Provides({
@@ -130,8 +129,8 @@ public class ApplicationComponent extends AbstractComponentType {
 
     public void trombi (String st) throws SQLException, ClassNotFoundException {
 
-       Bitmap bp = getPortByName("Trombi",ConnexionBDDInterface.class).sendRequestFromTrombiToBdd(st);
-       trombinoscopeView.viewImgIcon(bp,st);
+      // Bitmap bp = getPortByName("Trombi",ConnexionBDDInterface.class).sendRequestFromTrombiToBdd(st);
+      // trombinoscopeView.viewImgIcon(bp,st);
 
     }
 
