@@ -27,6 +27,8 @@
 
     <module>../esir.dom12.nsoc.donneesAde</module>
     <module>../esir.dom12.nsoc.connexionBDD</module>
+    <module>../esir.dom12.nsoc.NFCTranslator</module>
+    <module>../esir.dom12.nsoc.module_gestion_dacces</module>
     </modules>
 
     <repositories>
