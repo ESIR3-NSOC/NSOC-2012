@@ -1,13 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-    <groupId>esir.dom12.nsoc.Android</groupId>
-    <artifactId>esir.dom12.nsoc.Android</artifactId>
+<modelVersion>4.0.0</modelVersion>
+
+    <groupId>esir.dom12.nsoc.AndroidMaven</groupId>
+    <artifactId>esir.dom12.nsoc.AndroidMaven</artifactId>
+    <packaging>pom</packaging>
     <version>1.9.0</version>
-    <name>Android</name>
+    <name>Compilation modules Android</name>
+
+    <parent>
+        <groupId>esir.dom12.nsoc.root</groupId>
+        <artifactId>esir.dom12.nsoc.root</artifactId>
+        <version>1.9.0</version>
+        <relativePath>../esir.dom12.nsoc.root/pom.xml</relativePath>
+    </parent>
+
+    <modules>
+        <module>../esir.dom12.nsoc.Android</module>
+    </modules>
 
     <properties>
         <kevoree.version>${project.version}</kevoree.version>

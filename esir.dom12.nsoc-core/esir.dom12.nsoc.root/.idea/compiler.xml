@@ -11,6 +11,18 @@
       <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/target/generated-sources/annotations" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.Arduino-NFC/target/generated-sources/annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.Arduino-NFC/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.regulation/target/generated-sources/annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.regulation/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/target/generated-sources/annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/target/generated-sources/annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.scenarii/target/generated-sources/annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.scenarii/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.gateManager/target/generated-sources/annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.gateManager/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>
@@ -32,16 +44,29 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="esir.dom12.nsoc.Arduino" />
+        <module name="esir.dom12.nsoc.connexionBDD" />
+        <module name="esir.dom12.nsoc.gateManager" />
         <module name="esir.dom12.nsoc.Gestion-luminaire" />
         <module name="esir.dom12.nsoc.Gestion-volet" />
+        <module name="esir.dom12.nsoc.NFCTranslator" />
+        <module name="esir.dom12.nsoc.regulation" />
+        <module name="esir.dom12.nsoc.scenarii" />
         <module name="Gestion-donnee" />
         <module name="Module-knx" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="esir.dom12.nsoc.Arduino" target="1.6" />
+      <module name="esir.dom12.nsoc.connexionBDD" target="1.6" />
+      <module name="esir.dom12.nsoc.gateManager" target="1.6" />
       <module name="esir.dom12.nsoc.Gestion-luminaire" target="1.6" />
       <module name="esir.dom12.nsoc.Gestion-volet" target="1.6" />
+      <module name="esir.dom12.nsoc.JavaSe" target="1.6" />
+      <module name="esir.dom12.nsoc.NFCTranslator" target="1.6" />
+      <module name="esir.dom12.nsoc.regulation" target="1.6" />
       <module name="esir.dom12.nsoc.root" target="1.6" />
+      <module name="esir.dom12.nsoc.scenarii" target="1.6" />
       <module name="Gestion-donnee" target="1.6" />
       <module name="Module-knx" target="1.6" />
     </bytecodeTargetLevel>
