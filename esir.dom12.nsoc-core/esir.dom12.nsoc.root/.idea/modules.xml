@@ -13,10 +13,14 @@
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/esir.dom12.nsoc.JavaSe.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/esir.dom12.nsoc.JavaSe.iml" />
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/esir.dom12.nsoc.NFCTranslator.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator/esir.dom12.nsoc.NFCTranslator.iml" />
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/esir.dom12.nsoc.connexionBDD.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/esir.dom12.nsoc.connexionBDD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.donneesAde/esir.dom12.nsoc.donneesAde.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.donneesAde/esir.dom12.nsoc.donneesAde.iml" />
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.gateManager/esir.dom12.nsoc.gateManager.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.gateManager/esir.dom12.nsoc.gateManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/esir.dom12.nsoc.module_gestion_dacces.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/esir.dom12.nsoc.module_gestion_dacces.iml" />
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.regulation/esir.dom12.nsoc.regulation.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.regulation/esir.dom12.nsoc.regulation.iml" />
       <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc.root.iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc.root.iml" />
       <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.scenarii/esir.dom12.nsoc.scenarii.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.scenarii/esir.dom12.nsoc.scenarii.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.video/esir.dom12.nsoc.video.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.video/esir.dom12.nsoc.video.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/module_forcage.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/module_forcage.iml" />
     </modules>
   </component>
 </project>

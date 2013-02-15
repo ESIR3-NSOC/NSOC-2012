@@ -7,6 +7,7 @@ import org.kevoree.framework.AbstractComponentType;
 import org.kevoree.framework.MessagePort;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 /**
  * Created by IntelliJ IDEA.
@@ -67,7 +68,14 @@ public class ModuleGestionDacces extends AbstractComponentType {
         tag_recu=((String)o).toString();
         // TODO Appel methode de Marc
         NFCTranslatorInterface nfci = getPortByName("BDD_communication_entree", NFCTranslatorInterface.class);
-        String nomPrenom =  nfci.sendNumeroTagNFCFromGestionAccesToNfc(tag_recu);
+        String nomPrenom = null;
+        try {
+            nomPrenom = nfci.sendNumeroTagNFCFromGestionAccesToNfc(tag_recu);
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
         //  TODO envoie pour seb
         getPortByName("identification_personne",MessagePort.class).process(nomPrenom);
         // TODO appel methode Antoine avec Resultat de Marc

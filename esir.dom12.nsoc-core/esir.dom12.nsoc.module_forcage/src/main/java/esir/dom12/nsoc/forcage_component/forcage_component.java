@@ -31,9 +31,10 @@ import java.util.StringTokenizer;
 
 @DictionaryType({
 
-        @DictionaryAttribute(name = "light", defaultValue = "450", optional = false),
-        @DictionaryAttribute(name = "video", defaultValue = "OFF", optional = false),
-        @DictionaryAttribute(name = "boardLightState", defaultValue = "OFF", optional = false)
+        @DictionaryAttribute(name = "light", defaultValue = "450", optional = true),
+        @DictionaryAttribute(name = "video", defaultValue = "OFF", optional = true),
+        @DictionaryAttribute(name = "boardLightState", defaultValue = "OFF", optional = true),
+        @DictionaryAttribute(name = "scenarioName", defaultValue = "FORC",optional = true)
 
 
 })
@@ -41,26 +42,23 @@ import java.util.StringTokenizer;
 @ComponentType
 
 public class forcage_component extends AbstractComponentType {
-    private static String action_string2;
+
     private static String ON = "ON";
     private static String OFF = "OFF";
     private static String LIGHT = "LIGHT";
     private static String VIDEO = "VIDEO";
 
 
-    private boolean forcing;
+
 
     @Start
       public void startComponent() {
         this.set(OFF);
-        forcing = false;
-
     }
 
     @Stop
     public void stopComponent() {
         this.set(OFF);
-
     }
 
     @Update
@@ -77,7 +75,8 @@ public class forcage_component extends AbstractComponentType {
 
 
         // Reception of message
-        System.out.println("mode_Forcage " + " :: Received " + o.toString());
+        System.out.println("mode_Forcage " + getDictionary().get("scenarioName") + " :: Received " + o.toString());
+
 
         // Analysis only if the message is a string
         if(o instanceof String) {
@@ -92,34 +91,60 @@ public class forcage_component extends AbstractComponentType {
             // What is the command ? ON or OFF
             // Extraction of main command
             String action_string = tokens.nextToken();
-            action_string2 = tokens.nextToken();
+
 
             // The recipient of the message is the Forcing Component : stopping...
-            if ((new String(receiver_string)).compareTo(ON) == 0){
 
+            // The recipient of the message is this forcing component : command readingÉ
+            if ((new String(receiver_string)).compareTo((String) getDictionary().get("scenarioName")) == 0){
 
-                this.set(ON);
-                forcing = true;
-                System.out.println("forcing = true");
-                etatLight(action_string);
-                etatVideo(action_string);
+                // What is the forced device ? VIDEO or LIGHT
+                // Extraction of device
+                String device_string = tokens.nextToken();
 
-            }
+                // What is the forced command? ON or OFF
+                // Extraction of main command
+                String command_string = tokens.nextToken();
 
-                // Forcing Component is setting OFF, this component do nothing
-            else{
+                // Action is ON, we have to force a device...
+                if ((new String(action_string)).compareTo((String) ON) == 0){
+                    this.set(ON);
 
+                    if ((new String(device_string)).compareTo((String) VIDEO) == 0){
+                        sendVideoCommandRegulation(ON);
+                    }
+                    else if ((new String(device_string)).compareTo((String) LIGHT) == 0){
+                        sendLightCommandRegulation(ON);
+                    }
+
+                // Action is OFF, we have to set OFF the forcing component, we do not change device state
+                else if ((new String(action_string)).compareTo((String) OFF) == 0){
                     this.set(OFF);
-                    forcing = false;
-                    System.out.println("forcing = false");
+
+                        if ((new String(device_string)).compareTo((String) VIDEO) == 0){
+                            sendVideoCommandRegulation(OFF);
+                        }
+                        else if ((new String(device_string)).compareTo((String) LIGHT) == 0){
+                            sendLightCommandRegulation(OFF);
+                        }
+                }
+
+                }
 
             }
-
-
-
-
         }
+
+
     }
+
+
+
+
+
+
+
+
+
 
     /**
      * Change the state of forcage
@@ -148,19 +173,6 @@ public class forcage_component extends AbstractComponentType {
     }
 
 
-    private void etatLight(String s){
-        if ((new String(s)).compareTo(LIGHT) == 0){
-            sendLightCommandRegulation(action_string2);
-            sendVideoCommandRegulation(action_string2);
-        }
-    }
-
-    private void etatVideo(String s){
-        if ((new String(s)).compareTo(VIDEO) == 0){
-            sendLightCommandRegulation(action_string2);
-            sendVideoCommandRegulation(action_string2);
-        }
-    }
 
 
 

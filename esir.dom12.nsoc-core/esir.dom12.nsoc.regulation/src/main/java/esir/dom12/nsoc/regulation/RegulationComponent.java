@@ -45,27 +45,27 @@ public class RegulationComponent extends AbstractComponentType {
 	private static String VALUE;
 
 	// Variables to store the data parser
-	private static String regulationState; 	// ON or OFF
-	private static String boardState;		// ON or OFF
-	private static String roomValue;		// Lux Value in String
-	private static int roomValueINT;		// Lux Value in Int
+	private static String regulationState = "ON"; 	// ON or OFF
+	private static String boardState = null;		// ON or OFF
+	private static String roomValue = "OFF";		// Lux Value in String
+	private static int roomValueINT = 0;		// Lux Value in Int
 
 	// Variables to store the data of component KNX
 	String [] temp1 = new String[4];        // init array with size of 4 (Array for lines)
 	String [] temp2 = new String[2];        // init array with size of 2 (Array split lines)
-	private static String roomValueKNX;		// Lux Value in String
-	private static String boardStateKNX;	// ON or OFF
-	private static String shutterStateKNX;	// UP or DOWN
+	private static String roomValueKNX = "400";		// Lux Value in String
+	private static String boardStateKNX = "ON";	// ON or OFF
+	private static String shutterStateKNX = "UP";	// UP or DOWN
 
 	// Variables for parse data
 	private static int parseValueKNX = -1;
 	private static int parseOutsideValueKNX = -1;
 
 	// News variables for send command
-	private static String newRoomValueKNX;		// Lux Value in String
-	private static String newBoardStateKNX;		// ON or OFF
-	private static String newShutterStateKNX;	// UP or DOWN
-	private static String outsideValueKNX;		// Lux Value in String
+	private static String newRoomValueKNX = "0";		// Lux Value in String
+	private static String newBoardStateKNX = "UP";		// ON or OFF
+	private static String newShutterStateKNX = "ON";	// UP or DOWN
+	private static String outsideValueKNX = "400";		// Lux Value in String
 
 	// Variables for default operation
 	private static String DEFAULT_ROOM_VALUE = "0";			// Default Value Room
@@ -259,7 +259,9 @@ public class RegulationComponent extends AbstractComponentType {
 			if(regulationState.equals("ON")){
 
 				// Regulation of board light for boardState
-				if(boardState.isEmpty()){}
+				if(boardState == "OFF"){
+
+                }
 
 				else{
 
@@ -405,14 +407,14 @@ public class RegulationComponent extends AbstractComponentType {
 		if(prodPort != null) {
 
 			// Activate Konnex Board Equipment
-			if ((new String(newBoardStateKNX)).compareTo(ON) == 0){
+			if (newBoardStateKNX != null && (new String(newBoardStateKNX)).compareTo(ON) == 0){
 				msg = LIGHT_BOARD + ":" + ON;
 				prodPort.process(msg);
 				System.out.println("Board light command send :: " + msg);
 			}
 
 			// Desactivate Konnex Board Equipment
-			if ((new String(newBoardStateKNX)).compareTo(OFF) == 0){
+			if (newBoardStateKNX != null && (new String(newBoardStateKNX)).compareTo(OFF) == 0){
 				msg = LIGHT_BOARD + ":" + OFF;
 				prodPort.process(msg);
 				System.out.println("Board light command send :: " + msg);

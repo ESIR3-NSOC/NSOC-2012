@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc.Module-knx/Module-knx.iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc.Module-knx/Module-knx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc-core.iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc.Arduino-NFC/esir.dom12.nsoc.Arduino-NFC.iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc.Arduino-NFC/esir.dom12.nsoc.Arduino-NFC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc.Gestion-donnee/esir.dom12.nsoc.Gestion-donnee.iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc.Gestion-donnee/esir.dom12.nsoc.Gestion-donnee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc.Gestion-lum.iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc.Gestion-lum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc.Gestion-volet/esir.dom12.nsoc.Gestion-volet.iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc.Gestion-volet/esir.dom12.nsoc.Gestion-volet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc.Gestion-luminaire/esir.dom12.nsoc.Gestion-volet (1).iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc.Gestion-luminaire/esir.dom12.nsoc.Gestion-volet (1).iml" />
+    </modules>
+  </component>
+</project>
+

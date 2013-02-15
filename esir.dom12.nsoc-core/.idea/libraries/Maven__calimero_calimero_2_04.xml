@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: calimero:calimero:2.04">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/calimero/calimero/2.04/calimero-2.04.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/calimero/calimero/2.04/calimero-2.04-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/calimero/calimero/2.04/calimero-2.04-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -90,6 +90,10 @@ public class KnxImplementation extends AbstractComponentType {
     @Port(name = "setEquipementState")
     public void setComposant(Object o) {
 
+        if(connect == false){
+            connexionKnx(ipPasserelle);
+        }
+
         /**
          * Variable de la classe
          */
@@ -209,7 +213,7 @@ public class KnxImplementation extends AbstractComponentType {
         /********** FAKE KNX MODULE **********/
 
         tempResult[0] = "false";
-        tempResult[1] = "true";
+        tempResult[1] = "400";
         tempResult[2] = "false";
         tempResult[3] = "400";
 
@@ -217,7 +221,7 @@ public class KnxImplementation extends AbstractComponentType {
         // Once adresse are extract, we can make request
 
         // Check if we are connected to the KNX bus
-        if (connect != true) {
+     /*   if (connect != true) {
             connexionKnx(ipPasserelle);                                        // Crée le pont entre la machine et KNX
         }
 
@@ -235,11 +239,11 @@ public class KnxImplementation extends AbstractComponentType {
             /**
              *  DATAPOINT !!!!!
              */
-
+       /*
         } catch (KNXException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
-
+                */
         // Une fois toutes les données récupéré, on créé le String que l'on va envoyé
         for (i = 0; i < tempResult.length; i++) {
             if (i == 0) {

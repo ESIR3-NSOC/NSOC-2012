@@ -25,6 +25,14 @@
       <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.gateManager/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.Android/target/generated-sources/annotations" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.Android/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/generated-sources/annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.donneesAde/target/generated-sources/annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.donneesAde/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/target/generated-sources/annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.video/target/generated-sources/annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/../esir.dom12.nsoc.video/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>
@@ -49,14 +57,18 @@
         <module name="esir.dom12.nsoc.Android" />
         <module name="esir.dom12.nsoc.Arduino" />
         <module name="esir.dom12.nsoc.connexionBDD" />
+        <module name="esir.dom12.nsoc.donneesAde" />
         <module name="esir.dom12.nsoc.gateManager" />
         <module name="esir.dom12.nsoc.Gestion-luminaire" />
         <module name="esir.dom12.nsoc.Gestion-volet" />
+        <module name="esir.dom12.nsoc.module_gestion_dacces" />
         <module name="esir.dom12.nsoc.NFCTranslator" />
         <module name="esir.dom12.nsoc.regulation" />
         <module name="esir.dom12.nsoc.scenarii" />
+        <module name="esir.dom12.nsoc.video" />
         <module name="Gestion-donnee" />
         <module name="Module-knx" />
+        <module name="module_forcage" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -65,16 +77,20 @@
       <module name="esir.dom12.nsoc.Arduino" target="1.6" />
       <module name="esir.dom12.nsoc.ArduinoMaven" target="1.6" />
       <module name="esir.dom12.nsoc.connexionBDD" target="1.6" />
+      <module name="esir.dom12.nsoc.donneesAde" target="1.6" />
       <module name="esir.dom12.nsoc.gateManager" target="1.6" />
       <module name="esir.dom12.nsoc.Gestion-luminaire" target="1.6" />
       <module name="esir.dom12.nsoc.Gestion-volet" target="1.6" />
       <module name="esir.dom12.nsoc.JavaSe" target="1.6" />
+      <module name="esir.dom12.nsoc.module_gestion_dacces" target="1.6" />
       <module name="esir.dom12.nsoc.NFCTranslator" target="1.6" />
       <module name="esir.dom12.nsoc.regulation" target="1.6" />
       <module name="esir.dom12.nsoc.root" target="1.6" />
       <module name="esir.dom12.nsoc.scenarii" target="1.6" />
+      <module name="esir.dom12.nsoc.video" target="1.6" />
       <module name="Gestion-donnee" target="1.6" />
       <module name="Module-knx" target="1.6" />
+      <module name="module_forcage" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,74 @@
+ {
+addRepo "http://maven.kevoree.org/archiva/repository/release/"
+addRepo "http://maven.kevoree.org/release"
+addRepo "http://maven.kevoree.org/snapshots"
+addRepo "http://repo.maven.apache.org/maven2"
+addRepo "http://repo.typesafe.com/typesafe/releases/"
+addRepo "http://www.libvirt.org/maven2/"
+addRepo "http://repo1.maven.org/maven2"
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.fakeDomo/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.arduino/org.kevoree.library.arduino.components/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.gossiperNetty/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.arduino/org.kevoree.library.arduino.groupType/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.android/org.kevoree.library.android.fakeDomo/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.android/org.kevoree.library.android.mavenCache/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.android/org.kevoree.library.android.nodeType/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.camel.atom/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.android/org.kevoree.library.android.agrapher/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.etherpad/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.android/org.kevoree.library.android.nanohttp/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.camel/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.basicGossiper/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.swingUI/{kevoree.version}'
+merge 'mvn:esir.dom12.nsoc/esir.dom12.nsoc.Gestion-volet/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.webserver.api/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.sky/org.kevoree.library.sky.jails/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.nanohttpAutoDiscovery/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.webserver.servlet/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.serialCT/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.sky/org.kevoree.library.sky.minicloud/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.android/org.kevoree.library.android.jexxus/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.mavenCache/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.webserver.tjws/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.sky/org.kevoree.library.sky.api/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.defaultChannels/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.jexxus/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.javaseNode/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.sky/org.kevoree.library.sky.provider/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.nodeJS/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.webserver.spray/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.authentication/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.android/org.kevoree.library.android.nioChannels/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.nanohttp/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.socketChannels/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.android/org.kevoree.library.android.logger/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.android/org.kevoree.library.android.socketChannels/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.nioChannels/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.android/org.kevoree.library.android.defaultChannels/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.android/org.kevoree.library.android.basicGossiper/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.sky/org.kevoree.library.sky.provider.web/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.sky/org.kevoree.library.sky.libvirt/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.arduino/org.kevoree.library.arduino.groupType/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.arduino/org.kevoree.library.arduino.nodeType/{kevoree.version}'
+merge 'mvn:org.kevoree.corelibrary.javase/org.kevoree.library.javase.grapher/{kevoree.version}'
+addNode editor_node:MiniCloudNode
+updateDictionary editor_node{logLevel="INFO",log_folder="/tmp"}
+ {
+  addComponent FakeConso899@editor_node : FakeConsole {}
+  addComponent GestionVo229@editor_node : GestionVolImpl {}
+addChannel defMSG361 : defMSG {}
+addChannel defMSG514 : defMSG {}
+bind FakeConso899.textEntered@editor_node => defMSG361
+bind GestionVo229.setshutterstate@editor_node => defMSG361
+bind FakeConso899.showText@editor_node => defMSG514
+bind GestionVo229.setshutter@editor_node => defMSG514
+updateDictionary defMSG361 
+updateDictionary defMSG514 
+updateDictionary FakeConso899@editor_node 
+updateDictionary GestionVo229@editor_node 
+}
+
+addGroup editor_group:NanoRestGroup
+addToGroup editor_group editor_node
+updateDictionary editor_group{port="6002"}@editor_node
+}

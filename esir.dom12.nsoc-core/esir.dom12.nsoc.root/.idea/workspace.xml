@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c45edc9-eae3-4779-ab4e-b0139542cb5e" name="Default" comment="" />
+    <list default="true" id="3c45edc9-eae3-4779-ab4e-b0139542cb5e" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.Android/esir.dom12.nsoc.Android.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/classes.timestamp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/classes/KEV-INF/lib.kev" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/classes/KEV-INF/lib.kev.debug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/generated-sources/kevoree/KEV-INF/lib.kev" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/generated-sources/kevoree/KEV-INF/lib.kev.debug" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/generated-sources/kevoree/esir/dom12/nsoc/forcage_component/kevgen/JavaSENode/forcage_componentActivator.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/generated-sources/kevoree/esir/dom12/nsoc/forcage_component/kevgen/JavaSENode/forcage_componentFactory.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/generated-sources/kevoree/esir/dom12/nsoc/forcage_component/kevgen/JavaSENode/forcage_componentPORTcommandForcage.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/generated-sources/kevoree/esir/dom12/nsoc/forcage_component/kevgen/JavaSENode/forcage_componentPORTcommandRegul.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/generated-sources/kevoree/esir/dom12/nsoc/forcage_component/kevgen/JavaSENode/forcage_componentPORTisSettingOFF.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/generated-sources/kevoree/esir/dom12/nsoc/forcage_component/kevgen/JavaSENode/forcage_componentPORTisSettingON.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/esir.dom12.nsoc.module_gestion_dacces.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/target/generated-sources/kevoree/esir/dom12/nsoc/bdd/kevgen/JavaSENode/ConnexionBDDFactory.scala" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/target/generated-sources/kevoree/esir/dom12/nsoc/bdd/kevgen/JavaSENode/ConnexionBDDFactory.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/target/generated-sources/kevoree/esir/dom12/nsoc/bdd/kevgen/JavaSENode/ConnexionBDDPORTentreeBdd.scala" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/target/generated-sources/kevoree/esir/dom12/nsoc/bdd/kevgen/JavaSENode/ConnexionBDDPORTentreeBdd.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/src/main/java/esir/dom12/moduleKnx/KnxImplementation.java" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/src/main/java/esir/dom12/moduleKnx/KnxImplementation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/Module-knx.iml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/Module-knx.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/src/main/java/esir/dom12/nsoc/module_gestion_dacces/ModuleGestionDacces.java" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/src/main/java/esir/dom12/nsoc/module_gestion_dacces/ModuleGestionDacces.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/target/generated-sources/kevoree/esir/dom12/nsoc/module_gestion_dacces/kevgen/JavaSENode/ModuleGestionDaccesFactory.scala" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/target/generated-sources/kevoree/esir/dom12/nsoc/module_gestion_dacces/kevgen/JavaSENode/ModuleGestionDaccesFactory.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.regulation/src/main/java/esir/dom12/nsoc/regulation/RegulationComponent.java" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.regulation/src/main/java/esir/dom12/nsoc/regulation/RegulationComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.ArduinoMaven/esir.dom12.nsoc.ArduinoMaven.iml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.ArduinoMaven/esir.dom12.nsoc.ArduinoMaven.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-luminaire/esir.dom12.nsoc.Gestion-luminaire.iml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-luminaire/esir.dom12.nsoc.Gestion-luminaire.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/esir.dom12.nsoc.Gestion-volet.iml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/esir.dom12.nsoc.Gestion-volet.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/esir.dom12.nsoc.connexionBDD.iml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/esir.dom12.nsoc.connexionBDD.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/esir.dom12.nsoc.module_forcage.iml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/esir.dom12.nsoc.module_forcage.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/src/main/java/esir/dom12/nsoc/forcage_component/forcage_component.java" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/src/main/java/esir/dom12/nsoc/forcage_component/forcage_component.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/target/generated-sources/kevoree/KEV-INF/lib.kev.debug" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/target/generated-sources/kevoree/KEV-INF/lib.kev.debug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.donneesAde/target/generated-sources/kevoree/KEV-INF/lib.kev.debug" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.donneesAde/target/generated-sources/kevoree/KEV-INF/lib.kev.debug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/target/generated-sources/kevoree/KEV-INF/lib.kev.debug" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/target/generated-sources/kevoree/KEV-INF/lib.kev.debug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/target/generated-sources/kevoree/KEV-INF/lib.kev" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD/target/generated-sources/kevoree/KEV-INF/lib.kev" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.donneesAde/target/generated-sources/kevoree/KEV-INF/lib.kev" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.donneesAde/target/generated-sources/kevoree/KEV-INF/lib.kev" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/target/generated-sources/kevoree/KEV-INF/lib.kev" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/target/generated-sources/kevoree/KEV-INF/lib.kev" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/misc.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/modules.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.Android/pom.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.Android/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.AndroidMaven/pom.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.AndroidMaven/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/pom.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/pom.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="esir.dom12.nsoc.root.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/pom.xml" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360837664641" ignored="false" />
+    <file path="/pom.xml" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360938013058" ignored="false" />
     <file path="$PROJECT_DIR$/../root/.idea/workspace.xml" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360765980768" ignored="false" />
-    <file path="/Dummy.txt" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360859613403" ignored="false" />
-    <file path="/KnxImplementation.java" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360770823721" ignored="false" />
+    <file path="/Dummy.txt" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360935945015" ignored="false" />
+    <file path="/KnxImplementation.java" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360937322341" ignored="false" />
     <file path="/Arduino.java" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360775903198" ignored="false" />
+    <file path="/RegulationComponent.java" changelist="3c45edc9-eae3-4779-ab4e-b0139542cb5e" time="1360948614735" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +75,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -58,6 +109,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -68,36 +120,54 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.ArduinoMaven/pom.xml">
+        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="3139" selection-end="3139" vertical-scroll-proportion="0.0">
+            <state line="27" column="36" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegulationComponent.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.regulation/src/main/java/esir/dom12/nsoc/regulation/RegulationComponent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="416" column="36" selection-start="12492" selection-end="12492" vertical-scroll-proportion="0.6896552">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModuleGestionDacces.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/src/main/java/esir/dom12/nsoc/module_gestion_dacces/ModuleGestionDacces.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="12" selection-start="2087" selection-end="2182" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gestionAcces_Ade.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/src/main/java/esir/dom12/nsoc/module_gestion_dacces/gestionAcces_Ade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="17" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Android/pom.xml">
+        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="61" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0">
+            <state line="14" column="14" selection-start="396" selection-end="628" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Arduino-NFC/pom.xml">
+      <file leaf-file-name="KnxImplementation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/src/main/java/esir/dom12/moduleKnx/KnxImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="53" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.AndroidMaven/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="81" selection-start="476" selection-end="476" vertical-scroll-proportion="0.041208792">
+            <state line="241" column="9" selection-start="9731" selection-end="9731" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -110,6 +180,9 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Push.Settings">
+    <option name="myUpdateMethod" value="REBASE" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -121,22 +194,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/src/main/java/esir/dom12/moduleKnx/KnxImplementation.java" />
-        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.Arduino-NFC/src/main/java/esir/dom12/nsoc/Arduino.java" />
-        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.Arduino-NFC/src/main/java/esir/dom12/nsoc/ArduinoNFC.java" />
-        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-luminaire/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.scenarii/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.gateManager/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.regulation/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-donnee/pom.xml" />
-        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.Android/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.Arduino-NFC/pom.xml" />
-        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.ArduinoMaven/pom.xml" />
         <option value="$PROJECT_DIR$/../esir.dom12.nsoc.AndroidMaven/pom.xml" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.Android/pom.xml" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/pom.xml" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.video/pom.xml" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/src/main/java/esir/dom12/nsoc/module_gestion_dacces/ModuleGestionDacces.java" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/src/main/java/esir/dom12/moduleKnx/KnxImplementation.java" />
+        <option value="$PROJECT_DIR$/../esir.dom12.nsoc.regulation/src/main/java/esir/dom12/nsoc/regulation/RegulationComponent.java" />
       </list>
     </option>
   </component>
@@ -154,7 +227,7 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="Compilation modules Arduino" />
+          <option name="myItemId" value="Regulation Video" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -164,7 +237,31 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="Compilation modules Arduino" />
+          <option name="myItemId" value="Regulation Video" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Module KNX" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Module KNX" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -190,7 +287,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -205,7 +302,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -214,8 +310,63 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.root" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.regulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.root" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.regulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.root" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="esir.dom12.nsoc.regulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="regulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -446,10 +597,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="722" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="722" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32724252" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3255814" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -459,10 +610,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3245033" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32658023" sideWeight="0.6744186" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21231766" sideWeight="0.68438536" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26580226" sideWeight="0.67275745" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6694352" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26580226" sideWeight="0.68438536" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31456953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -542,43 +693,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/src/main/java/esir/dom12/moduleKnx/KnxImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="293" column="55" selection-start="11665" selection-end="11665" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Arduino-NFC/src/main/java/esir/dom12/nsoc/ArduinoNFC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="70" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-luminaire/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="29" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-donnee/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="70" selection-start="634" selection-end="634" vertical-scroll-proportion="0.61403507" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="543" selection-end="543" vertical-scroll-proportion="0.5263158" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.scenarii/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="40" selection-start="648" selection-end="648" vertical-scroll-proportion="0.65753424" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.gateManager/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="32" selection-start="558" selection-end="558" vertical-scroll-proportion="0.49315068" />
@@ -586,16 +700,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="18" selection-start="1766" selection-end="1766" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="32" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -617,13 +722,6 @@
         <state line="17" column="32" selection-start="739" selection-end="739" vertical-scroll-proportion="0.6988304" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Android/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="61" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Arduino-NFC/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="53" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
@@ -633,7 +731,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.AndroidMaven/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="81" selection-start="476" selection-end="476" vertical-scroll-proportion="0.041208792">
+        <state line="22" column="3" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Android/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="17" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="43" selection-start="857" selection-end="857" vertical-scroll-proportion="0.61170214">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Gestion-volet/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="14" selection-start="396" selection-end="628" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.video/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/src/main/java/esir/dom12/nsoc/module_gestion_dacces/gestionAcces_Ade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.JavaSe/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="36" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces/src/main/java/esir/dom12/nsoc/module_gestion_dacces/ModuleGestionDacces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="12" selection-start="2087" selection-end="2182" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/src/main/java/esir/dom12/moduleKnx/KnxImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="241" column="9" selection-start="9731" selection-end="9731" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esir.dom12.nsoc.regulation/src/main/java/esir/dom12/nsoc/regulation/RegulationComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="416" column="36" selection-start="12492" selection-end="12492" vertical-scroll-proportion="0.6896552">
           <folding />
         </state>
       </provider>

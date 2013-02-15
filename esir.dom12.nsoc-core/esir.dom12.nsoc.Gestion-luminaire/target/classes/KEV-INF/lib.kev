@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kevoree:ContainerRoot xmlns:kevoree="http://kevoree/1.0" xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xsi:type="kevoree:ContainerRoot">
+<typeDefinitions xsi:type="kevoree:NodeType" name="JavaSENode">
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:ComponentType" name="GestionLumImpl" factoryBean="esir.dom12.gestionLum.GestionLumImplFactory" bean="esir.dom12.gestionLum.GestionLumImpl" startMethod="startComponent" stopMethod="stopComponent" updateMethod="updateComponent" deployUnits="//@deployUnits.0">
+<dictionaryType>
+<attributes xsi:type="kevoree:DictionaryAttribute" name="Board_light" optional="true" state="false" fragmentDependant="false">
+</attributes>
+<attributes xsi:type="kevoree:DictionaryAttribute" name="Room_light" optional="true" state="false" fragmentDependant="false">
+</attributes>
+<defaultValues xsi:type="kevoree:DictionaryValue" value="3/0/1" attribute="//@typeDefinitions.1/@dictionaryType/@attributes.0">
+</defaultValues>
+<defaultValues xsi:type="kevoree:DictionaryValue" value="3/0/2" attribute="//@typeDefinitions.1/@dictionaryType/@attributes.1">
+</defaultValues>
+</dictionaryType>
+<required xsi:type="kevoree:PortTypeRef" name="setLight" optional="true" noDependency="true" ref="//@typeDefinitions.2">
+</required>
+<provided xsi:type="kevoree:PortTypeRef" name="setLightState" optional="false" noDependency="false" ref="//@typeDefinitions.2">
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="setEquipement" serviceMethodName="process">
+</mappings>
+<mappings xsi:type="kevoree:PortTypeMapping" beanMethodName="setEquipement" serviceMethodName="process">
+</mappings>
+</provided>
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:MessagePortType" name="org.kevoree.framework.MessagePort" synchrone="false">
+</typeDefinitions>
+<repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/release">
+</repositories>
+<repositories xsi:type="kevoree:Repository" url="http://repo1.maven.org/maven2">
+</repositories>
+<repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/snapshots">
+</repositories>
+<libraries xsi:type="kevoree:TypeLibrary" name="JavaSE" subTypes="//@typeDefinitions.1">
+</libraries>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="Gestion-luminaire" unitName="Gestion-luminaire" version="1.9.0" hashcode="201302151521123" type="jar" requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10" targetNodeType="//@typeDefinitions.0">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" unitName="org.kevoree.tools.javase.framework" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.0">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.framework" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.0">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.api" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.0">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.model" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.0">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.model.context" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.0">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.adaptation.model" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.0">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.kcl" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.0">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.scala-lang" unitName="scala-library" version="2.9.2" type="jar" targetNodeType="//@typeDefinitions.0">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.slf4j" unitName="slf4j-api" version="1.6.4" type="jar" targetNodeType="//@typeDefinitions.0">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" unitName="org.kevoree.tools.annotation.api" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.0">
+</deployUnits>
+</kevoree:ContainerRoot>

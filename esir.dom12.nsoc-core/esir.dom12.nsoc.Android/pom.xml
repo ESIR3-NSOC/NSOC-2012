@@ -16,6 +16,13 @@
         <relativePath>../esir.dom12.nsoc.AndroidMaven/pom.xml</relativePath>
     </parent>
 
+    <properties>
+        <kevoree.version>${project.version}</kevoree.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <android.tools.aapt>../../AndroidDependence/aapt</android.tools.aapt>
+        <android.tools.dx>../../AndroidDependence/dx</android.tools.dx>
+        <kevoree.exclude>com.google.android:*,commons-*:*,org.apache.httpcomponents:*,org.khronos:*,xerces:*,xpp3:*,org.json:*</kevoree.exclude>
+    </properties>
     <repositories>
 
         <repository>

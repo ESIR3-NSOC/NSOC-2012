@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/esir.dom12.nsoc.Module-knx/pom.xml" />
+        <option value="$PROJECT_DIR$/esir.dom12.nsoc.Gestion-volet/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/esir.dom12.nsoc.Gestion-luminaire/pom.xml" />
+        <option value="$PROJECT_DIR$/esir.dom12.nsoc.test-Guillaume/pom.xml" />
+        <option value="$PROJECT_DIR$/esir.dom12.nsoc.Gestion-donnee/pom.xml" />
+        <option value="$PROJECT_DIR$/esir.dom12.nsoc.Arduino-NFC/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
+

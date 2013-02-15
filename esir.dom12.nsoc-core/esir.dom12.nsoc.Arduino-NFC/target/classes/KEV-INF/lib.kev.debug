@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kevoree:ContainerRoot xmlns:kevoree="http://kevoree/1.0" xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xsi:type="kevoree:ContainerRoot">
+<typeDefinitions xsi:type="kevoree:ComponentType" name="ArduinoNFC" factoryBean="esir.dom12.nsoc.ArduinoNFCFactory" bean="esir.dom12.nsoc.ArduinoNFC" startMethod="dummy" stopMethod="dummy" updateMethod="dummy" deployUnits="//@deployUnits.0">
+<dictionaryType>
+<attributes xsi:type="kevoree:DictionaryAttribute" name="period" optional="true" state="false" datatype="raw=java.lang.Long" fragmentDependant="false">
+</attributes>
+<defaultValues xsi:type="kevoree:DictionaryValue" value="1000" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.0">
+</defaultValues>
+</dictionaryType>
+<required xsi:type="kevoree:PortTypeRef" name="serial" optional="false" noDependency="true" ref="//@typeDefinitions.2">
+</required>
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:NodeType" name="ArduinoNode">
+</typeDefinitions>
+<typeDefinitions xsi:type="kevoree:MessagePortType" name="org.kevoree.framework.MessagePort" synchrone="false">
+</typeDefinitions>
+<repositories xsi:type="kevoree:Repository" url="http://repo1.maven.org/maven2">
+</repositories>
+<repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/release">
+</repositories>
+<repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/snapshots">
+</repositories>
+<libraries xsi:type="kevoree:TypeLibrary" name="Arduino" subTypes="//@typeDefinitions.0">
+</libraries>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="Arduino-NFC" unitName="Arduino-NFC" version="1.9.0" hashcode="201302142000156" type="jar" requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10 //@deployUnits.11" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" unitName="org.kevoree.tools.arduino.framework" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" unitName="org.kevoree.tools.javase.framework" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.scala-lang" unitName="scala-library" version="2.9.2" type="jar" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.slf4j" unitName="slf4j-api" version="1.6.4" type="jar" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.framework" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.api" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.model" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.model.context" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.adaptation.model" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree" unitName="org.kevoree.kcl" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+<deployUnits xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" unitName="org.kevoree.tools.annotation.api" version="1.9.0" type="jar" targetNodeType="//@typeDefinitions.1">
+</deployUnits>
+</kevoree:ContainerRoot>

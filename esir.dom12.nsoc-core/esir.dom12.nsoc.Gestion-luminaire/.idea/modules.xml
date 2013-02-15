@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/Module-knx.iml" filepath="$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx/Module-knx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/esir.dom12.nsoc.Gestion-luminaire.iml" filepath="$PROJECT_DIR$/esir.dom12.nsoc.Gestion-luminaire.iml" />
+    </modules>
+  </component>
+</project>
+

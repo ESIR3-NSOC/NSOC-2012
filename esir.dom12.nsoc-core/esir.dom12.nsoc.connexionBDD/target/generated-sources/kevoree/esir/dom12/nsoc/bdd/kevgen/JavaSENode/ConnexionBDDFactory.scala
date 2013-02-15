@@ -16,7 +16,11 @@ override def updateComponent(){getKevoreeComponentType.asInstanceOf[esir.dom12.n
 }}
 def createConnexionBDD() : esir.dom12.nsoc.bdd.ConnexionBDD ={
 val newcomponent = new esir.dom12.nsoc.bdd.ConnexionBDD();
+newcomponent.getHostedPorts().put("Trombi",createConnexionBDDPORTTrombi(newcomponent))
 newcomponent.getHostedPorts().put("entreeBdd",createConnexionBDDPORTentreeBdd(newcomponent))
+newcomponent.getNeededPorts().put("trombiSortie",createConnexionBDDPORTtrombiSortie(newcomponent))
 newcomponent}
+def createConnexionBDDPORTTrombi(component : ConnexionBDD) : ConnexionBDDPORTTrombi ={ new ConnexionBDDPORTTrombi(component)}
 def createConnexionBDDPORTentreeBdd(component : ConnexionBDD) : ConnexionBDDPORTentreeBdd ={ new ConnexionBDDPORTentreeBdd(component)}
+def createConnexionBDDPORTtrombiSortie(component : ConnexionBDD) : ConnexionBDDPORTtrombiSortie ={ return new ConnexionBDDPORTtrombiSortie(component);}
 }

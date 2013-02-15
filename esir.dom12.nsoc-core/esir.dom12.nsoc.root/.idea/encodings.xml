@@ -12,10 +12,14 @@
     <file url="file://$PROJECT_DIR$/../esir.dom12.nsoc.Module-knx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../esir.dom12.nsoc.NFCTranslator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../esir.dom12.nsoc.connexionBDD" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../esir.dom12.nsoc.donneesAde" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../esir.dom12.nsoc.gateManager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_forcage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../esir.dom12.nsoc.module_gestion_dacces" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../esir.dom12.nsoc.regulation" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../esir.dom12.nsoc.scenarii" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../esir.dom12.nsoc.video" charset="UTF-8" />
   </component>
 </project>
 

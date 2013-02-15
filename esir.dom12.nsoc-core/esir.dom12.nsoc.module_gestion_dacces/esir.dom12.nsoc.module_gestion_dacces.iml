@@ -13,8 +13,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="esir.dom12.nsoc.connexionBDD-1.9.0" level="project" />
-    <orderEntry type="library" name="esir.dom12.nsoc.NFCTranslator-1.9.0" level="project" />
+    <orderEntry type="module" module-name="esir.dom12.nsoc.connexionBDD" />
+    <orderEntry type="library" name="Maven: mysql.connector.jdbc:mysql.connector.jdbc:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree.tools:org.kevoree.tools.javase.framework:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree:org.kevoree.framework:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree:org.kevoree.api:1.9.0" level="project" />
@@ -25,9 +25,8 @@
     <orderEntry type="library" name="Maven: org.kevoree:org.kevoree.adaptation.model:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree:org.kevoree.kcl:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.kevoree.tools:org.kevoree.tools.annotation.api:1.9.0" level="project" />
-    <orderEntry type="library" name="Maven: esir.dom12.nsoc.connexionBDD:esir.dom12.nsoc.connexionBDD:1.9.0" level="project" />
-    <orderEntry type="library" name="Maven: esir.dom12.nsoc.donneesAde:esir.dom12.nsoc.donneesAde:1.9.0" level="project" />
-    <orderEntry type="library" name="Maven: esir.dom12.nsoc.NFCTranslator:esir.dom12.nsoc.NFCTranslator:1.9.0" level="project" />
+    <orderEntry type="module" module-name="esir.dom12.nsoc.donneesAde" />
+    <orderEntry type="module" module-name="esir.dom12.nsoc.NFCTranslator" />
   </component>
 </module>
 

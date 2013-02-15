@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>esir.dom12.nsoc.NFCTranslator</groupId>
+    <artifactId>esir.dom12.nsoc.NFCTranslator</artifactId>
+    <version>1.9.0</version>
+    <name>Nfc Translator</name>
+
+    <parent>
+        <groupId>esir.dom12.nsoc.JavaSe</groupId>
+        <artifactId>esir.dom12.nsoc.JavaSe</artifactId>
+        <version>1.9.0</version>
+        <relativePath>../esir.dom12.nsoc.JavaSe/pom.xml</relativePath>
+    </parent>
+
+    <properties>
+        <kevoree.version>${project.version}</kevoree.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>esir.dom12.nsoc.donneesAde</groupId>
+            <artifactId>esir.dom12.nsoc.donneesAde</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>esir.dom12.nsoc.connexionBDD</groupId>
+            <artifactId>esir.dom12.nsoc.connexionBDD</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+    </dependencies>
+
+
+    
+</project>
