@@ -124,7 +124,7 @@ public class KnxImplementation extends AbstractComponentType {
         }
 
         // Connexion à la passerelle KNX (si l'on est pas deja connecté)
-      /*  if (connect == false) {
+        if (connect == false) {
             connexionKnx(ipPasserelle);                                 // Connexion a la passerelle
             connect = true;
         }
@@ -132,13 +132,13 @@ public class KnxImplementation extends AbstractComponentType {
         // Action sur l'équipement
         try {
             pc.write(new GroupAddress(addComposant), value);            // Commande l'équipement
-            */
+
 
         // Ecrit sur le port log que tout a bien été effectué
 
 
 
-       /* } catch (KNXException e) {
+        } catch (KNXException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             log.log(Level.WARNING, "KNX Exception lors de l'ecriture sur le composant");
 
@@ -155,9 +155,9 @@ public class KnxImplementation extends AbstractComponentType {
         }
 
         // Sinon on retourne true et on se déconnect
-        deconnexionKNX(netLinkIp);
-        */
-        log.log(Level.INFO, "Déconnexion");
+        //deconnexionKNX(netLinkIp);
+
+       // log.log(Level.INFO, "Déconnexion");
     }
 
     /**
